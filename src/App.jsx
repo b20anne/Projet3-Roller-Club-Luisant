@@ -1,29 +1,26 @@
 import React from "react";
-import "./App.css";
+import { Switch, Route } from "react-router-dom";
+
+import "./App.scss";
+
+// import Pages
+import HomePage from "./pages/HomePage/HomePage";
+import Login from "./pages/Login/Login";
+import ShopPage from "./pages/ShopPage/ShopPage";
+
+// import Components
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
-  const value = 0;
   return (
-    <main className="container">
-      <div className="item">
-        <h1>Hello world !</h1>
-      </div>
-      <div className="item">
-        <p>
-          Welcome to your fresh, lightweight, React App !
-          <span role="img" aria-label="rainbow">
-            &#127752;
-          </span>
-        </p>
-      </div>
-      <div className="item">
-        <p>
-          Start in the
-          <code>App.jsx</code>
-          component !{value}
-        </p>
-      </div>
-    </main>
+    <div>
+      <Navbar />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/login" component={Login} />
+        <Route path="/shop" component={ShopPage} />
+      </Switch>
+    </div>
   );
 }
 
