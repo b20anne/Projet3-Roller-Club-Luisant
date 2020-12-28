@@ -1,0 +1,32 @@
+.navDashboard {
+  &__globalContainer {
+    width: 288px;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.25);
+    margin: 40px;
+    border-radius: 5px;
+  }
+
+  &__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-weight: 600;
+    font-size: 22px;
+  }
+
+  &__itemNav {
+    border-bottom: 1px solid #c4c4c4;
+    padding-left: 25px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__textNav {
+    color: #000;
+  }
+}

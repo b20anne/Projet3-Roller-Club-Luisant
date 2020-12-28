@@ -10,6 +10,7 @@ import ShopPage from "./pages/ShopPage/ShopPage";
 
 // import Components
 import Navbar from "./components/Navbar/Navbar";
+import DashboardUsers from "./pages/AdminPage/DashboardUsers/DashboardUsers";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route exact path="/" component={HomePage} />
         <Route path="/login" component={Login} />
         <Route path="/shop" component={ShopPage} />
+        <Route path="/dashboardusers" component={DashboardUsers} />
       </Switch>
     </div>
   );
