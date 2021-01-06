@@ -1,0 +1,65 @@
+.registerPageContainer {
+    height: 110vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registerContainer {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #3D3939;
+}
+
+.registerLeft {
+    width: 100%;
+    height: 100%;
+}
+
+.registerRight {
+    margin: 40px;
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+    height: 92%;
+}
+
+.registerTitle {
+    height: 98%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+.registerTitle h1 {
+    color: white;
+    font-weight: 500;
+    font-size: 50px;
+}
+.registerTitle p {
+    color: rgb(204, 204, 204);
+}
+.registerPicture {
+    border-radius: 20px;
+    height: 450px;
+    width: 90%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logoRegister {
+    height: 250px;
+    width: 250px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(-20deg);
+    margin-right: 200px;
+}
