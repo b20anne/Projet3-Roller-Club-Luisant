@@ -5,6 +5,8 @@ import imageOne from "./assets/register-picture.jpeg";
 import imageTwo from "./assets/roller.png";
 
 const Register = () => {
+const [email, setEmail] = useState("");
+
   return (
     <div className="registerPageContainer">
       <div className="registerContainer">
@@ -30,9 +32,20 @@ const Register = () => {
         </div>
         <div className="registerRight">
           <div>
-            <h1>Inscription</h1>
-            <p>Créer votre compte pour accéder à nos offres</p>
-            <p>Veuillez rentrer vos informations personnelles pour pouvoir créer votre compte.</p>
+            <div>
+              <h1>Inscription</h1>
+              <p>Créer votre compte pour accéder à nos offres</p>
+              <p>
+                Veuillez rentrer vos informations personnelles pour pouvoir
+                créer votre compte.
+              </p>
+            </div>
+            <form>
+              <div>
+                <label htmlFor="email">Email</label>
+                <input id="email" name="email" type="text" value={email} />
+              </div>
+            </form>
           </div>
         </div>
       </div>
