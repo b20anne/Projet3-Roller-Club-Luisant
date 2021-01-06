@@ -1,0 +1,158 @@
+.page-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.connection-container {
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 30px 0px rgba(0,0,0,0.3);
+    border-radius: 20px;
+    height: 90vh;
+    width: 85%;
+}
+.connection-boxOne {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding-left: 100px;
+}
+.connection-boxTwo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+}
+
+.connection-boxOne form {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.connection-boxOne form input {
+    border: 1px solid rgb(218, 218, 218);
+    outline-width: 0;
+    line-height: 50px;
+    background-color: #fafafa;
+    box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.08);
+    padding: 0 20px;
+    margin: 10px 0 10px 0;
+    border-radius: 5px;
+}
+.remembermeContainer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.forgotpassword {
+    margin-top: 20px;
+}
+.rememberme input[type = checkbox] {
+    margin-right: 10px;
+}
+.forgotpassword span {
+    color: #20B82C;
+}
+.connection-boxOne form button {
+    margin-top: 25px;
+    border: 0;
+    color: white;
+    background-color: #20B82C;
+    border-radius: 5px;
+    line-height: 50px;
+    font-size: 20px;
+}
+.connection-boxOne form label {
+    margin: 10px 0 10px 0;
+    font-size: 20px;
+    font-weight: 200;
+}
+.connection-title {
+    width: 250px;
+    margin-bottom: 80px;
+}
+
+.connection-title h1 {
+    font-size: 48px;
+    font-weight: 500;
+}
+.connection-title p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #7D7D7D;
+}
+
+.logoConnection {
+    height: 400px;
+    width: 470px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width: 1024px) {
+    .connection-container{
+        box-shadow: none;
+    }
+    .page-container {
+        background-color: #3D3939;
+    }
+    .connection-boxTwo {
+        display: none;
+    }
+    .connection-boxOne {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .connection-container {
+        height: 100%;
+        width: 100%;
+    }
+    .connection-title h1 {
+        color: #FFFF
+    }
+    .connection-title p {
+        text-align: center;
+        color: white;
+    }
+    .connection-title {
+        margin-bottom: 0;
+    }
+    .connection-boxOne form input {
+        background-color: transparent;
+        border: 1px solid #969696;
+    }
+    .connection-boxOne form label {
+        color: white;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .connection-boxOne form label {
+        font-size: 16px;
+    }
+    .connection-title h1 {
+        text-align: center;
+        font-size: 35px;
+    }
+}
+
+@media screen and (min-width: 640px) and (max-width: 1025px) {
+    .connection-title h1 {
+        font-size: 50px;
+    }
+    .connection-title p {
+        font-size: 20px;
+    }
+}
