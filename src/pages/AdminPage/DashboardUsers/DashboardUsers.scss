@@ -2,31 +2,107 @@
   &__table {
     border-collapse: collapse;
     border-spacing: 0;
-    width: 1000px;
+    width: 100%;
     border: 1px solid #ddd;
   }
 }
 
-th,
-td {
-  text-align: center;
-  padding: 10px;
+.rwd-table {
+  margin: auto;
+  min-width: 90%;
+  max-width: 100%;
+  border-collapse: collapse;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-th {
-  width: 80px;
-  height: 40px;
-  border: 1px solid #000;
+.rwd-table tr:first-child {
+  border-top: none;
+  background: #343A40;
   color: #fff;
-  font-size: 18px;
-  background: #343a40;
 }
 
-td {
-  font-size: 19px;
-  border: 1px solid #000;
+.rwd-table tr {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #f5f9fc;
 }
 
-tr:nth-child(even) {
-  background-color: #f2f2f2;
+.rwd-table tr:nth-child(odd):not(:first-child) {
+  background-color: #ebf3f9;
+}
+
+.rwd-table th {
+  display: none;
+}
+
+.rwd-table td {
+  display: block;
+  border: 1px solid #ccc;
+}
+
+.rwd-table td:first-child {
+  margin-top: 0.5em;
+}
+
+.rwd-table td:last-child {
+  margin-bottom: 0.5em;
+}
+
+.rwd-table td:before {
+  content: attr(data-th) ": ";
+  font-weight: bold;
+  width: 120px;
+  display: inline-block;
+  color: #000;
+}
+
+.rwd-table th,
+.rwd-table td {
+  text-align: left;
+}
+
+.rwd-table {
+  color: #333;
+  border-radius: 0.4em;
+  overflow: hidden;
+}
+
+.rwd-table tr {
+  border-color: #bfbfbf;
+}
+
+.rwd-table th,
+.rwd-table td {
+  padding: 0.5em 1em;
+}
+@media screen and (max-width: 601px) {
+  .rwd-table tr:nth-child(2) {
+    border-top: none;
+  }
+}
+@media screen and (min-width: 600px) {
+  .rwd-table tr:hover:not(:first-child) {
+    background-color: #d8e7f3;
+  }
+  .rwd-table td:before {
+    display: none;
+  }
+  .rwd-table th,
+  .rwd-table td {
+    display: table-cell;
+    padding: 0.25em 0.5em;
+  }
+  .rwd-table th:first-child,
+  .rwd-table td:first-child {
+    padding-left: 0;
+  }
+  .rwd-table th:last-child,
+  .rwd-table td:last-child {
+    padding-right: 0;
+  }
+  .rwd-table th,
+  .rwd-table td {
+    padding: 1em !important;
+  }
 }

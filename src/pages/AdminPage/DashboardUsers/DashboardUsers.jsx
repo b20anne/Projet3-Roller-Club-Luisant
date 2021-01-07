@@ -5,41 +5,36 @@ import NavigationDashboard from "../../../components/NavigationDashboard/Navigat
 
 const DashboardUsers = () => {
   return (
-    <div style={{ display: "flex", justifyContent: "space-between" }}>
+    <div className="dashboardusers__globalContainer">
       <NavigationDashboard />
-      <div
-        style={{
-          overflowX: "auto",
-          display: "flex",
-          justifyContent: "center",
-          width: "75%",
-        }}
-      >
-        <table className="dashboardusers__table">
-          <tr>
-            <th>Nom</th>
-            <th>Prénom</th>
-            <th>Status</th>
-            <th>Âge</th>
-          </tr>
-          <tr>
-            <td>Jill</td>
-            <td>Smith</td>
-            <td>Apprentissage</td>
-            <td>15 ans</td>
-          </tr>
-          <tr>
-            <td>Eve</td>
-            <td>Jackson</td>
-            <td>Baby</td>
-            <td>3 ans</td>
-          </tr>
-          <tr>
-            <td>Adam</td>
-            <td>Johnson</td>
-            <td>Perfectionnement</td>
-            <td>19 ans</td>
-          </tr>
+      <div>
+        <table className="rwd-table">
+          <tbody>
+            <tr>
+              <th>Nom</th>
+              <th>Prénom</th>
+              <th>Status</th>
+              <th>Âge</th>
+            </tr>
+            <tr>
+              <td data-th="Nom">Dubé</td>
+              <td data-th="Prénom">Karel</td>
+              <td data-th="Status">Baby</td>
+              <td data-th="Âge">6</td>
+            </tr>
+            <tr>
+              <td data-th="Nom">Saindon</td>
+              <td data-th="Prénom">Alexis</td>
+              <td data-th="Status">Apprentissage</td>
+              <td data-th="Âge">12</td>
+            </tr>
+            <tr>
+              <td data-th="Nom">Dexter</td>
+              <td data-th="Prénom">François</td>
+              <td data-th="Status">Perfectionnement</td>
+              <td data-th="Âge">15</td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </div>
