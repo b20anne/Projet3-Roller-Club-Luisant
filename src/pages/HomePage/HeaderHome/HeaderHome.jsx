@@ -33,7 +33,7 @@ const HeaderHome = () => {
             </div>
           </button>
           <button as="input" type="button" className="calendar">
-            <p>Planning des cours et des compétitions</p>
+            <p>Planning des cours</p>
             <div className="RiCalendar">
               <RiCalendarEventFill />
             </div>
