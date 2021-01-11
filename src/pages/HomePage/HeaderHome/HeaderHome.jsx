@@ -1,32 +1,48 @@
 import React from "react";
+import { BiBasket } from "react-icons/bi";
+import { RiCalendarEventFill } from "react-icons/ri";
+import Logo from "../../../components/HeaderComponent/Logo.png";
+import RollerVideo from "../../../components/HeaderComponent/Video/Video";
 import "./HeaderHome.scss";
 
 const HeaderHome = () => {
   return (
-    <header>
+    <header className="container">
       <div>
         <div>
-          <p>Logo</p>
+          <img src={Logo} alt="logo" />
         </div>
-        <div>
-          <p>Connexion</p>
-        </div>
-        <div>
-          <p>Inscription</p>
+        <div className="doubleBttn">
+          <button as="input" type="button" className="connect">
+            Connexion
+          </button>
+          <button as="input" type="button" className="register">
+            Inscription
+          </button>
         </div>
       </div>
       <div>
-        <p>Video</p>
+        <div>
+          <RollerVideo />
+        </div>
+        <div className="otherButtons">
+          <button as="input" type="button" className="market">
+            <p>Catalogue Produits</p>
+            <div className="Basket">
+              <BiBasket />
+            </div>
+          </button>
+          <button as="input" type="button" className="calendar">
+            <p>Planning des cours et des compétitions</p>
+            <div className="RiCalendar">
+              <RiCalendarEventFill />
+            </div>
+          </button>
+        </div>
       </div>
-      <div>
-        <button>
-          <p>Catalogue</p>
-        </button>
-        <button>
-          <p>Planning</p>
-        </button>
-      </div>
-      <h1>“ Ne limite pas tes défis, défie tes limites !”</h1>
+      <h1 className="slogan">
+        “ Ne limite pas tes défis, défie tes limites !”
+      </h1>
     </header>
   );
 };
