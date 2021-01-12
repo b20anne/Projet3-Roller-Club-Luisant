@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import "./Register.scss";
 import imageOne from "./assets/register-picture.jpeg";
@@ -39,7 +40,7 @@ const Register = () => {
           <div className="formContainer">
             <div className="formTitle">
               <h1>Inscription</h1>
-              <p>Créer votre compte pour accéder à nos offres</p>
+              <h2>Créer votre compte pour accéder à nos offres</h2>
               <p>
                 Veuillez rentrer vos informations personnelles pour pouvoir
                 créer votre compte.
@@ -121,12 +122,23 @@ const Register = () => {
                 </div>
                 <div className="cgu-checkbox">
                   <input type="checkbox" id="CGU" name="CGU" />
-                  <label htmlFor="CGU">J'accepte les conditions d'utilisations du site</label>
+                  <label htmlFor="CGU">
+                    J'accepte les conditions d'utilisations du site
+                  </label>
                 </div>
               </div>
               <div className="inscriptionContainer">
-                <button name="inscription" id="inscription">Inscription</button>
-                <label htmlFor="inscription">Déjà inscrit ? Connectez vous</label>
+                <div className="inscriptionLeft">
+                  <button name="inscription" id="inscription">
+                    Inscription
+                  </button>
+                  <label htmlFor="inscription">
+                    Déjà inscrit ?{" "}
+                    <div classname="linktologin">
+                      <Link to="/login">Connectez vous</Link>
+                    </div>
+                  </label>
+                </div>
               </div>
             </form>
           </div>
