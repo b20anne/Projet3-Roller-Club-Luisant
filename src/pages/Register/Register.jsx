@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable jsx-a11y/label-has-associated-control */
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import "./Register.scss";
 import imageOne from "./assets/register-picture.jpeg";
 import imageTwo from "./assets/roller.png";
@@ -129,12 +130,12 @@ const Register = () => {
               </div>
               <div className="inscriptionContainer">
                 <div className="inscriptionLeft">
-                  <button name="inscription" id="inscription">
+                  <button type="button" name="inscription" id="inscription">
                     Inscription
                   </button>
                   <label htmlFor="inscription">
                     Déjà inscrit ?{" "}
-                    <div classname="linktologin">
+                    <div className="linktologin">
                       <Link to="/login">Connectez vous</Link>
                     </div>
                   </label>

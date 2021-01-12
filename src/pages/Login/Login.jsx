@@ -1,3 +1,5 @@
+/* eslint-disable object-shorthand */
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from "react";
 import axios from "axios";
 import logo from "./assets/LOGO.gif";
@@ -50,7 +52,7 @@ const Login = () => {
             />
             <div className="remembermeContainer">
               <div className="rememberme">
-                <input id="rememberme" name="rememberme" type="checkbox"/>
+                <input id="rememberme" name="rememberme" type="checkbox" />
                 <label htmlFor="rememberme">Se souvenir de moi</label>
               </div>
               <div className="forgotpassword">
@@ -63,9 +65,12 @@ const Login = () => {
           </form>
         </div>
         <div className="connection-boxTwo">
-          <div className="logoConnection" style={{
-            backgroundImage: `url(${logo})`
-          }} />
+          <div
+            className="logoConnection"
+            style={{
+              backgroundImage: `url(${logo})`,
+            }}
+          />
           <p>{isConnected}</p>
         </div>
       </div>

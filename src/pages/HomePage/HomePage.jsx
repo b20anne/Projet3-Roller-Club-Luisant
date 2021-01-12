@@ -7,7 +7,7 @@ const HomePage = () => {
   return (
     <div>
       <HeaderHome />
-      <Actualites/>
+      <Actualites />
     </div>
   );
 };
