@@ -6,6 +6,7 @@ import "./App.scss";
 // import Pages
 import HomePage from "./pages/HomePage/HomePage";
 import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
 import ShopPage from "./pages/ShopPage/ShopPage";
 
 // import Components
@@ -17,6 +18,7 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/" component={HomePage} />
+        <Route exact path="/register" component={Register} />
         <Route path="/login" component={Login} />
         <Route path="/shop" component={ShopPage} />
       </Switch>
