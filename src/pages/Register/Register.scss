@@ -1,3 +1,20 @@
+:root {
+    --primary-light: #8abdff;
+    --primary: #6d5dfc;
+    --primary-dark: #5b0eeb;
+    
+    --white: #FFFFFF;
+    --greyLight-1: #E4EBF5;
+    --greyLight-2: #c8d0e7;
+    --greyLight-3: #bec8e4;
+    --greyDark: #9baacf;
+  }
+  
+  $shadow: .3rem .3rem .6rem var(--greyLight-2), 
+  -.2rem -.2rem .5rem var(--white);
+  $inner-shadow: inset .2rem .2rem .5rem var(--greyLight-2), 
+  inset -.2rem -.2rem .5rem var(--white);
+
 .registerPageContainer {
     height: 110vh;
     width: 100%;
@@ -23,7 +40,7 @@
 
 .registerRight {
     margin: 40px;
-    background-color: white;
+    background-color:  rgb(255, 255, 255);
     border-radius: 20px;
     width: 100%;
     height: 92%;
@@ -81,11 +98,76 @@
     display: flex;
     flex-direction: column;
 }
-
-.inputRegister label {
-    font-size: 18px;
-    font-weight: 500;
-}
 .inputRegister input {
-    
+    margin: 20px 0 20px 0;
+    width: 20.4rem;
+    height: 3rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    padding-left: 1.4rem;
+    box-shadow: $inner-shadow;
+    background: none;
+    font-family: inherit;
+    color: var(--greyDark);
+
+    &::placeholder { color: var(--greyLight-3); }
+    &:focus { outline: none; box-shadow: $shadow; }
+}
+
+.formContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.registerForm {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100%;
+    width: 100%
+}
+
+.cgu-checkbox {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+        input { display: none; }
+        
+        &__1, &__2 {
+          width: 6rem;
+          display: flex;
+          justify-content: center;
+          label {
+          box-shadow: $shadow;
+              cursor: pointer;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+              border-radius: .5rem;
+              width: 2.8rem;
+              height: 2.8rem;
+            
+          &:hover i { color: var(--primary); }
+          
+          i {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--greyDark);
+            transition: .3s ease;
+          }
+        }
+        
+        & input:checked {
+          & ~ label {
+            box-shadow: $inner-shadow;
+            i {
+              color: var(--primary);
+            }
+          }
+        }
+      }
 }

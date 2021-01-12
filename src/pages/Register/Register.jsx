@@ -8,7 +8,6 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
-  const [confirmedPassword, setConfirmedPassword] = useState("");
   const [lastName, setLastName] = useState("");
   const [age, setAge] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -38,7 +37,7 @@ const Register = () => {
         </div>
         <div className="registerRight">
           <div className="formContainer">
-            <div>
+            <div className="formTitle">
               <h1>Inscription</h1>
               <p>Créer votre compte pour accéder à nos offres</p>
               <p>
@@ -49,73 +48,59 @@ const Register = () => {
             <form className="registerForm">
               <div className="inputField">
                 <div className="inputRegister">
-                  <label htmlFor="email">Email</label>
                   <input
                     id="email"
                     name="email"
                     type="text"
                     value={email}
+                    placeholder="Email"
                     onChange={(event) => {
                       setEmail(event.target.value);
                     }}
                   />
                 </div>
                 <div className="inputRegister">
-                  <label htmlFor="password">Mot de passe</label>
                   <input
                     id="password"
                     name="password"
                     type="password"
                     value={password}
+                    placeholder="Mot de passe"
                     onChange={(event) => {
                       setPassword(event.target.value);
                     }}
                   />
                 </div>
                 <div className="inputRegister">
-                  <label htmlFor="confirmedPassword">
-                    Confirmé mot de passe
-                  </label>
-                  <input
-                    id="confirmedPassword"
-                    name="confirmedPassword"
-                    type="password"
-                    value={confirmedPassword}
-                    onChange={(event) => {
-                      setConfirmedPassword(event.target.value);
-                    }}
-                  />
-                </div>
-                <div className="inputRegister">
-                  <label htmlFor="firsName">Prénom</label>
                   <input
                     id="firsName"
                     name="firsName"
                     type="text"
                     value={firstName}
+                    placeholder="Prénom"
                     onChange={(event) => {
                       setFirstName(event.target.value);
                     }}
                   />
                 </div>
                 <div className="inputRegister">
-                  <label htmlFor="lastName">Nom</label>
                   <input
                     id="lastName"
                     name="lastName"
                     type="text"
                     value={lastName}
+                    placeholder="Nom"
                     onChange={(event) => {
                       setLastName(event.target.value);
                     }}
                   />
                 </div>
                 <div className="inputRegister">
-                  <label htmlFor="age">Age</label>
                   <input
                     id="age"
                     name="age"
                     type="text"
+                    placeholder="Age"
                     value={age}
                     onChange={(event) => {
                       setAge(event.target.value);
@@ -123,24 +108,26 @@ const Register = () => {
                   />
                 </div>
                 <div className="inputRegister">
-                  <label htmlFor="phoneNumber">Numéro de téléphone</label>
                   <input
                     id="phoneNumber"
                     name="phoneNumber"
                     type="text"
+                    placeholder="Numéro de téléphone"
                     value={phoneNumber}
                     onChange={(event) => {
                       setPhoneNumber(event.target.value);
                     }}
                   />
                 </div>
+                <div className="cgu-checkbox">
+                  <input type="checkbox" id="CGU" name="CGU" />
+                  <label htmlFor="CGU">J'accepte les conditions d'utilisations du site</label>
+                </div>
               </div>
               <div>
-                <input type="checkbox"/>
-                <span>J'accepte les conditions d'utilisations</span>
+                <button name="inscription" id="inscription">Inscription</button>
+                <label htmlFor="inscription">Déjà inscrit ? Connectez vous</label>
               </div>
-              <button>Inscription</button>
-              <p>Déjà inscrit ? Connectez vous</p>
             </form>
           </div>
         </div>
