@@ -124,7 +124,7 @@ const Register = () => {
                   <label htmlFor="CGU">J'accepte les conditions d'utilisations du site</label>
                 </div>
               </div>
-              <div>
+              <div className="inscriptionContainer">
                 <button name="inscription" id="inscription">Inscription</button>
                 <label htmlFor="inscription">Déjà inscrit ? Connectez vous</label>
               </div>

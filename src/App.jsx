@@ -15,14 +15,13 @@ import Navbar from "./components/Navbar/Navbar";
 function App() {
   return (
     <div>
-      {/* <Navbar />
+      <Navbar />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/register" component={Register} />
         <Route path="/login" component={Login} />
         <Route path="/shop" component={ShopPage} />
-      </Switch> */}
-      <Login />
+      </Switch>
     </div>
   );
 }
