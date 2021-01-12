@@ -21,6 +21,7 @@
     margin: 15px;
     border: none;
     outline: none;
+    text-align: center;
 }
 
 .register {
@@ -34,13 +35,16 @@
     margin: 15px;
     border: none;
     outline: none;
+    text-align: center;
 }
 
 .doubleBttn {
+    display:flex;
     padding: 2px;
     margin: 10px;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
 }
 
 .market {
