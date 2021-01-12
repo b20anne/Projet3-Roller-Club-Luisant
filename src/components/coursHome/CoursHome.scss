@@ -1,0 +1,30 @@
+.coursDisplay {
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+// .coursDisplay:hover {
+    
+// }
+
+.coursHomeContainer {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #3D3939;
+    padding: 50px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
