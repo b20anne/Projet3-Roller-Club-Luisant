@@ -8,7 +8,7 @@ import "./HeaderHome.scss";
 const HeaderHome = () => {
   return (
     <header className="container">
-      <div>
+      <div className="leftDiv">
         <div>
           <img src={Logo} alt="logo" />
         </div>
@@ -21,8 +21,8 @@ const HeaderHome = () => {
           </button>
         </div>
       </div>
-      <div>
-        <div>
+      <div className="rightDiv">
+        <div className="RollVid">
           <RollerVideo />
         </div>
         <div className="otherButtons">
