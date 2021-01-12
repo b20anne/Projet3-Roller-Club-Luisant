@@ -1,5 +1,5 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable object-shorthand */
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from "react";
 import axios from "axios";
 import logo from "./assets/LOGO.gif";

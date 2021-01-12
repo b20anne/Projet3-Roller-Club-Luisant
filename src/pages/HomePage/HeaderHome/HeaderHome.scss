@@ -1,13 +1,14 @@
 .container{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 .slogan {
     display: table;
     width: 100%;
     color: #F64C02;
     text-align: center;
+    flex-flow: row nowrap;
 }
 .connect {
     position: flex;
@@ -15,11 +16,12 @@
     height: 40px;
     color: white;
     background: #20B82C;
-    box-shadow: 0px 2px 20px rgb(0, 0, 0, 0.60);
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.60);
     border-radius: 10px;
     margin: 15px;
     border: none;
     outline: none;
+    text-align: center;
 }
 
 .register {
@@ -33,17 +35,20 @@
     margin: 15px;
     border: none;
     outline: none;
+    text-align: center;
 }
 
 .doubleBttn {
+    display:flex;
     padding: 2px;
     margin: 10px;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 
 .market {
-    position: flex;
+    position: relative;
     width: 200px;
     height: 120px;
     color: white;
@@ -57,7 +62,7 @@
 }
 
 .calendar {
-    position: flex;
+    position: relative;
     width: 200px;
     height: 120px;
     color: white;
@@ -72,7 +77,9 @@
 
 .otherButtons{
     margin: 10px;
-    flex-direction: row;
+    margin-left: 10%;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
 }
 
 .Basket{
@@ -81,4 +88,45 @@
 
 .RiCalendar{
     padding: 5px;
+}
+
+@media screen and (min-width:760px) and (max-width:900px){
+    .leftDiv{
+        display:none;
+    }
+    .rightDiv{
+        align-items: flex-end;
+    }
+    .RollVid{
+        position: relative;
+    }
+    .otherButtons{
+        position: relative;
+        margin-left: 30%;
+        align-self: center;
+    }
+    .market{
+        display: none;
+    }
+    .calendar{
+        align-self: center;
+    }
+    .slogan{
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width:760px){
+    .leftDiv{
+        display: none;
+    }
+    .RollVid{
+        display: none;
+    }
+    .market{
+        display: none;
+    }
+    .otherButtons{
+        margin-left: none;
+    }
 }
