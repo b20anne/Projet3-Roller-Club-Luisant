@@ -7,6 +7,7 @@ import "./App.scss";
 import HomePage from "./pages/HomePage/HomePage";
 import Login from "./pages/Login/Login";
 import ShopPage from "./pages/ShopPage/ShopPage";
+import Planning from "./pages/Planning/Planning";
 
 // import Components
 import Navbar from "./components/Navbar/Navbar";
@@ -14,13 +15,13 @@ import Navbar from "./components/Navbar/Navbar";
 function App() {
   return (
     <div>
-      {/* <Navbar />
+      <Navbar />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/login" component={Login} />
         <Route path="/shop" component={ShopPage} />
-      </Switch> */}
-      <Login />
+        <Route path="/planning" component={Planning} />
+      </Switch>
     </div>
   );
 }
