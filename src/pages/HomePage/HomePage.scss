@@ -1,24 +1,28 @@
 .mainHome {
-    height: 100vh;
     width: 100%;
     display: flex;
 }
 .mainHomeRight {
-    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .mainHomeLeft {
-    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-.headerHome {
-    position: relative;
-    
+.coursTitleHome {
+    margin: 20px 0 20px 0;
+    font-size: 34px;
+}
+
+@media only screen and (max-width: 900px) {
+    .mainHome{
+        flex-direction: column;
+    }
 }
