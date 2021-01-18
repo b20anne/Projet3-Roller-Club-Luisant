@@ -8,7 +8,7 @@ const RollerVideo = () => {
   return (
     <div
       style={{
-        borderRadius: "44px",
+        borderRadius: "20px",
         overflow: "hidden",
       }}
     >
