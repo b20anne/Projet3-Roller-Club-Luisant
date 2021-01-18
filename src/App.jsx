@@ -11,6 +11,7 @@ import ShopPage from "./pages/ShopPage/ShopPage";
 
 // import Components
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/login" component={Login} />
         <Route path="/shop" component={ShopPage} />
       </Switch>
+      <Footer />
     </div>
   );
 }

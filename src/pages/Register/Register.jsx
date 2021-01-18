@@ -1,5 +1,5 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/no-unescaped-entities */
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Register.scss";
@@ -130,7 +130,7 @@ const Register = () => {
               </div>
               <div className="inscriptionContainer">
                 <div className="inscriptionLeft">
-                  <button name="inscription" id="inscription" type="button">
+                  <button type="button" name="inscription" id="inscription">
                     Inscription
                   </button>
                   <label htmlFor="inscription">

@@ -1,0 +1,21 @@
+.actu-card {
+  background-color: #3d3939;
+  border-radius: 4px;
+  padding: 20px;
+  width: 400px;
+}
+
+.actu-card h1 {
+  color: white;
+  text-align: center;
+}
+
+.actu-card article {
+  background-color: #b4b4b4;
+  border-radius: 4px;
+  margin: 8px;
+}
+
+.actu-card article h2 {
+  text-align: center;
+}
