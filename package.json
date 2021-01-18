@@ -44,8 +44,6 @@
     "react-dom": "^16.14.0",
     "react-icons": "^4.1.0",
     "react-router-dom": "^5.2.0",
-    "react-slick": "^0.27.14",
-    "slick-carousel": "^1.8.1",
     "video-react": "^0.14.1"
   },
   "husky": {
