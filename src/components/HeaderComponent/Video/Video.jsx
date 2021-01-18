@@ -1,9 +1,8 @@
 import React from "react";
 import { Player, ControlBar, PlayToggle, BigPlayButton } from "video-react";
+import HeaderVid from "./roller.mp4";
 import "../../../../node_modules/video-react/styles/scss/video-react.scss";
 import "./Video.scss";
-
-const HeaderVid = "https://media.w3.org/2010/05/sintel/trailer_hd.mp4";
 
 const RollerVideo = () => {
   return (

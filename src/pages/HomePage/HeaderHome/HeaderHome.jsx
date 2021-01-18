@@ -30,13 +30,13 @@ const HeaderHome = () => {
           <button as="input" type="button" className="market">
             <p>Catalogue Produits</p>
             <div className="Basket">
-              <BiBasket />
+              <BiBasket size="3em" />
             </div>
           </button>
           <button as="input" type="button" className="calendar">
             <p>Planning des cours</p>
             <div className="RiCalendar">
-              <RiCalendarEventFill />
+              <RiCalendarEventFill size="3em" />
             </div>
           </button>
         </div>
