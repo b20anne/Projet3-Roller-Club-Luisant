@@ -12,7 +12,7 @@ const RollerVideo = () => {
         overflow: "hidden",
       }}
     >
-      <Player src={HeaderVid} className="PlayVid">
+      <Player muted src={HeaderVid} className="PlayVid">
         <BigPlayButton position="center">
           <ControlBar disableDefaultControls>
             <PlayToggle />
