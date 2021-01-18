@@ -12,7 +12,17 @@ const HomePage = () => {
       </div>
       <div className="mainHome">
         <div className="mainHomeLeft">
-          <CoursHome />
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-evenly",
+              alignItems: "center",
+            }}
+          >
+            <h2 className="coursTitleHome">Nos Cours</h2>
+            <CoursHome />
+          </div>
         </div>
         <div className="mainHomeRight">
           <Actualites />
