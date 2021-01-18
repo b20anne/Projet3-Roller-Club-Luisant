@@ -22,6 +22,6 @@ module.exports = {
     "react/state-in-constructor": 0,
     "react/jsx-one-expression-per-line": 0,
     "no-console": 0,
-    "react/jsx-indent": 0
+    "react/jsx-indent": 0,
   },
 };
