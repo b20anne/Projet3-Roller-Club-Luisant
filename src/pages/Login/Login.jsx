@@ -13,8 +13,8 @@ const Login = () => {
   const handleSubmit = () => {
     axios
       .post("http://localhost:8000/api/users/login", {
-        email: email,
-        password: password,
+        email,
+        password,
       })
       .then((res) => {
         setIsConnected(res.data);
