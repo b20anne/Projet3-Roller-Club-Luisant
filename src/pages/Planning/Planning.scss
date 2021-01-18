@@ -1,0 +1,23 @@
+.planning {
+  &__globalContainer {
+    height: 100vh;
+    width: 100%;
+    background-color: #f2f3f7;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+
+  &__titlePlanning {
+    margin-left: 4rem;
+    color: #202225;
+    font-weight: 600;
+    font-size: 30px;
+  }
+
+  &__cardCourse {
+    display: flex;
+    justify-content: space-around;
+    flex: wrap;
+    width: 100%;
+  }
+}
