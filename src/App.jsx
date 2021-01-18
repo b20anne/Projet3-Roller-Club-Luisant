@@ -13,10 +13,12 @@ import Planning from "./pages/Planning/Planning";
 // import Components
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+// import CarouselTest from "./components/CarouselTest/CarouselTest";
 
 function App() {
   return (
     <div>
+      {/* <CarouselTest /> */}
       <Navbar />
       <Switch>
         <Route exact path="/" component={HomePage} />

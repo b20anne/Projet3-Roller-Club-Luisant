@@ -6,13 +6,20 @@ import "./Video.scss";
 
 const RollerVideo = () => {
   return (
-    <Player src={HeaderVid} className="PlayVid">
-      <BigPlayButton position="center">
-        <ControlBar disableDefaultControls>
-          <PlayToggle />
-        </ControlBar>
-      </BigPlayButton>
-    </Player>
+    <div
+      style={{
+        borderRadius: "44px",
+        overflow: "hidden",
+      }}
+    >
+      <Player src={HeaderVid} className="PlayVid">
+        <BigPlayButton position="center">
+          <ControlBar disableDefaultControls>
+            <PlayToggle />
+          </ControlBar>
+        </BigPlayButton>
+      </Player>
+    </div>
   );
 };
 
