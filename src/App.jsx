@@ -51,11 +51,12 @@ function App() {
     <Provider store={store}>
       <Router>
         <div className="App" id="app">
-          <Navbar />
+          <NavBar />
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
+            <Route exact path="/toutes" component={Toutes} />
             <AdminRoute exact path="/shop" component={ShopPage} />
             <PrivateRoute exact path="/planning" component={Planning} />
           </Switch>
