@@ -19,3 +19,15 @@
 .actu-card article h2 {
   text-align: center;
 }
+
+.singleActu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.actu {
+  &__description {
+    margin-left: 7px;
+    margin-right: 3px;
+  }
+}
