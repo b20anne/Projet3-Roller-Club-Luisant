@@ -1,0 +1,14 @@
+.social-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.social {
+  margin: 0 1rem;
+  flex-flow: row wrap;
+}
+
+.social:hover {
+  transform: translateY(-4px);
+}
