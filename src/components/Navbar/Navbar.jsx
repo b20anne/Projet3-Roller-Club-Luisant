@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logoNav from "../assets/logoNav.gif";
 
@@ -16,10 +17,18 @@ export default function Navbar() {
           }}
         />
         <ul className="listes">
-          <li className="iteems">Acceuil</li>
-          <li className="iteems">Le Club</li>
-          <li className="iteems">Réglement</li>
-          <li className="iteems">Les roues de couleurs</li>
+          <Link to="/">
+            <li className="iteems">Acceuil</li>
+          </Link>
+          <Link to="/club">
+            <li className="iteems">Le Club</li>
+          </Link>
+          <Link to="/réglement">
+            <li className="iteems">Réglement</li>
+          </Link>
+          <Link to="/roues">
+            <li className="iteems">Les roues de couleurs</li>
+          </Link>
         </ul>
         <div className="menu-butn" onClick={() => setMenuOpen(!menuOpen)}>
           <div className="menu-butn_burger">
@@ -32,14 +41,22 @@ export default function Navbar() {
       <div
         className="menuMobiles"
         style={{
-          transform: menuOpen ? `translateY(0)` : `translateY(-100%)`,
+          transform: menuOpen ? `translateY(0)` : `translateY(-200%)`,
         }}
       >
         <ul className="listeMobiles">
-          <li className="itemsMobiles">Accueuil</li>
-          <li className="itemsMobiles">Le Club</li>
-          <li className="itemsMobiles">Réglement</li>
-          <li className="itemsMobiles">Les roues de couleurs</li>
+          <Link to="/">
+            <li className="itemsMobiles">Accueuil</li>
+          </Link>
+          <Link to="/club">
+            <li className="itemsMobiles">Le Club</li>
+          </Link>
+          <Link to="/réglement">
+            <li className="itemsMobiles">Réglement</li>
+          </Link>
+          <Link to="/roues">
+            <li className="itemsMobiles">Les roues de couleurs</li>
+          </Link>
           <li className="itemsMobiles">
             <div className="accessLoginMobile">
               <div
@@ -49,7 +66,7 @@ export default function Navbar() {
                   height: "100%",
                 }}
               >
-                Connection
+                <Link to="/login">Connection</Link>
               </div>
               <div
                 style={{
@@ -59,7 +76,7 @@ export default function Navbar() {
                   color: "black",
                 }}
               >
-                Inscription
+                <Link to="/register">Inscription</Link>
               </div>
             </div>
           </li>
