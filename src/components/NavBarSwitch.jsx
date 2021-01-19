@@ -8,7 +8,7 @@ function NavBar() {
       <div className="row">
         {
           // Check if message failed
-          NavBar === 1 ? <Navbar /> : <NavbarUser />
+          NavBar === 1 ? <NavbarUser /> : <Navbar />
         }
       </div>
     </div>

@@ -1,21 +1,23 @@
 .navDashboard {
   &__globalContainer {
-    width: 288px;
-    height: 50%;
-    background: #ffffff;
-    box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
+      height: 100%;
+      width: 30%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
   }
-
-  &__container {
+  &__menuContainer {
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    font-weight: 600;
-    font-size: 22px;
+    justify-content: space-evenly;
   }
 
   &__itemNav {
+    
+    width: 100%;
     border-bottom: 1px solid #c4c4c4;
     padding-left: 25px;
     height: 50px;

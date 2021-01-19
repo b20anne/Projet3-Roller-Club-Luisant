@@ -1,9 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./TableUsers.scss";
 
-const TableUsers = () => {
+const TableUsers = ({ users }) => {
   return (
-    <div>
+    <div className="tableUsersContainer">
       <table className="rwd-table">
         <tbody>
           <tr>
@@ -13,63 +14,40 @@ const TableUsers = () => {
             <th>Âge</th>
           </tr>
           <tr>
-            <td data-th="Name">Roberto</td>
-            <td data-th="Prénom">Robert</td>
+            <td data-th="Name">oui</td>
+            <td data-th="Prénom">yes</td>
             <td data-th="Status">Baby</td>
-            <td data-th="Âge">65ans</td>
+            <td data-th="Âge">12 ans</td>
           </tr>
           <tr>
-            <td data-th="Name">Coudray</td>
-            <td data-th="Prénom">Eloise</td>
-            <td data-th="Status">Perfectionnement</td>
-            <td data-th="Âge">16ans</td>
+            <td data-th="Name">oui</td>
+            <td data-th="Prénom">yes</td>
+            <td data-th="Status">Baby</td>
+            <td data-th="Âge">12 ans</td>
           </tr>
           <tr>
-            <td data-th="Name">Coudray</td>
-            <td data-th="Prénom">Eloise</td>
-            <td data-th="Status">Perfectionnement</td>
-            <td data-th="Âge">16ans</td>
+            <td data-th="Name">oui</td>
+            <td data-th="Prénom">yes</td>
+            <td data-th="Status">Baby</td>
+            <td data-th="Âge">12 ans</td>
           </tr>
-          <tr>
-            <td data-th="Name">Coudray</td>
-            <td data-th="Prénom">Eloise</td>
-            <td data-th="Status">Perfectionnement</td>
-            <td data-th="Âge">16ans</td>
-          </tr>
-          <tr>
-            <td data-th="Name">Coudray</td>
-            <td data-th="Prénom">Eloise</td>
-            <td data-th="Status">Perfectionnement</td>
-            <td data-th="Âge">16ans</td>
-          </tr>
-          <tr>
-            <td data-th="Name">Coudray</td>
-            <td data-th="Prénom">Eloise</td>
-            <td data-th="Status">Perfectionnement</td>
-            <td data-th="Âge">16ans</td>
-          </tr>
-          <tr>
-            <td data-th="Name">Coudray</td>
-            <td data-th="Prénom">Eloise</td>
-            <td data-th="Status">Perfectionnement</td>
-            <td data-th="Âge">16ans</td>
-          </tr>
-          <tr>
-            <td data-th="Name">Coudray</td>
-            <td data-th="Prénom">Eloise</td>
-            <td data-th="Status">Perfectionnement</td>
-            <td data-th="Âge">16ans</td>
-          </tr>
-          <tr>
-            <td data-th="Name">Coudray</td>
-            <td data-th="Prénom">Eloise</td>
-            <td data-th="Status">Perfectionnement</td>
-            <td data-th="Âge">16ans</td>
-          </tr>
+          {users.map((el) => (
+            <tr>
+              <td data-th="Name">{el.lastName}</td>
+              <td data-th="Prénom">{el.firstName}</td>
+              <td data-th="Status">Baby</td>
+              <td data-th="Âge">{el.age} ans</td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
   );
+};
+
+TableUsers.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  users: PropTypes.array.isRequired,
 };
 
 export default TableUsers;
