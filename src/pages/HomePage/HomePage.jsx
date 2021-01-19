@@ -6,7 +6,11 @@ import "./HomePage.scss";
 
 const HomePage = () => {
   return (
-    <div>
+    <div
+      style={{
+        marginTop: "60px",
+      }}
+    >
       <div className="headerHome">
         <HeaderHome />
       </div>
