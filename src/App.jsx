@@ -21,6 +21,7 @@ import Register from "./pages/Register/Register";
 import ShopPage from "./pages/ShopPage/ShopPage";
 import Planning from "./pages/Planning/Planning";
 import Toutes from "./pages/ToutesEnRoller/Toutes";
+import AdminPageNews from "./pages/AdminPageNews/AdminPageNews";
 
 // import Components
 import NavBar from "./components/NavBarSwitch";
@@ -57,8 +58,9 @@ function App() {
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/toutes" component={Toutes} />
-            <AdminRoute exact path="/shop" component={ShopPage} />
             <PrivateRoute exact path="/planning" component={Planning} />
+            <AdminRoute exact path="/shop" component={ShopPage} />
+            <AdminRoute exact path="/admin/news" component={AdminPageNews} />
           </Switch>
           <Footer />
         </div>

@@ -1,0 +1,18 @@
+.adminPageNews {
+  &__globalContainer {
+    min-height: 82vh;
+    width: 100%;
+    padding: 40px;
+  }
+
+  &__titlePage {
+    color: #20b82c;
+    font-size: 26px;
+    font-weight: 400;
+  }
+
+  &__container {
+    margin: 40px 0;
+    display: flex;
+  }
+}
