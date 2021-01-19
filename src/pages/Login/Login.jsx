@@ -1,81 +1,116 @@
 /* eslint-disable object-shorthand */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState } from "react";
-import axios from "axios";
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { loginUser } from "../../actions/authActions";
+
 import logo from "./assets/LOGO.gif";
 import "./Login.scss";
 
-const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [isConnected, setIsConnected] = useState(null);
+class Login extends Component {
+  constructor() {
+    super();
+    this.state = {
+      email: "",
+      password: "",
+    };
+  }
 
-  const handleSubmit = () => {
-    axios
-      .post("http://localhost:8000/api/users/login", {
-        email,
-        password,
-      })
-      .then((res) => {
-        setIsConnected(res.data);
-      });
+  componentDidMount() {
+    const { history, auth } = this.props;
+    // If logged in and user navigates to Login page, should redirect them to dashboard
+    if (auth.isAuthenticated) {
+      history.push("/");
+    }
+  }
+
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    const { history } = this.props;
+    if (nextProps.auth.isAuthenticated) {
+      history.push("/planning");
+    }
+  }
+
+  onChange = (e) => {
+    this.setState({ [e.target.id]: e.target.value });
   };
 
-  return (
-    <main className="page-container">
-      <div className="connection-container">
-        <div className="connection-boxOne">
-          <div className="connection-title">
-            <h1>Connexion</h1>
-            <p>Veuillez vous identifier pour accéder à votre profil</p>
-          </div>
-          <form className="QuoteForm">
-            <label htmlFor="email">Email</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              value={email}
-              onChange={(event) => {
-                setEmail(event.target.value);
-              }}
-            />
-            <label htmlFor="password">Mot de passe</label>
-            <input
-              id="password"
-              name="password"
-              type="password"
-              value={password}
-              onChange={(event) => {
-                setPassword(event.target.value);
-              }}
-            />
-            <div className="remembermeContainer">
-              <div className="rememberme">
-                <input id="rememberme" name="rememberme" type="checkbox" />
-                <label htmlFor="rememberme">Se souvenir de moi</label>
-              </div>
-              <div className="forgotpassword">
-                <span>Mot de passe oublié ?</span>
-              </div>
+  onSubmit = (e) => {
+    e.preventDefault();
+    const { email, password } = this.state;
+    // eslint-disable-next-line no-shadow
+    const { loginUser } = this.props;
+
+    const userData = {
+      email: email.toLowerCase(),
+      password: password,
+    };
+
+    loginUser(userData);
+  };
+
+  render() {
+    const { email, password } = this.state;
+    return (
+      <main className="page-container">
+        <div className="connection-container">
+          <div className="connection-boxOne">
+            <div className="connection-title">
+              <h1>Connexion</h1>
+              <p>Veuillez vous identifier pour accéder à votre profil</p>
             </div>
-            <button type="button" onClick={handleSubmit}>
-              Connexion
-            </button>
-          </form>
+            <form noValidate onSubmit={this.onSubmit} className="QuoteForm">
+              <label htmlFor="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                value={email}
+                onChange={this.onChange}
+              />
+              <label htmlFor="password">Mot de passe</label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                value={password}
+                onChange={this.onChange}
+              />
+              <div className="remembermeContainer">
+                <div className="rememberme">
+                  <input id="rememberme" name="rememberme" type="checkbox" />
+                  <label htmlFor="rememberme">Se souvenir de moi</label>
+                </div>
+                <div className="forgotpassword">
+                  <span>Mot de passe oublié ?</span>
+                </div>
+              </div>
+              <button type="submit">Connexion</button>
+            </form>
+          </div>
+          <div className="connection-boxTwo">
+            <div
+              className="logoConnection"
+              style={{
+                backgroundImage: `url(${logo})`,
+              }}
+            />
+          </div>
         </div>
-        <div className="connection-boxTwo">
-          <div
-            className="logoConnection"
-            style={{
-              backgroundImage: `url(${logo})`,
-            }}
-          />
-          <p>{isConnected}</p>
-        </div>
-      </div>
-    </main>
-  );
+      </main>
+    );
+  }
+}
+
+Login.propTypes = {
+  loginUser: PropTypes.func.isRequired,
+  history: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  auth: PropTypes.oneOfType([PropTypes.object]).isRequired,
 };
 
-export default Login;
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
+
+export default connect(mapStateToProps, { loginUser })(Login);

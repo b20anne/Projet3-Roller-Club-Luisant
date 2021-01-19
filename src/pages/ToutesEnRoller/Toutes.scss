@@ -1,0 +1,30 @@
+.LogoToutes{
+    display:flex;
+}
+
+.TERH1{
+    display:flex;
+    align-self: center;
+    color: rgb(202, 19, 202);
+    width: 600px;
+    justify-content: center;
+}
+
+.TERDesc{
+    margin: 60px;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    align-self: center;
+}
+
+.TERRoll{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.TERLogos{
+    display: flex;
+    justify-content: space-evenly;
+}
