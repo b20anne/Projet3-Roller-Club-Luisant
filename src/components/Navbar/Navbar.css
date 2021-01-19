@@ -1,3 +1,7 @@
+.Sova {
+  height: 70px;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -39,7 +43,7 @@ nav {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   nav {
     display: flex;
     justify-content: space-between;

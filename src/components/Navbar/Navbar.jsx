@@ -8,7 +8,7 @@ import logoNav from "../assets/logoNav.gif";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <div>
+    <div className="Sova">
       <nav>
         <div
           className="logoNavbar"

@@ -20,9 +20,10 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import ShopPage from "./pages/ShopPage/ShopPage";
 import Planning from "./pages/Planning/Planning";
+import Toutes from "./pages/ToutesEnRoller/Toutes";
 
 // import Components
-import Navbar from "./components/Navbar/Navbar";
+import NavBar from "./components/NavBarSwitch";
 import Footer from "./components/Footer/Footer";
 
 // Check for token to keep user logged in
@@ -50,11 +51,12 @@ function App() {
     <Provider store={store}>
       <Router>
         <div className="App" id="app">
-          <Navbar />
+          <NavBar />
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
+            <Route exact path="/toutes" component={Toutes} />
             <AdminRoute exact path="/shop" component={ShopPage} />
             <PrivateRoute exact path="/planning" component={Planning} />
           </Switch>
