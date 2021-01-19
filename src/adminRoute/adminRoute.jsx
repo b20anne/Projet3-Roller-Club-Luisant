@@ -9,13 +9,17 @@ const PrivateRoute = ({ component: Component, auth, ...rest }) => {
   const decoded = jwtDecode(token);
   return (
     <Route
+      // eslint-disable-next-line react/jsx-props-no-spreading
       {...rest}
-      render={(props) =>
-        auth.isAuthenticated === true && decoded.id === 1 ? (
-          <Component {...props} />
-        ) : (
-          <Redirect to="/login" />
-        )
+      render={
+        (props) =>
+          auth.isAuthenticated === true && decoded.id === 1 ? (
+            // eslint-disable-next-line react/jsx-props-no-spreading
+            <Component {...props} />
+          ) : (
+            <Redirect to="/login" />
+          )
+        // eslint-disable-next-line react/jsx-curly-newline
       }
     />
   );
