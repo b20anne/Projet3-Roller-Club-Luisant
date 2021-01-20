@@ -6,8 +6,8 @@
   align-items: center;
   height: 80px;
   width: 100%;
-  margin: 0px;
-  border: 0px;
+  margin: none;
+  border: none;
 }
 
 @media screen and (max-width: 960px) {

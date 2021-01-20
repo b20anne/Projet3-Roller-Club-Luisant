@@ -23,7 +23,7 @@ export default function Navbar() {
           <Link to="/club">
             <li className="iteems">Le Club</li>
           </Link>
-          <Link to="/réglement">
+          <Link to="/reglement">
             <li className="iteems">Réglement</li>
           </Link>
           <Link to="/roues">

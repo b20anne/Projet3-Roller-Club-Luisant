@@ -1,0 +1,59 @@
+.RegleDiv{
+    display: flex;
+    margin: 10px;
+}
+
+.Allrules{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.RulesSpo{
+    background-color: lightblue;
+    border-radius: 10px;
+}
+
+.RulesAcc{
+    background-color:  lightgreen;
+    border-radius: 10px;
+}
+
+.RulesTrain{
+    background-color:lightcoral;
+    border-radius: 10px;
+}
+
+.RulesSani{
+    border: black;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+.LifeRules{
+    text-decoration: underline;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.RegleListP{
+    text-decoration: underline;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.RuleLists{
+    list-style: inside;
+    margin: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.BoldLine{
+    font-weight: bold;
+    text-align: center;
+}
+
+.RulesP{
+    text-align: center;
+}
