@@ -6,7 +6,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 .mainHomeLeft {
     width: 100%;
@@ -14,6 +14,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+.mainHomeEvent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .coursTitleHome {

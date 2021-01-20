@@ -32,7 +32,7 @@ const TableUsers = ({ users }) => {
             <td data-th="Âge">12 ans</td>
           </tr>
           {users.map((el) => (
-            <tr>
+            <tr key={el.id}>
               <td data-th="Name">{el.lastName}</td>
               <td data-th="Prénom">{el.firstName}</td>
               <td data-th="Status">Baby</td>
