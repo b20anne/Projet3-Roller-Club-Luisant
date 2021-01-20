@@ -2,6 +2,7 @@ import React from "react";
 import Actualites from "../../components/Actualites/Actualites";
 import CoursHome from "../../components/coursHome/CoursHome";
 import HeaderHome from "./HeaderHome/HeaderHome";
+import EventHome from "../../components/EventHome/EventHome";
 import "./HomePage.scss";
 
 const HomePage = () => {
@@ -31,6 +32,9 @@ const HomePage = () => {
         <div className="mainHomeRight">
           <Actualites />
         </div>
+      </div>
+      <div className="mainHomeEvent">
+        <EventHome />
       </div>
     </div>
   );
