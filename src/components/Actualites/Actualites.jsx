@@ -39,7 +39,7 @@ class Actualites extends React.Component {
         {actualities.map((actuality) => (
           <SingleActualite
             key={actuality.id}
-            picture={`http://localhost:8000/public/pictures/${actuality.name}`}
+            picture={`http://localhost:8000/public/images/${actuality.name}`}
             alt={actuality.alt}
             title={actuality.title}
             description={actuality.description}
