@@ -28,7 +28,7 @@ const HeaderHome = () => {
         </div>
         <div className="otherButtons">
           <button as="input" type="button" className="market">
-            <p>Catalogue Produits</p>
+            <p>Catalogue des Produits</p>
             <div className="Basket">
               <BiBasket size="3em" />
             </div>
