@@ -57,7 +57,8 @@ function App() {
             <Route exact path="/" component={HomePage} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
-            <Route exact path="/toutes" component={Toutes} />
+            <Route exact path="/toutes_en_roller" component={Toutes} />
+            <AdminRoute exact path="/shop" component={ShopPage} />
             <PrivateRoute exact path="/planning" component={Planning} />
             <AdminRoute exact path="/shop" component={ShopPage} />
             <AdminRoute exact path="/admin/news" component={AdminPageNews} />

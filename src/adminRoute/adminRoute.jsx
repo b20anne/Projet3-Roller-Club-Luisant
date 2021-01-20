@@ -1,19 +1,16 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
-import jwtDecode from "jwt-decode";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
-const PrivateRoute = ({ component: Component, auth, ...rest }) => {
-  const token = localStorage.jwtToken;
-  const decoded = jwtDecode(token);
+const AdminRoute = ({ component: Component, auth, ...rest }) => {
   return (
     <Route
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...rest}
       render={
         (props) =>
-          auth.isAuthenticated === true && decoded.id === 1 ? (
+          auth.isAuthenticated === true && auth.user.id === 1 ? (
             // eslint-disable-next-line react/jsx-props-no-spreading
             <Component {...props} />
           ) : (
@@ -25,13 +22,13 @@ const PrivateRoute = ({ component: Component, auth, ...rest }) => {
   );
 };
 
-PrivateRoute.propTypes = {
+AdminRoute.propTypes = {
   auth: PropTypes.oneOfType([PropTypes.object]).isRequired,
-  component: PropTypes.func.isRequired,
+  component: PropTypes.oneOfType([PropTypes.object]).isRequired,
 };
 
 const mapStateToProps = (state) => ({
   auth: state.auth,
 });
 
-export default connect(mapStateToProps)(PrivateRoute);
+export default connect(mapStateToProps)(AdminRoute);
