@@ -1,26 +1,40 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import { BiBasket } from "react-icons/bi";
 import { RiCalendarEventFill } from "react-icons/ri";
+import { logoutUser } from "../../../actions/authActions";
 import Logo from "../../../components/HeaderComponent/Logo.png";
 import RollerVideo from "../../../components/HeaderComponent/Video/Video";
 import "./HeaderHome.scss";
 
-const HeaderHome = () => {
+const HeaderHome = ({ auth, logoutUser }) => {
   return (
     <header className="container">
       <div className="leftDiv">
         <div>
           <img src={Logo} alt="logo" />
         </div>
-        <div className="doubleBttn">
-          <div className="connect">
-            <Link to="/login">Connexion</Link>
+        {auth.isAuthenticated === true ? (
+          <button
+            type="button"
+            onClick={() => {
+              logoutUser();
+            }}
+          >
+            logout
+          </button>
+        ) : (
+          <div className="doubleBttn">
+            <div className="connect">
+              <Link to="/login">Connexion</Link>
+            </div>
+            <div className="register">
+              <Link to="/register">Inscription</Link>
+            </div>
           </div>
-          <div className="register">
-            <Link to="/register">Inscription</Link>
-          </div>
-        </div>
+        )}
       </div>
       <div className="rightDiv">
         <div className="RollVid">
@@ -48,4 +62,13 @@ const HeaderHome = () => {
   );
 };
 
-export default HeaderHome;
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
+
+HeaderHome.propTypes = {
+  auth: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  logoutUser: PropTypes.func.isRequired,
+};
+
+export default connect(mapStateToProps, { logoutUser })(HeaderHome);

@@ -1,9 +1,18 @@
 import React from "react";
+import axios from "axios";
 
 import "./CardPostNewsUI.scss";
 import { BsFillTrashFill, BsPencil } from "react-icons/bs";
 
-function CardPostNewsUI({ image }) {
+function CardPostNewsUI({ image, id }) {
+  function handleDelete() {
+    axios
+      .delete(`http://localhost:8000/api/actualities/news/${id}`)
+      .then((res) => {
+        console.log("ahahah");
+      });
+  }
+
   return (
     <div
       style={{
@@ -14,7 +23,7 @@ function CardPostNewsUI({ image }) {
       className="CardPostNewsUI__globalContainer"
     >
       <div className="CardPostNewsUI__iconTopImg">
-        <BsFillTrashFill />
+        <BsFillTrashFill onClick={handleDelete} />
         <BsPencil />
       </div>
     </div>

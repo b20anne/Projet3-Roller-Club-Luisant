@@ -8,8 +8,8 @@ import "./FormNews.scss";
 function FormNews() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [filename, setFileName] = useState("");
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
+  const [titleName, setTitleName] = useState("");
+  const [descriptionName, setDescriptionName] = useState("");
 
   const onChangeHandle = (event) => {
     setSelectedFile(event.target.files[0]);
@@ -24,9 +24,8 @@ function FormNews() {
       .post("http://localhost:8000/api/admin/", data)
       .then((res) => res.data)
       .then((res) => {
-        console.log(res);
         setFileName(res.filename);
-        alert(`Image ${res.filename} téléchargé avec succès.`);
+        alert(`Image ${res.filename} téléchargée avec succès.`);
       })
       .catch((err) => {
         alert(err);
@@ -35,21 +34,22 @@ function FormNews() {
 
   function onSubmit(e) {
     e.preventDefault();
-    onClickHandle();
-
-    if (!title || !description) {
-      alert(
-        "Vous devez renseigner au minimum un nom de partenaire, et une description."
-      );
+    if (!titleName && !descriptionName) {
+      alert("Vous devez renseigner un titre et une description");
     } else {
+      onClickHandle();
+      const newsData = {
+        title: titleName,
+        description: descriptionName,
+        name: filename,
+        date: "12/01/2021",
+        alt: filename,
+      };
+
       axios
-        .post("http://localhost:8000/api/actus", {
-          Title: title,
-          Description: description,
-        })
+        .post("http://localhost:8000/api/actualities/add", newsData)
         .then((res) => res.data)
         .catch((err) => {
-          console.log();
           alert(err.response.data.errorMessage);
         });
     }
@@ -64,19 +64,19 @@ function FormNews() {
           placeholder="Entrez le titre de votre post"
           name="title"
           id="title"
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={(e) => setTitleName(e.target.value)}
         />
         <textarea
           className="formNews__inputDesc"
           name="description"
           id="description"
           placeholder="Entrez la description du post"
-          onChange={(e) => setDescription(e.target.value)}
+          onChange={(e) => setDescriptionName(e.target.value)}
           rows="10"
         />
 
         <label htmlFor="file-upload" className="formNews__upload">
-          cliquer pour ajouté une image
+          cliquez pour ajouter une image
           <input
             id="file-upload"
             type="file"
@@ -88,7 +88,7 @@ function FormNews() {
         <button className="formNews__btn" type="submit">
           <div className="formNews__containerBtn">
             <MdPublish className="formNews__icon" />
-            <p>Ajouté le post</p>
+            <p>Ajouter le post</p>
           </div>
         </button>
       </div>
