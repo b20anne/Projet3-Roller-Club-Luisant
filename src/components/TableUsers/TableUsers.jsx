@@ -5,6 +5,7 @@ import "./TableUsers.scss";
 const TableUsers = ({ users }) => {
   return (
     <div className="tableUsersContainer">
+      <h1>Tableaux des utilisateurs : </h1>
       <table className="rwd-table">
         <tbody>
           <tr>

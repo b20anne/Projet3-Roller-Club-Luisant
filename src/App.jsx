@@ -23,6 +23,7 @@ import Planning from "./pages/Planning/Planning";
 import Toutes from "./pages/ToutesEnRoller/Toutes";
 import AdminPageNews from "./pages/AdminPageNews/AdminPageNews";
 import Regle from "./pages/Reglement/Reglement";
+import CoursBaby from "./pages/Cours/CoursBaby";
 
 // import Components
 import NavBar from "./components/Navbar/Navbar";
@@ -61,15 +62,12 @@ function App() {
             <Route exact path="/login" component={Login} />
             <Route exact path="/toutes_en_roller" component={Toutes} />
             <Route exact path="/réglement" component={Regle} />
+            <Route exact path="/cours/baby" component={CoursBaby} />
             <AdminRoute exact path="/shop" component={ShopPage} />
             <PrivateRoute exact path="/planning" component={Planning} />
             <AdminRoute exact path="/shop" component={ShopPage} />
             <AdminRoute exact path="/admin/news" component={AdminPageNews} />
-            <AdminRoute
-              exact
-              path="/admin/dashboarduser"
-              component={DashboardUsers}
-            />
+            <AdminRoute exact path="/admin" component={DashboardUsers} />
           </Switch>
           <Footer />
         </div>
