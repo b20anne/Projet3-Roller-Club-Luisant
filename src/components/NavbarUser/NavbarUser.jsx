@@ -16,10 +16,10 @@ export default function Navbar() {
           }}
         />
         <ul className="liste">
-          <li className="items">Acceuil</li>
+          <li className="items">Accueil</li>
           <li className="items">Le Club</li>
-          <li className="items">Réglement</li>
-          <li className="items">Les roues de couleurs</li>
+          <li className="items">Règlement</li>
+          <li className="items">Les roues de couleur</li>
         </ul>
         <img src="../assets/image.png" className="profilNavbar" alt="Navbar" />
         <div className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
@@ -37,10 +37,10 @@ export default function Navbar() {
         }}
       >
         <ul className="listeMobile">
-          <li className="itemsMobile">Acceuil</li>
+          <li className="itemsMobile">Accueil</li>
           <li className="itemsMobile">Le Club</li>
-          <li className="itemsMobile">Réglement</li>
-          <li className="itemsMobile">Les roues de couleurs</li>
+          <li className="itemsMobile">Règlement</li>
+          <li className="itemsMobile">Les roues de couleur</li>
           <li className="itemsMobile">Mon compte</li>
           <li className="itemsMobile">Déconnexion</li>
         </ul>

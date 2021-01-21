@@ -22,9 +22,11 @@ import ShopPage from "./pages/ShopPage/ShopPage";
 import Planning from "./pages/Planning/Planning";
 import Toutes from "./pages/ToutesEnRoller/Toutes";
 import AdminPageNews from "./pages/AdminPageNews/AdminPageNews";
+import Regle from "./pages/Reglement/Reglement";
 
 // import Components
-import NavBar from "./components/NavBarSwitch";
+import NavBar from "./components/Navbar/Navbar";
+import DashboardUsers from "./pages/AdminPage/DashboardUsers/DashboardUsers";
 import Footer from "./components/Footer/Footer";
 
 // Check for token to keep user logged in
@@ -58,10 +60,16 @@ function App() {
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/toutes_en_roller" component={Toutes} />
+            <Route exact path="/réglement" component={Regle} />
             <AdminRoute exact path="/shop" component={ShopPage} />
             <PrivateRoute exact path="/planning" component={Planning} />
             <AdminRoute exact path="/shop" component={ShopPage} />
             <AdminRoute exact path="/admin/news" component={AdminPageNews} />
+            <AdminRoute
+              exact
+              path="/admin/dashboarduser"
+              component={DashboardUsers}
+            />
           </Switch>
           <Footer />
         </div>
