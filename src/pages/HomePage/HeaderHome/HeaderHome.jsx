@@ -17,14 +17,17 @@ const HeaderHome = ({ auth, logoutUser }) => {
           <img src={Logo} alt="logo" />
         </div>
         {auth.isAuthenticated === true ? (
-          <button
-            type="button"
-            onClick={() => {
-              logoutUser();
-            }}
-          >
-            logout
-          </button>
+          <div className="logout-container">
+            <button
+              type="button"
+              className="btn-logout"
+              onClick={() => {
+                logoutUser();
+              }}
+            >
+              logout
+            </button>
+          </div>
         ) : (
           <div className="doubleBttn">
             <div className="connect">
