@@ -7,7 +7,7 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <div>
+    <footer>
       <div className="footer">
         <NavLink to="/Copyright">
           <Copyright />
@@ -19,7 +19,7 @@ function Footer() {
         </div>
         <SocialMedia />
       </div>
-    </div>
+    </footer>
   );
 }
 
