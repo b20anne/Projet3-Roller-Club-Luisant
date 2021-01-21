@@ -57,3 +57,9 @@
 .RulesP{
     text-align: center;
 }
+
+@media only screen and (max-width: 800px) {
+    .RegleDiv {
+        flex-direction: column;
+    }
+}

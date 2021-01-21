@@ -65,11 +65,7 @@ function App() {
             <PrivateRoute exact path="/planning" component={Planning} />
             <AdminRoute exact path="/shop" component={ShopPage} />
             <AdminRoute exact path="/admin/news" component={AdminPageNews} />
-            <AdminRoute
-              exact
-              path="/admin/dashboarduser"
-              component={DashboardUsers}
-            />
+            <AdminRoute exact path="/admin" component={DashboardUsers} />
           </Switch>
           <Footer />
         </div>

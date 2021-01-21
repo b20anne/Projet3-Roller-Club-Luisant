@@ -50,12 +50,21 @@ const HeaderHome = ({ auth, logoutUser }) => {
               <BiBasket size="3em" />
             </div>
           </button>
-          <button as="input" type="button" className="calendar">
-            <p>Planning des cours</p>
-            <div className="RiCalendar">
-              <RiCalendarEventFill size="3em" />
-            </div>
-          </button>
+          <Link to="/planning">
+            <button
+              as="input"
+              type="button"
+              className="calendar"
+              style={{
+                cursor: "pointer",
+              }}
+            >
+              <p>Planning des cours</p>
+              <div className="RiCalendar">
+                <RiCalendarEventFill size="3em" />
+              </div>
+            </button>
+          </Link>
         </div>
       </div>
       <h1 className="slogan">

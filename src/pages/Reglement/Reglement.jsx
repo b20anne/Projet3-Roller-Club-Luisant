@@ -3,7 +3,15 @@ import "./Reglement.scss";
 
 const Regle = () => {
   return (
-    <div>
+    <div
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+      }}
+    >
       <h2 className="LifeRules">REGLES DE VIE</h2>
       <div className="RegleDiv">
         <div className="AllRules">

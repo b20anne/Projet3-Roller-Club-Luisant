@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import axios from "axios";
 
@@ -9,7 +10,7 @@ function CardPostNewsUI({ image, id }) {
     axios
       .delete(`http://localhost:8000/api/actualities/news/${id}`)
       .then((res) => {
-        console.log("ahahah");
+        console.log(res);
       });
   }
 
