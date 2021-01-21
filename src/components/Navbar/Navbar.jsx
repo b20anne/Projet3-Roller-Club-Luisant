@@ -8,7 +8,11 @@ import logoNav from "../assets/logoNav.gif";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <div className="Sova">
+    <div
+      style={{
+        height: "40px",
+      }}
+    >
       <nav>
         <div
           className="logoNavbar"
@@ -45,16 +49,16 @@ export default function Navbar() {
         }}
       >
         <ul className="listeMobiles">
-          <Link to="/">
+          <Link to="/" onClick={() => setMenuOpen(!menuOpen)}>
             <li className="itemsMobiles">Accueuil</li>
           </Link>
-          <Link to="/club">
+          <Link to="/club" onClick={() => setMenuOpen(!menuOpen)}>
             <li className="itemsMobiles">Le Club</li>
           </Link>
-          <Link to="/réglement">
+          <Link to="/réglement" onClick={() => setMenuOpen(!menuOpen)}>
             <li className="itemsMobiles">Réglement</li>
           </Link>
-          <Link to="/roues">
+          <Link to="/roues" onClick={() => setMenuOpen(!menuOpen)}>
             <li className="itemsMobiles">Les roues de couleurs</li>
           </Link>
           <li className="itemsMobiles">
@@ -66,7 +70,9 @@ export default function Navbar() {
                   height: "100%",
                 }}
               >
-                <Link to="/login">Connexion</Link>
+                <Link to="/login" onClick={() => setMenuOpen(!menuOpen)}>
+                  Connection
+                </Link>
               </div>
               <div
                 style={{
@@ -76,7 +82,9 @@ export default function Navbar() {
                   color: "black",
                 }}
               >
-                <Link to="/register">Inscription</Link>
+                <Link to="/register" onClick={() => setMenuOpen(!menuOpen)}>
+                  Inscription
+                </Link>
               </div>
             </div>
           </li>

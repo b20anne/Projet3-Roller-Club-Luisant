@@ -23,7 +23,8 @@ import Planning from "./pages/Planning/Planning";
 import Toutes from "./pages/ToutesEnRoller/Toutes";
 
 // import Components
-import NavBar from "./components/NavBarSwitch";
+import NavBar from "./components/Navbar/Navbar";
+import DashboardUsers from "./pages/AdminPage/DashboardUsers/DashboardUsers";
 import Footer from "./components/Footer/Footer";
 
 // Check for token to keep user logged in
@@ -59,6 +60,12 @@ function App() {
             <Route exact path="/toutes_en_roller" component={Toutes} />
             <AdminRoute exact path="/shop" component={ShopPage} />
             <PrivateRoute exact path="/planning" component={Planning} />
+            <AdminRoute exact path="/shop" component={ShopPage} />
+            <AdminRoute
+              exact
+              path="/admin/dashboarduser"
+              component={DashboardUsers}
+            />
           </Switch>
           <Footer />
         </div>

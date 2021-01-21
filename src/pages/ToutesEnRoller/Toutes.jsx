@@ -9,7 +9,11 @@ import "./Toutes.scss";
 
 const Toutes = () => {
   return (
-    <div>
+    <div
+      style={{
+        margin: "70px 0",
+      }}
+    >
       <div className="LogoToutes">
         <img src={LogoTER} alt="TER" />
         <h1 className="TERH1">Toutes en Roller</h1>
