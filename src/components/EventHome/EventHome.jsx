@@ -15,9 +15,10 @@ const EventHome = () => {
       <div className="TERText">
         <h3>Toutes en Roller</h3>
         <p className="TERTextD">
-          Inspiré par le projet TouteSport de la Fédération Nationale des Toutes
-          en Roller met en avant la performance sportive des athlètes féminines
-          au travers des courses de Roller phares et populaires. <br /> <br />
+          Inspiré par le projet TouteSport de la Fédération Nationale des CDIFF,
+          Toutes en Roller met en avant la performance sportive des athlètes
+          féminines au travers des courses de Roller phares et populaires.
+          <br /> <br />
           Une équipe composée de dix patineuses de haut niveau représentera
           Toutes en Roller sur l’épreuve mythique des 24h du Mans. Une
           manifestation rassemblant chaque année plus de 100 000 participants.
