@@ -6,6 +6,7 @@ import axios from "axios";
 import CardPostNewsUI from "./CardPostNewsUI/CardPostNewsUI";
 import CardPostNews from "./CardPostNews/CardPostNews";
 import Form from "./FormNews/FormNews";
+import NavigationDashboard from "../../components/NavigationDashboard/NavigationDashboard";
 
 function AdminPageNews() {
   const [isVisibleForm, setIsVisibleForm] = useState(false);
@@ -23,20 +24,23 @@ function AdminPageNews() {
   }
 
   return (
-    <div className="adminPageNews__globalContainer">
-      <h4 className="adminPageNews__titlePage">Ajoutez une actualité</h4>
-      <div className="adminPageNews__container">
-        <CardPostNews handleClick={handlePost} />
-        {dataPost.map((el) => {
-          return (
-            <CardPostNewsUI
-              image="https://cdn.paris.fr/paris/2020/05/12/huge-67a65318e89c13e2b63ddbe2bb89cc3c.jpg"
-              id={el.id}
-            />
-          );
-        })}
+    <div className="dashboardContainer">
+      <NavigationDashboard />
+      <div className="adminPageNews__globalContainer">
+        <h4 className="adminPageNews__titlePage">Ajoutez une actualité</h4>
+        <div className="adminPageNews__container">
+          <CardPostNews handleClick={handlePost} />
+          {dataPost.map((el) => {
+            return (
+              <CardPostNewsUI
+                image="https://cdn.paris.fr/paris/2020/05/12/huge-67a65318e89c13e2b63ddbe2bb89cc3c.jpg"
+                id={el.id}
+              />
+            );
+          })}
+        </div>
+        {isVisibleForm && <Form />}
       </div>
-      {isVisibleForm && <Form />}
     </div>
   );
 }
