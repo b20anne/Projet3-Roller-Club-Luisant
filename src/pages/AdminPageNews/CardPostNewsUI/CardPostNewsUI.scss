@@ -1,0 +1,24 @@
+.CardPostNewsUI {
+  &__globalContainer {
+    height: 10em;
+    width: 8em;
+    filter: grayscale(70%);
+    border-radius: 15px;
+    margin: 0 40px;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+      transition-duration: 0.3s;
+    }
+  }
+
+  &__iconTopImg {
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    font-size: 40px;
+    color: #ffffff;
+  }
+}

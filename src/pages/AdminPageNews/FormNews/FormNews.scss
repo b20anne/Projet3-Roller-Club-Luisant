@@ -1,0 +1,66 @@
+.formNews {
+  &__globalContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__input {
+    width: 40%;
+    height: 40px;
+    padding: 0 15px;
+    border: 1px solid #ccc;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+
+  &__inputDesc {
+    border: 1px solid #ccc;
+    width: 40%;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 10px;
+  }
+
+  &__upload {
+    width: 40%;
+    border: 2px solid #000;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+
+  &__btn {
+    width: 11%;
+    height: 50px;
+    margin-top: 20px;
+    background-color: red;
+    border: 0;
+    border-radius: 10px;
+    color: #ffffff;
+    outline: none;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  &__icon {
+    font-size: 20px;
+    transform: rotate(180deg);
+  }
+
+  &__containerBtn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+// input type file = display: none
+input[type="file"] {
+  display: none;
+}

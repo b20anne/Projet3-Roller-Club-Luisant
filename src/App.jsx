@@ -21,6 +21,7 @@ import Register from "./pages/Register/Register";
 import ShopPage from "./pages/ShopPage/ShopPage";
 import Planning from "./pages/Planning/Planning";
 import Toutes from "./pages/ToutesEnRoller/Toutes";
+import AdminPageNews from "./pages/AdminPageNews/AdminPageNews";
 import Regle from "./pages/Reglement/Reglement";
 
 // import Components
@@ -63,6 +64,7 @@ function App() {
             <AdminRoute exact path="/shop" component={ShopPage} />
             <PrivateRoute exact path="/planning" component={Planning} />
             <AdminRoute exact path="/shop" component={ShopPage} />
+            <AdminRoute exact path="/admin/news" component={AdminPageNews} />
             <AdminRoute
               exact
               path="/admin/dashboarduser"
