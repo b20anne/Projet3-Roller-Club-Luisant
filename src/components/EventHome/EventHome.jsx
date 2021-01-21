@@ -7,8 +7,8 @@ const EventHome = () => {
   return (
     <div className="TERProjet">
       <div>
-        <h1>Les Projets</h1>
-        <img src={TER} className="TERTitleLogo" alt="TER" />
+        <h1 className="TERTitle">Les Projets</h1>
+        <img src={TER} className="TERLogo" alt="TER" />
       </div>
       <div className="TERText">
         <h3>Toutes en Roller</h3>
