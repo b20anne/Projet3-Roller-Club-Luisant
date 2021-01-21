@@ -22,16 +22,16 @@ export default function Navbar() {
         />
         <ul className="listes">
           <Link to="/">
-            <li className="iteems">Acceuil</li>
+            <li className="iteems">Accueil</li>
           </Link>
           <Link to="/club">
             <li className="iteems">Le Club</li>
           </Link>
           <Link to="/réglement">
-            <li className="iteems">Réglement</li>
+            <li className="iteems">Règlement</li>
           </Link>
           <Link to="/roues">
-            <li className="iteems">Les roues de couleurs</li>
+            <li className="iteems">Les roues de couleur</li>
           </Link>
         </ul>
         <div className="menu-butn" onClick={() => setMenuOpen(!menuOpen)}>

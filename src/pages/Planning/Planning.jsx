@@ -6,7 +6,7 @@ import CardUI from "./CardUI/CardUI";
 function Planning() {
   return (
     <div className="planning__globalContainer">
-      <h3 className="planning__titlePlanning">Nos Plannings</h3>
+      <h3 className="planning__titlePlanning">Les Plannings</h3>
       <div className="planning__cardCourse">
         <a
           target="_blank"
