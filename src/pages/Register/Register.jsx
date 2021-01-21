@@ -20,8 +20,8 @@ const Register = () => {
         <div className="registerLeft">
           <div className="registerTitle">
             <div>
-              <h1>Roller CLUB Luisant</h1>
-              <p>Plus que quelques clique avant de vous inscrire !</p>
+              <h1>Roller CLUB de Luisant</h1>
+              <p>Plus que quelques clics avant de vous inscrire !</p>
             </div>
             <div
               className="registerPicture"
@@ -41,7 +41,7 @@ const Register = () => {
           <div className="formContainer">
             <div className="formTitle">
               <h1>Inscription</h1>
-              <h2>Créer votre compte pour accéder à nos offres</h2>
+              <h2>Créez votre compte pour accéder à nos offres</h2>
               <p>
                 Veuillez rentrer vos informations personnelles pour pouvoir
                 créer votre compte.
@@ -124,7 +124,7 @@ const Register = () => {
                 <div className="cgu-checkbox">
                   <input type="checkbox" id="CGU" name="CGU" />
                   <label htmlFor="CGU">
-                    J'accepte les conditions d'utilisations du site
+                    J'accepte les conditions d'utilisation du site
                   </label>
                 </div>
               </div>
@@ -136,7 +136,7 @@ const Register = () => {
                   <label htmlFor="inscription">
                     Déjà inscrit ?{" "}
                     <div className="linktologin">
-                      <Link to="/login">Connectez vous</Link>
+                      <Link to="/login">Connectez-vous</Link>
                     </div>
                   </label>
                 </div>
