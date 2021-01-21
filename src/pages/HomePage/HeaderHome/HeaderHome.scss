@@ -1,151 +1,169 @@
-.container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 .slogan {
-    display: table;
-    width: 100%;
-    color: #F64C02;
-    text-align: center;
-    flex-flow: row nowrap;
+  display: table;
+  width: 100%;
+  color: #f64c02;
+  text-align: center;
+  flex-flow: row nowrap;
 }
 .connect {
-    position: flex;
-    width: 140px;
-    height: 40px;
-    color: white;
-    background: #20B82C;
-    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.60);
-    border-radius: 10px;
-    margin: 15px;
-    border: none;
-    outline: none;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: flex;
+  width: 140px;
+  height: 40px;
+  color: white;
+  background: #20b82c;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  margin: 15px;
+  border: none;
+  outline: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .register {
-    position: flex;
-    width: 140px;
-    height: 40px;
-    color: black;
-    background: white;
-    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.60);
-    border-radius: 10px;
-    margin: 15px;
-    border: none;
-    outline: none;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: flex;
+  width: 140px;
+  height: 40px;
+  color: black;
+  background: white;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  margin: 15px;
+  border: none;
+  outline: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .doubleBttn {
-    display:flex;
-    padding: 2px;
-    margin: 10px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  padding: 2px;
+  margin: 10px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .market {
-    position: relative;
-    width: 200px;
-    height: 120px;
-    color: white;
-    background: #20B82C;
-    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.60);
-    border-radius: 10px;
-    padding: 2px;
-    margin: 15px;
-    border: none;
-    outline:none;
-    font-size: medium;
+  position: relative;
+  width: 200px;
+  height: 120px;
+  color: white;
+  background: #20b82c;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 2px;
+  margin: 15px;
+  border: none;
+  outline: none;
+  font-size: medium;
 }
 
 .calendar {
+  position: relative;
+  width: 200px;
+  height: 120px;
+  color: white;
+  background: #f64c02;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 2px;
+  margin: 15px;
+  border: none;
+  outline: none;
+  font-size: medium;
+}
+
+.otherButtons {
+  margin: 10px;
+  margin-left: 10%;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.Basket {
+  margin-top: 30px;
+  display: flex;
+  padding: 5px;
+  align-content: center;
+}
+
+.RiCalendar {
+  margin-top: 30px;
+  display: flex;
+  padding: 5px;
+  align-content: center;
+}
+
+.RollVid {
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.btn-logout {
+  width: 10rem;
+  height: 2rem;
+  border: 0;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #20b82c;
+  margin-top: 15px;
+}
+
+.logout-container {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 760px) and (max-width: 900px) {
+  .leftDiv {
+    display: none;
+  }
+  .rightDiv {
+    align-items: flex-end;
+  }
+  .RollVid {
     position: relative;
-    width: 200px;
-    height: 120px;
-    color: white;
-    background: #F64C02;
-    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.60);
-    border-radius: 10px;
-    padding: 2px;
-    margin: 15px;
-    border: none;
-    outline: none;
+  }
+  .otherButtons {
+    position: relative;
+    margin-left: 30%;
+    align-self: center;
+  }
+  .market {
+    display: none;
+  }
+  .calendar {
+    align-self: center;
+  }
+  .slogan {
     font-size: medium;
+  }
 }
 
-.otherButtons{
-    margin: 10px;
-    margin-left: 10%;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-}
-
-.Basket{
-    margin-top: 30px;
-    display: flex;
-    padding: 5px;
-    align-content: center;
-}
-
-.RiCalendar{
-    margin-top: 30px;
-    display: flex;
-    padding: 5px;
-    align-content: center;
-}
-
-.RollVid{
-    padding: 5px;
-    border-radius: 10px;
-}
-
-@media screen and (min-width:760px) and (max-width:900px){
-    .leftDiv{
-        display:none;
-    }
-    .rightDiv{
-        align-items: flex-end;
-    }
-    .RollVid{
-        position: relative;
-    }
-    .otherButtons{
-        position: relative;
-        margin-left: 30%;
-        align-self: center;
-    }
-    .market{
-        display: none;
-    }
-    .calendar{
-        align-self: center;
-    }
-    .slogan{
-        font-size: medium;
-    }
-}
-
-@media screen and (max-width:760px){
-    .leftDiv{
-        display: none;
-    }
-    .RollVid{
-        display: none;
-    }
-    .market{
-        display: none;
-    }
-    .otherButtons{
-        margin-left: none;
-    }
+@media screen and (max-width: 760px) {
+  .leftDiv {
+    display: none;
+  }
+  .RollVid {
+    display: none;
+  }
+  .market {
+    display: none;
+  }
+  .otherButtons {
+    margin-left: none;
+  }
 }
