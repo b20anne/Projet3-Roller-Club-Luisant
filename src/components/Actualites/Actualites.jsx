@@ -1,6 +1,9 @@
 import React from "react";
 import axios from "axios";
+import { Slide } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
 import "./Actualites.scss";
+// eslint-disable-next-line import/no-named-as-default
 import SingleActualite from "./SingleActualite";
 
 class Actualites extends React.Component {
@@ -34,17 +37,37 @@ class Actualites extends React.Component {
   render() {
     const { actualities } = this.state;
     return (
-      <div className="actu-card">
-        <h1>Actualités</h1>
-        {actualities.map((actuality) => (
-          <SingleActualite
-            key={actuality.id}
-            picture={`http://localhost:8000/public/images/${actuality.name}`}
-            alt={actuality.alt}
-            title={actuality.title}
-            description={actuality.description}
-          />
-        ))}
+      <div>
+        <section className="actu-card">
+          <h1>Actualités</h1>
+          {actualities.map((actuality) => (
+            <SingleActualite
+              key={actuality.id}
+              picture={`http://localhost:8000/public/images/${actuality.name}`}
+              alt={actuality.alt}
+              title={actuality.title}
+              description={actuality.description}
+            />
+          ))}
+        </section>
+        <section className="actu-card-mobile">
+          <h1>Actualités</h1>
+          <div>
+            <Slide>
+              {actualities.map((actuality) => (
+                <div>
+                  <SingleActualite
+                    key={actuality.id}
+                    picture={`http://localhost:8000/public/images/${actuality.name}`}
+                    alt={actuality.alt}
+                    title={actuality.title}
+                    description={actuality.description}
+                  />
+                </div>
+              ))}
+            </Slide>
+          </div>
+        </section>
       </div>
     );
   }
