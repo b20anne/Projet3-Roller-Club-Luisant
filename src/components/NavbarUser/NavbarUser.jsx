@@ -21,7 +21,11 @@ export default function Navbar() {
           <li className="items">Règlement</li>
           <li className="items">Les roues de couleur</li>
         </ul>
-        <img src="../assets/image.png" className="profilNavbar" alt="Navbar" />
+        <img
+          src="https://oasys.ch/wp-content/uploads/2019/03/photo-avatar-profil.png"
+          className="profilNavbar"
+          alt="Navbar"
+        />
         <div className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
           <div className="menu-btn_burger">
             <div />
