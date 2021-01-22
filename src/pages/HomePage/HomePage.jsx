@@ -27,12 +27,14 @@ const HomePage = () => {
           >
             <h2 className="coursTitleHome">Nos Cours</h2>
             <CoursHome />
-            <EventHome />
           </div>
         </div>
         <div className="mainHomeRight">
           <Actualites />
         </div>
+      </div>
+      <div className="mainHomeEvent">
+        <EventHome />
       </div>
     </div>
   );

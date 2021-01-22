@@ -20,7 +20,7 @@ const Register = () => {
         <div className="registerLeft">
           <div className="registerTitle">
             <div>
-              <h1>Roller CLUB de Luisant</h1>
+              <h1>Roller Club Luisant</h1>
               <p>Plus que quelques clics avant de vous inscrire !</p>
             </div>
             <div
