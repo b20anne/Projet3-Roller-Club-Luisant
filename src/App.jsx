@@ -26,7 +26,7 @@ import Regle from "./pages/Reglement/Reglement";
 import CoursBaby from "./pages/Cours/CoursBaby";
 
 // import Components
-import NavBar from "./components/Navbar/Navbar";
+import NavbarGlobal from "./components/NavbarGlobal/NavbarGlobal";
 import DashboardUsers from "./pages/AdminPage/DashboardUsers/DashboardUsers";
 import Footer from "./components/Footer/Footer";
 
@@ -55,7 +55,7 @@ function App() {
     <Provider store={store}>
       <Router>
         <div className="App" id="app">
-          <NavBar />
+          <NavbarGlobal />
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/register" component={Register} />
