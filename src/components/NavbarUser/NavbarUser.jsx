@@ -7,7 +7,7 @@ import logoNav from "../assets/logoNav.gif";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <div>
+    <>
       <nav>
         <div
           className="logoNav"
@@ -49,6 +49,6 @@ export default function Navbar() {
           <li className="itemsMobile">Déconnexion</li>
         </ul>
       </div>
-    </div>
+    </>
   );
 }
