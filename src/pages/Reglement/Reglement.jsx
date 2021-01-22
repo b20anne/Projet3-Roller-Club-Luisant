@@ -97,7 +97,7 @@ const Regle = () => {
 
           <p className="RulesPSani">
             En tant qu’association, il est de notre devoir de faire respecter
-            les les mesures d’hygiène instaurées par la Fédération Française de
+            les mesures d’hygiène instaurées par la Fédération Française de
             Roller Skateboard et notre gouvernement face à la covid-19.
             <br />
             Qu’il s’agisse d’un adhérent, d’un accompagnateur ou d’un encadrant,
