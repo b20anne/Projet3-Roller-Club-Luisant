@@ -27,12 +27,7 @@ class Login extends Component {
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     const { history } = this.props;
-    if (
-      nextProps.auth.isAuthenticated === true &&
-      nextProps.auth.user.id === 1
-    ) {
-      history.push("/admin");
-    } else if (nextProps.auth.isAuthenticated) {
+    if (nextProps.auth.isAuthenticated) {
       history.push("/planning");
     }
   }
