@@ -48,12 +48,13 @@ const Roues = () => {
         </li>
       </ul>
       <div>
-        <h3>La roue jaune</h3>
+        <h3 className="RoueColorT">La roue jaune</h3>
         <div className="RoueColorDiv">
           <img src={RoueJ} alt="Roue Jaune" />
+          <p className="RoueBold">DÉCOUVRIR</p>
           <p className="RoueDesc">
-            DÉCOUVRIR – Ce test valide la capacité à utiliser ses rollers en
-            milieu sécurisé, sans contrainte de vitesse. Comme il fixe des bases
+            Ce test valide la capacité à utiliser ses rollers en milieu
+            sécurisé, sans contrainte de vitesse. Comme il fixe des bases
             nécessaires à l’apprentissage du roller, les 10 difficultés du
             parcours doivent être réussies pour obtenir cette roue. Notez que le
             patineur dispose de 3 essais pour y parvenir.
@@ -61,56 +62,60 @@ const Roues = () => {
         </div>
       </div>
       <div>
-        <h3>La roue verte</h3>
+        <h3 className="RoueColorT">La roue verte</h3>
         <div className="RoueColorDiv">
           <img src={RoueV} alt="Roue Verte" />
+          <p className="RoueBold">S’INITIER</p>
           <p className="RoueDesc">
-            S’INITIER – Ce test valide la capacité à être autonome en milieu
-            sécurisé, à faible vitesse. Le patineur doit réussir au moins 10 des
-            11 difficultés du parcours pour obtenir cette roue. Il dispose de 2
+            Ce test valide la capacité à être autonome en milieu sécurisé, à
+            faible vitesse. Le patineur doit réussir au moins 10 des 11
+            difficultés du parcours pour obtenir cette roue. Il dispose de 2
             essais pour y parvenir.
           </p>
         </div>
       </div>
       <div>
-        <h3>La roue bleue</h3>
+        <h3 className="RoueColorT">La roue bleue</h3>
         <div className="RoueColorDiv">
           <img src={RoueB} alt="Roue Bleue" />
+          <p className="RoueBold">PROGRESSER</p>
           <p className="RoueDesc">
-            PROGRESSER – Ce test valide la capacité à être agile en milieu
-            sécurisé, à vitesse modérée. Le patineur doit réussir au moins 12
-            des 13 difficultés du parcours pour obtenir cette roue. Il dispose
-            de 2 essais pour y parvenir. La roue bleue est également le niveau
+            Ce test valide la capacité à être agile en milieu sécurisé, à
+            vitesse modérée. Le patineur doit réussir au moins 12 des 13
+            difficultés du parcours pour obtenir cette roue. Il dispose de 2
+            essais pour y parvenir. La roue bleue est également le niveau
             technique requis pour valider un BIF ou un BEF.
           </p>
         </div>
       </div>
       <div>
-        <h3>Les roues rouges</h3>
+        <h3 className="RoueColorT">Les roues rouges</h3>
         <div className="RoueColorDiv">
           <img src={RoueR} alt="Roue Rouge" />
+          <p className="RoueBold">SE SPÉCIALISER</p>
           <p className="RoueDesc">
-            SE SPÉCIALISER – Comme les clubs n’évoluent pas tous en gymnase, la
-            roue rouge se décline dans 3 lieux de pratique : gymnase, skatepark
-            et urbain. Chacun offre son lot d’habiletés techniques spécifiques à
-            valider grâce à ces tests. La roue rouge est également le niveau
-            technique requis pour valider le CQP. Pour obtenir cette roue, le
-            patineur doit réussir au moins 8 des 10 difficultés et ne dispose
-            que d’un essai pour y parvenir.
+            Comme les clubs n’évoluent pas tous en gymnase, la roue rouge se
+            décline dans 3 lieux de pratique : gymnase, skatepark et urbain.
+            Chacun offre son lot d’habiletés techniques spécifiques à valider
+            grâce à ces tests. La roue rouge est également le niveau technique
+            requis pour valider le CQP. Pour obtenir cette roue, le patineur
+            doit réussir au moins 8 des 10 difficultés et ne dispose que d’un
+            essai pour y parvenir.
           </p>
         </div>
       </div>
       <div>
-        <h3>Les roues noires</h3>
+        <h3 className="RoueColorT">Les roues noires</h3>
         <div className="RoueColorDiv">
           <img src={RoueN} alt="Roue Noire" />
+          <p className="RoueBold">SE DEPASSER</p>
           <p className="RoueDesc">
-            SE DEPASSER – Ce test consiste à réaliser des défis techniques pour
-            ouvrir le champ des possibles, en fonction des 3 lieux de pratique.
-            Cette roue est conçue pour créer du challenge et alimenter les
-            écoles de roller dans le temps. L’ensemble des difficultés doit être
-            réussi pour obtenir ce test. Le patineur dispose de 3 « jokers »
-            pour retenter des difficultés non validées.
+            Ce test consiste à réaliser des défis techniques pour ouvrir le
+            champ des possibles, en fonction des 3 lieux de pratique. Cette roue
+            est conçue pour créer du challenge et alimenter les écoles de roller
+            dans le temps. L’ensemble des difficultés doit être réussi pour
+            obtenir ce test. Le patineur dispose de 3 « jokers » pour retenter
+            des difficultés non validées.
           </p>
         </div>
       </div>
