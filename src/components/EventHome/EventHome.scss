@@ -1,3 +1,5 @@
+@media only screen and (min-width:900px){
+
 .TERProjet{
     margin-top: 15px;
     margin-bottom: 15px;
@@ -8,13 +10,34 @@
     display: flex;
 }
 
+.TERTitle{
+    text-align: center;
+}
+
 .TERText{
     justify-content: center;
     align-self: center;
     text-align: center;
 }
-
+    
 .TERTextD{
     margin-top: 20px;
     margin-bottom: 20px;
+}
+}
+
+@media only screen and (max-width: 900px){
+
+    .TERProjet{
+        background-color: lightgray;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .TERLogo{
+        display: none;
+    }
+    .TERText{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 }
