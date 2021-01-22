@@ -9,30 +9,46 @@
 }
 
 .RulesSpo{
-    background-color: lightblue;
+    border: 1px solid;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .RulesAcc{
-    background-color:  lightgreen;
+    border: 1px solid;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .RulesTrain{
-    background-color:lightcoral;
+    border: 1px solid;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .RulesSani{
-    border: black;
-    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    background-color: #3d3939;
     border-radius: 10px;
+    margin-left: 10px;
+    justify-content: space-around;
 }
 
 .LifeRules{
+    margin-top: 40px;
     text-decoration: underline;
     justify-content: center;
     text-align: center;
+    margin-bottom: 15px;
+    color: #f64c02;
+}
+
+.SaniRules{
+    text-align: center;
+    color: #f64c02;
+    text-decoration: underline;
     margin-bottom: 15px;
 }
 
@@ -40,6 +56,8 @@
     text-decoration: underline;
     margin-top: 10px;
     margin-left: 15px;
+    text-align: center;
+    color: #20b82c;
 }
 
 .RuleLists{
@@ -52,8 +70,36 @@
 .BoldLine{
     font-weight: bold;
     text-align: center;
+    color: white;
 }
 
 .RulesP{
     text-align: center;
+}
+
+.RegleListPSani{
+    text-decoration: underline;
+    margin-top: 10px;
+    margin-left: 15px;
+    text-align: center;
+    color: #20b82c;
+}
+
+.RuleListsSani{
+    list-style: inside;
+    margin: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.RulesPSani{
+    text-align: center;
+    color: white;
+}
+
+@media only screen and (max-width: 800px) {
+    .RegleDiv {
+        flex-direction: column;
+    }
 }
