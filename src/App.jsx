@@ -22,7 +22,9 @@ import ShopPage from "./pages/ShopPage/ShopPage";
 import Planning from "./pages/Planning/Planning";
 import Toutes from "./pages/ToutesEnRoller/Toutes";
 import AdminPageNews from "./pages/AdminPageNews/AdminPageNews";
+import Club from "./pages/LeClub/Club";
 import Regle from "./pages/Reglement/Reglement";
+import Roues from "./pages/RouesDeCouleur/RoueDeCouleur";
 import CoursBaby from "./pages/Cours/CoursBaby";
 
 // import Components
@@ -61,7 +63,9 @@ function App() {
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/toutes_en_roller" component={Toutes} />
+            <Route exact path="/club" component={Club} />
             <Route exact path="/réglement" component={Regle} />
+            <Route exact path="/roues" component={Roues} />
             <Route exact path="/cours/baby" component={CoursBaby} />
             <AdminRoute exact path="/shop" component={ShopPage} />
             <PrivateRoute exact path="/planning" component={Planning} />

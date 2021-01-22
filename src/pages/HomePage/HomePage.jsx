@@ -34,7 +34,6 @@ const HomePage = () => {
           <Actualites />
         </div>
       </div>
-      {/* <div className="mainHomeEvent"></div> */}
     </div>
   );
 };
