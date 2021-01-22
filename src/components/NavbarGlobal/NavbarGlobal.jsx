@@ -7,9 +7,7 @@ import Navbar from "../Navbar/Navbar";
 import NavbarConnect from "../NavbarUser/NavbarUser";
 
 function NavbarGlobal({ auth }) {
-  return (
-    <div>{auth.isAuthenticated === true ? <NavbarConnect /> : <Navbar />}</div>
-  );
+  return <>{auth.isAuthenticated === true ? <NavbarConnect /> : <Navbar />}</>;
 }
 
 const mapStateToProps = (state) => ({

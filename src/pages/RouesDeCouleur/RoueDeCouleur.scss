@@ -1,76 +1,78 @@
-.RouesDiv{
-    margin-top: 30px;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-bottom: 30px;
+.RouesDiv {
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.RouesTitle {
+  text-align: center;
+  color: #f64c02;
 }
 
-.RouesTitle{
+.RouesDescr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.RouesList {
+  margin-left: 35px;
+  margin-right: 25px;
+  margin-bottom: 15px;
+}
+
+.RoueColorDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 15px;
+}
+
+.RoueColorT {
+  color: #f64c02;
+}
+
+.RoueDesc {
+  margin-left: 30px;
+  margin-right: 30px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  width: 500px;
+}
+
+.RoueBold {
+  font-weight: bold;
+  margin-left: 15px;
+  text-align: center;
+  color: #20b82c;
+}
+
+.BIFLink {
+  color: #f64c02;
+}
+.RouesColorImg {
+  border-radius: 50%;
+}
+.RoueDiv {
+  border: 1px solid;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #3d3939;
+}
+
+@media screen and (max-width: 900px) {
+  .RouesDiv {
+    display: flex;
+    flex-direction: column;
+  }
+  .RoueBold {
+    display: none;
+  }
+  .RouesColorImg {
+    display: none;
+  }
+  .RoueColorT {
     text-align: center;
-    color:  #f64c02;
-}
-
-.RouesDescr{
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.RouesList{
-    margin-left: 35px;
-    margin-right: 25px;
-    margin-bottom: 15px;
-}
-
-.RoueColorDiv{
-    display:flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin: 15px;
-}
-
-.RoueColorT{
-    color: #f64c02;
-}
-
-.RoueDesc{
-    margin-left: 30px;
-    margin-right: 30px;
-    border-radius: 10px;
-    text-align: center;
-    color: white;
-}
-
-.RoueBold{
-    font-weight: bold;
-    margin-left: 15px;
-    text-align: center;
-    color:  #20b82c;
-}
-
-.BIFLink{
-    color: #F64C02;
-}
-
-.RoueDiv{
-    border: 1px solid;
-    border-radius: 10px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    background-color: #3d3939;
-}
-
-@media screen and (max-width: 900px){
-    .RouesDiv{
-        display: flex;
-        flex-direction: column;
-    }
-    .RoueBold{
-        display:none;
-    }
-    .RouesColorImg{
-        display:none;
-    }
-    .RoueColorT{
-        text-align: center;
-    }
+  }
 }

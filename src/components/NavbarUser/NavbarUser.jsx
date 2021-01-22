@@ -1,13 +1,14 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./NavbarUser.css";
 import logoNav from "../assets/logoNav.gif";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <div>
+    <>
       <nav>
         <div
           className="logoNav"
@@ -16,10 +17,18 @@ export default function Navbar() {
           }}
         />
         <ul className="liste">
-          <li className="items">Accueil</li>
-          <li className="items">Le Club</li>
-          <li className="items">Règlement</li>
-          <li className="items">Les roues de couleur</li>
+          <Link to="/">
+            <li className="items">Accueil</li>
+          </Link>
+          <Link to="/club">
+            <li className="items">Le Club</li>
+          </Link>
+          <Link to="/réglement">
+            <li className="items">Règlement</li>
+          </Link>
+          <Link to="/roues">
+            <li className="items">Les roues de couleur</li>
+          </Link>
         </ul>
         <img
           src="https://oasys.ch/wp-content/uploads/2019/03/photo-avatar-profil.png"
@@ -49,6 +58,6 @@ export default function Navbar() {
           <li className="itemsMobile">Déconnexion</li>
         </ul>
       </div>
-    </div>
+    </>
   );
 }
