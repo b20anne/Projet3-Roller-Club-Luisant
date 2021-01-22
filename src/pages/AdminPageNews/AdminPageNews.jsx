@@ -33,7 +33,7 @@ function AdminPageNews() {
           {dataPost.map((el) => {
             return (
               <CardPostNewsUI
-                image="https://cdn.paris.fr/paris/2020/05/12/huge-67a65318e89c13e2b63ddbe2bb89cc3c.jpg"
+                image={`http://localhost:8000/public/images/${el.name}`}
                 id={el.id}
               />
             );
