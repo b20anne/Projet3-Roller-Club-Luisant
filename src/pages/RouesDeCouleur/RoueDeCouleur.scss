@@ -37,6 +37,7 @@
     margin-right: 30px;
     border-radius: 10px;
     text-align: center;
+    color: white;
 }
 
 .RoueBold{
@@ -48,4 +49,28 @@
 
 .BIFLink{
     color: #F64C02;
+}
+
+.RoueDiv{
+    border: 1px solid;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #3d3939;
+}
+
+@media screen and (max-width: 900px){
+    .RouesDiv{
+        display: flex;
+        flex-direction: column;
+    }
+    .RoueBold{
+        display:none;
+    }
+    .RouesColorImg{
+        display:none;
+    }
+    .RoueColorT{
+        text-align: center;
+    }
 }
