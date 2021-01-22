@@ -1,18 +1,37 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { registerUser } from "../../actions/authActions";
 import "./Register.scss";
 import imageOne from "./assets/register-picture.jpeg";
 import imageTwo from "./assets/roller.png";
 
-const Register = () => {
+const Register = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [age, setAge] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+
+  function onSubmit(e) {
+    e.preventDefault();
+
+    const newUser = {
+      email,
+      firstName,
+      lastName,
+      password,
+      age,
+      // eslint-disable-next-line camelcase
+      Phone_Number: phoneNumber,
+    };
+
+    props.registerUser(newUser, props.history);
+  }
 
   return (
     <div className="registerPageContainer">
@@ -47,7 +66,7 @@ const Register = () => {
                 créer votre compte.
               </p>
             </div>
-            <form className="registerForm">
+            <form noValidate onSubmit={onSubmit} className="registerForm">
               <div className="inputField">
                 <div className="inputRegister">
                   <input
@@ -130,7 +149,7 @@ const Register = () => {
               </div>
               <div className="inscriptionContainer">
                 <div className="inscriptionLeft">
-                  <button type="button" name="inscription" id="inscription">
+                  <button type="submit" name="inscription" id="inscription">
                     Inscription
                   </button>
                   <label htmlFor="inscription">
@@ -149,4 +168,13 @@ const Register = () => {
   );
 };
 
-export default Register;
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
+
+Register.propTypes = {
+  registerUser: PropTypes.func.isRequired,
+  history: PropTypes.func.isRequired,
+};
+
+export default connect(mapStateToProps, { registerUser })(Register);
