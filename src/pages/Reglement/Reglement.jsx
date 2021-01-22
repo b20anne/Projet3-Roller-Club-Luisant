@@ -3,15 +3,7 @@ import "./Reglement.scss";
 
 const Regle = () => {
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-      }}
-    >
+    <div>
       <h2 className="LifeRules">REGLES DE VIE</h2>
       <div className="RegleDiv">
         <div className="AllRules">
@@ -101,9 +93,9 @@ const Regle = () => {
         </div>
 
         <div className="RulesSani">
-          <h3 className="LifeRules">MESURES SANITAIRES</h3>
+          <h3 className="SaniRules">MESURES SANITAIRES</h3>
 
-          <p className="RulesP">
+          <p className="RulesPSani">
             En tant qu’association, il est de notre devoir de faire respecter
             les les mesures d’hygiène instaurées par la Fédération Française de
             Roller Skateboard et notre gouvernement face à la covid-19.
@@ -113,11 +105,11 @@ const Regle = () => {
             préconisées ci-dessous pour limiter la propagation du virus.
             <br />
           </p>
-          <h3 className="RegleListP">
+          <h3 className="RegleListPSani">
             Pour se faire, d’un point de vue gouvernemental il est obligatoire
             de :
           </h3>
-          <ul className="RuleLists">
+          <ul className="RuleListsSani">
             <li>
               Se laver régulièrement les mains avec de l’eau et du savon ou à
               défaut, utiliser une solution hydro alcoolique.
@@ -137,10 +129,10 @@ const Regle = () => {
             </li>
             <li>Aérer au maximum l’ensemble des espaces partagés.</li>
           </ul>
-          <h3 className="RegleListP">
+          <h3 className="RegleListPSani">
             Pour se faire, d’un point de vue associatif, il est nécessaire de :
           </h3>
-          <ul className="RuleLists">
+          <ul className="RuleListsSani">
             <li>
               Se laver les mains dès son arrivée dans l’espace dédié à la
               pratique du roller ou à défaut mettre du gel hydro alcoolique et
@@ -158,7 +150,7 @@ const Regle = () => {
               des accords en Mairie.
             </li>
           </ul>
-          <p className="RulesP">
+          <p className="RulesPSani">
             Il est important, quelque soit notre avis sur le sujet, de tout
             mettre en œuvre pour permettre la pratique de notre sport dans la
             durée.
