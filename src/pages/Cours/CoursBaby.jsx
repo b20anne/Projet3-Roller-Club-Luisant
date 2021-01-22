@@ -2,7 +2,7 @@ import React from "react";
 import "./coursBaby.css";
 import Logo from "../../components/assets/logoNav.gif";
 import Logo1 from "../../components/assets/Roller.jpg";
-import Carousel from "../Cours/Carousel/Carousel";
+import Carousel from "./Carousel/Carousel";
 
 const CoursBaby = () => {
   return (
