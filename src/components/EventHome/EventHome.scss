@@ -1,65 +1,63 @@
-@media only screen and (min-width:900px){
-
-.TERProjet{
+@media only screen and (min-width: 900px) {
+  .TERProjet {
     margin-top: 15px;
     margin-bottom: 15px;
     margin-left: 15px;
     margin-right: 15px;
     border-radius: 10px;
-    box-shadow: 2px 2px 2px 2px black;
+    box-shadow: 0px 0px 59px -30px rgba(0, 0, 0, 0.75);
     display: flex;
     flex-flow: nowrap column;
-}
+  }
 
-.TERTitle{
+  .TERTitle {
     text-align: center;
     color: #f64c02;
-}
+  }
 
-.TERText{
+  .TERText {
     justify-content: center;
     align-self: center;
     text-align: center;
-}
+  }
 
-.TERTextT{
+  .TERTextT {
     color: #20b82c;
-}
-    
-.TERTextD{
+  }
+
+  .TERTextD {
     margin-top: 20px;
     margin-bottom: 20px;
-}
+  }
 
-.TERLowerDiv{
+  .TERLowerDiv {
     display: flex;
     flex-flow: row nowrap;
-}
+  }
 }
 
-@media only screen and (max-width: 900px){
-
-    .TERProjet{
-        margin-top: 15px;
-        margin-bottom: 15px;
-        border-radius: 10px;
-        box-shadow: 2px 2px 2px 2px black;
-        text-align: center;
-    }
-    .TERLogo{
-        display: none;
-    }
-    .TERTitle{
-        color: #f64c02;
-    }
-    .TERTextT{
-        margin-bottom: 15px;
-        color: #20b82c;
-    }
-    .TERTextD{
-        margin-left: 15px;
-        margin-right: 15px;
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
+@media only screen and (max-width: 900px) {
+  .TERProjet {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 59px -30px rgba(0, 0, 0, 0.75);
+  }
+  .TERLogo {
+    display: none;
+  }
+  .TERTitle {
+    color: #f64c02;
+  }
+  .TERTextT {
+    margin-bottom: 15px;
+    color: #20b82c;
+  }
+  .TERTextD {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
 }

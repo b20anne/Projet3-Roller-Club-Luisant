@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 import { registerUser } from "../../actions/authActions";
 import "./Register.scss";
 import imageOne from "./assets/register-picture.jpeg";
@@ -140,24 +139,12 @@ const Register = (props) => {
                     }}
                   />
                 </div>
-                <div className="cgu-checkbox">
-                  <input type="checkbox" id="CGU" name="CGU" />
-                  <label htmlFor="CGU">
-                    J'accepte les conditions d'utilisation du site
-                  </label>
-                </div>
               </div>
               <div className="inscriptionContainer">
                 <div className="inscriptionLeft">
                   <button type="submit" name="inscription" id="inscription">
                     Inscription
                   </button>
-                  <label htmlFor="inscription">
-                    Déjà inscrit ?{" "}
-                    <div className="linktologin">
-                      <Link to="/login">Connectez-vous</Link>
-                    </div>
-                  </label>
                 </div>
               </div>
             </form>

@@ -5,7 +5,7 @@ nav {
   width: 100%;
   height: 70px;
   position: fixed;
-  z-index: 10;
+  z-index: 10000;
   box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -17,7 +17,9 @@ nav {
   align-items: center;
   flex-direction: row;
 }
-
+.listeMobile {
+  display: none;
+}
 .items {
   margin-left: 5rem;
   list-style-type: none;
@@ -44,12 +46,18 @@ nav {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1100px) {
   nav {
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 70px;
+  }
+  .listeMobile {
+    margin-top: 90px;
+    display: block;
+    width: 100%;
+    background-color: #252424;
   }
 
   .liste {
@@ -75,7 +83,7 @@ nav {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    z-index: 5;
+    z-index: 5000;
     transition: all 1.2s ease-in-out;
     background-color: #252424;
   }
@@ -88,7 +96,7 @@ nav {
     font-family: Open Sans;
     font-style: normal;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 22px;
     line-height: 90px;
     text-align: center;
     cursor: pointer;
@@ -105,11 +113,6 @@ nav {
     cursor: pointer;
     transition: all 0.5s ease-in-out;
   }
-
-  .menuMobile {
-    background-color: rgb(61, 57, 57, 1);
-  }
-
   .menu-btn_burger {
     width: 50px;
     height: 6px;
@@ -136,19 +139,10 @@ nav {
   .menu-btn_burger::after {
     transform: translateY(16px);
   }
+}
 
-  /* ANIMATION
-    .menu-btn .menu-btn_burger {
-        transform: translateX(50px);
-        background: transparent;
-        box-shadow: none;
-    }
-
-    .menu-btn .menu-btn_burger::before {
-        transform: rotate(-45deg) translate(-35px, 35px);
-    }
-
-    .menu-btn .menu-btn_burger {
-        transform: rotate(45deg) translate(35px, 35px);  
-    } */
+@media only screen and (min-width: 1100px) and (max-width: 1400px) {
+  .items {
+    font-size: 14px;
+  }
 }
