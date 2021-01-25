@@ -84,18 +84,12 @@
 }
 
 .otherButtons {
+  display: flex;
   margin: 10px;
-  margin-left: 10%;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
-.Basket {
-  margin-top: 30px;
-  display: flex;
-  padding: 5px;
-  align-content: center;
-}
 
 .RiCalendar {
   margin-top: 30px;
@@ -139,7 +133,6 @@
   }
   .otherButtons {
     position: relative;
-    margin-left: 30%;
     align-self: center;
   }
   .market {
