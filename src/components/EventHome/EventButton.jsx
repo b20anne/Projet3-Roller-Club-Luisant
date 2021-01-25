@@ -9,7 +9,7 @@ function LinkButton() {
   }
 
   return (
-    <button type="button" onClick={handleClick}>
+    <button type="button" onClick={handleClick} className="TERLinkButton">
       En Savoir Plus
     </button>
   );
