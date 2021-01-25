@@ -7,7 +7,6 @@ import "./FormNews.scss";
 
 function FormNews() {
   const [selectedFile, setSelectedFile] = useState(null);
-  const [filename, setFileName] = useState("");
   const [titleName, setTitleName] = useState("");
   const [descriptionName, setDescriptionName] = useState("");
 
@@ -24,8 +23,22 @@ function FormNews() {
       .post("http://localhost:8000/api/admin/", data)
       .then((res) => res.data)
       .then((res) => {
-        setFileName(res.filename);
-        alert(`Image ${res.filename} téléchargée avec succès.`);
+        const newsData = {
+          title: titleName,
+          description: descriptionName,
+          name: res.filename,
+          date: "12/01/2021",
+          alt: res.filename,
+        };
+        axios
+          .post("http://localhost:8000/api/actualities/add", newsData)
+          .then((resTwo) => resTwo.data)
+          .then(() => {
+            alert(`Article créé`);
+          })
+          .catch((err) => {
+            alert(err.response.data.errorMessage);
+          });
       })
       .catch((err) => {
         alert(err);
@@ -38,20 +51,6 @@ function FormNews() {
       alert("Vous devez renseigner un titre et une description");
     } else {
       onClickHandle();
-      const newsData = {
-        title: titleName,
-        description: descriptionName,
-        name: filename,
-        date: "12/01/2021",
-        alt: filename,
-      };
-
-      axios
-        .post("http://localhost:8000/api/actualities/add", newsData)
-        .then((res) => res.data)
-        .catch((err) => {
-          alert(err.response.data.errorMessage);
-        });
     }
   }
 
