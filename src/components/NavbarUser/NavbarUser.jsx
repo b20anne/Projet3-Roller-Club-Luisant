@@ -2,10 +2,12 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import "./NavbarUser.css";
 import logoNav from "../assets/logoNav.gif";
 
-export default function Navbar() {
+function Navbar({ auth }) {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <>
@@ -29,6 +31,16 @@ export default function Navbar() {
           <Link to="/roues">
             <li className="items">Les roues de couleur</li>
           </Link>
+          {auth.isAuthenticated === true ? (
+            <Link to="/planning">
+              <li className="items">Nos planning</li>
+            </Link>
+          ) : null}
+          {auth.isAuthenticated === true && auth.user.id === 1 ? (
+            <Link to="/admin">
+              <li className="items">Admin page</li>
+            </Link>
+          ) : null}
         </ul>
         <img
           src="https://oasys.ch/wp-content/uploads/2019/03/photo-avatar-profil.png"
@@ -50,14 +62,43 @@ export default function Navbar() {
         }}
       >
         <ul className="listeMobile">
-          <li className="itemsMobile">Accueil</li>
-          <li className="itemsMobile">Le Club</li>
-          <li className="itemsMobile">Règlement</li>
-          <li className="itemsMobile">Les roues de couleur</li>
-          <li className="itemsMobile">Mon compte</li>
-          <li className="itemsMobile">Déconnexion</li>
+          <Link to="/">
+            <li className="itemsMobile">Accueil</li>
+          </Link>
+          <Link to="/club">
+            <li className="itemsMobile">Le Club</li>
+          </Link>
+          <Link to="/réglement">
+            <li className="itemsMobile">Règlement</li>
+          </Link>
+          <Link to="/roues">
+            <li className="itemsMobile">Les roues de couleur</li>
+          </Link>
+          <Link to="/profil">
+            <li className="itemsMobile">Mon compte</li>
+          </Link>
+          {auth.isAuthenticated === true ? (
+            <Link to="/planning">
+              <li className="itemsMobile">Nos planning</li>
+            </Link>
+          ) : null}
+          {auth.isAuthenticated === true && auth.user.id === 1 ? (
+            <Link to="/admin">
+              <li className="itemsMobile">Admin page</li>
+            </Link>
+          ) : null}
         </ul>
       </div>
     </>
   );
 }
+
+Navbar.propTypes = {
+  auth: PropTypes.oneOfType([PropTypes.object]).isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
+
+export default connect(mapStateToProps)(Navbar);
