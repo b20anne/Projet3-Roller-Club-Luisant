@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <div
       style={{
-        height: "40px",
+        height: "70px",
       }}
     >
       <nav>

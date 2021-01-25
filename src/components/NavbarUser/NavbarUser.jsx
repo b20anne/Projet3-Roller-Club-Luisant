@@ -1,19 +1,25 @@
+/* eslint-disable no-shadow */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import "./NavbarUser.css";
+import { logoutUser } from "../../actions/authActions";
 import logoNav from "../assets/logoNav.gif";
+import "./NavbarUser.css";
 
-function Navbar({ auth }) {
+function Navbar({ auth, logoutUser }) {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <>
+    <div
+      style={{
+        height: "70px",
+      }}
+    >
       <nav>
         <div
-          className="logoNav"
+          className="logoNavbar"
           style={{
             backgroundImage: `url(${logoNav})`,
           }}
@@ -62,43 +68,60 @@ function Navbar({ auth }) {
         }}
       >
         <ul className="listeMobile">
-          <Link to="/">
+          <Link to="/" onClick={() => setMenuOpen(!menuOpen)}>
             <li className="itemsMobile">Accueil</li>
           </Link>
-          <Link to="/club">
+          <Link to="/club" onClick={() => setMenuOpen(!menuOpen)}>
             <li className="itemsMobile">Le Club</li>
           </Link>
-          <Link to="/réglement">
+          <Link to="/réglement" onClick={() => setMenuOpen(!menuOpen)}>
             <li className="itemsMobile">Règlement</li>
           </Link>
-          <Link to="/roues">
+          <Link to="/roues" onClick={() => setMenuOpen(!menuOpen)}>
             <li className="itemsMobile">Les roues de couleur</li>
           </Link>
-          <Link to="/profil">
+          <Link to="/profil" onClick={() => setMenuOpen(!menuOpen)}>
             <li className="itemsMobile">Mon compte</li>
           </Link>
-          {auth.isAuthenticated === true ? (
-            <Link to="/planning">
-              <li className="itemsMobile">Nos planning</li>
-            </Link>
-          ) : null}
+          <Link to="/planning" onClick={() => setMenuOpen(!menuOpen)}>
+            <li className="itemsMobile">Nos planning</li>
+          </Link>
           {auth.isAuthenticated === true && auth.user.id === 1 ? (
-            <Link to="/admin">
+            <Link to="/admin" onClick={() => setMenuOpen(!menuOpen)}>
               <li className="itemsMobile">Admin page</li>
             </Link>
           ) : null}
+          <li className="itemsMobile">
+            <div
+              className="accessLoginMobile"
+              type="button"
+              onClick={() => {
+                logoutUser();
+              }}
+            >
+              <div
+                style={{
+                  backgroundColor: "#20B82C",
+                  width: "100%",
+                }}
+              >
+                Deconnection
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
-    </>
+    </div>
   );
 }
 
 Navbar.propTypes = {
   auth: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  logoutUser: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
   auth: state.auth,
 });
 
-export default connect(mapStateToProps)(Navbar);
+export default connect(mapStateToProps, { logoutUser })(Navbar);

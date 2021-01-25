@@ -8,11 +8,19 @@ const TableUsers = ({ users }) => {
       <h1>Tableaux des utilisateurs : </h1>
       <table className="rwd-table">
         <tbody>
+          <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Status</th>
+            <th>Âge</th>
+          </tr>
           {users.map((el) => (
             <tr key={el.id}>
               <td data-th="Name">{el.lastName}</td>
               <td data-th="Prénom">{el.firstName}</td>
-              <td data-th="Status">Baby</td>
+              <td data-th="Status">
+                {el.Status_id === undefined ? "À renseigner" : el.Status_id}
+              </td>
               <td data-th="Âge">{el.age} ans</td>
             </tr>
           ))}

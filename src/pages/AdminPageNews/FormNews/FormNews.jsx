@@ -35,6 +35,7 @@ function FormNews() {
           .then((resTwo) => resTwo.data)
           .then(() => {
             alert(`Article créé`);
+            window.location.reload();
           })
           .catch((err) => {
             alert(err.response.data.errorMessage);
