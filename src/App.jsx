@@ -28,6 +28,7 @@ import Roues from "./pages/RouesDeCouleur/RoueDeCouleur";
 import CoursBaby from "./pages/Cours/CoursBaby";
 
 // import Components
+import ScrollToTop from "./components/ScrollToTop/Scroll";
 import NavbarGlobal from "./components/NavbarGlobal/NavbarGlobal";
 import DashboardUsers from "./pages/AdminPage/DashboardUsers/DashboardUsers";
 import Footer from "./components/Footer/Footer";
@@ -56,25 +57,27 @@ function App() {
   return (
     <Provider store={store}>
       <Router>
-        <div className="App" id="app">
-          <NavbarGlobal />
-          <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route exact path="/register" component={Register} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/toutes_en_roller" component={Toutes} />
-            <Route exact path="/club" component={Club} />
-            <Route exact path="/réglement" component={Regle} />
-            <Route exact path="/roues" component={Roues} />
-            <Route exact path="/cours/baby" component={CoursBaby} />
-            <AdminRoute exact path="/shop" component={ShopPage} />
-            <PrivateRoute exact path="/planning" component={Planning} />
-            <AdminRoute exact path="/shop" component={ShopPage} />
-            <AdminRoute exact path="/admin/news" component={AdminPageNews} />
-            <AdminRoute exact path="/admin" component={DashboardUsers} />
-          </Switch>
-          <Footer />
-        </div>
+        <ScrollToTop>
+          <div className="App" id="app">
+            <NavbarGlobal />
+            <Switch>
+              <Route exact path="/" component={HomePage} />
+              <Route exact path="/register" component={Register} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/toutes_en_roller" component={Toutes} />
+              <Route exact path="/club" component={Club} />
+              <Route exact path="/réglement" component={Regle} />
+              <Route exact path="/roues" component={Roues} />
+              <Route exact path="/cours/baby" component={CoursBaby} />
+              <AdminRoute exact path="/shop" component={ShopPage} />
+              <PrivateRoute exact path="/planning" component={Planning} />
+              <AdminRoute exact path="/shop" component={ShopPage} />
+              <AdminRoute exact path="/admin/news" component={AdminPageNews} />
+              <AdminRoute exact path="/admin" component={DashboardUsers} />
+            </Switch>
+            <Footer />
+          </div>
+        </ScrollToTop>
       </Router>
     </Provider>
   );
