@@ -82,15 +82,6 @@ class Login extends Component {
                 value={password}
                 onChange={this.onChange}
               />
-              <div className="remembermeContainer">
-                <div className="rememberme">
-                  <input id="rememberme" name="rememberme" type="checkbox" />
-                  <label htmlFor="rememberme">Se souvenir de moi</label>
-                </div>
-                <div className="forgotpassword">
-                  <span>Mot de passe oublié ?</span>
-                </div>
-              </div>
               <button type="submit">Connexion</button>
             </form>
           </div>

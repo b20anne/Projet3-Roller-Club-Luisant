@@ -3,6 +3,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
   }
 
   &__input {
@@ -36,7 +38,7 @@
   }
 
   &__btn {
-    width: 11%;
+    width: 20%;
     height: 50px;
     margin-top: 20px;
     background-color: red;

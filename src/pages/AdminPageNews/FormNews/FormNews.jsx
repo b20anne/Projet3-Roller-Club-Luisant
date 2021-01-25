@@ -35,6 +35,7 @@ function FormNews() {
           .then((resTwo) => resTwo.data)
           .then(() => {
             alert(`Article créé`);
+            window.location.reload();
           })
           .catch((err) => {
             alert(err.response.data.errorMessage);
@@ -55,42 +56,42 @@ function FormNews() {
   }
 
   return (
-    <form noValidate onSubmit={onSubmit}>
-      <div className="formNews__globalContainer">
+    <form className="formNews__globalContainer" noValidate onSubmit={onSubmit}>
+      {/* <div > */}
+      <input
+        className="formNews__input"
+        type="text"
+        placeholder="Entrez le titre de votre post"
+        name="title"
+        id="title"
+        onChange={(e) => setTitleName(e.target.value)}
+      />
+      <textarea
+        className="formNews__inputDesc"
+        name="description"
+        id="description"
+        placeholder="Entrez la description du post"
+        onChange={(e) => setDescriptionName(e.target.value)}
+        rows="10"
+      />
+
+      <label htmlFor="file-upload" className="formNews__upload">
+        cliquez pour ajouter une image
         <input
-          className="formNews__input"
-          type="text"
-          placeholder="Entrez le titre de votre post"
-          name="title"
-          id="title"
-          onChange={(e) => setTitleName(e.target.value)}
+          id="file-upload"
+          type="file"
+          onChange={onChangeHandle}
+          accept="image/png, image/jpeg, image/jpg"
         />
-        <textarea
-          className="formNews__inputDesc"
-          name="description"
-          id="description"
-          placeholder="Entrez la description du post"
-          onChange={(e) => setDescriptionName(e.target.value)}
-          rows="10"
-        />
+      </label>
 
-        <label htmlFor="file-upload" className="formNews__upload">
-          cliquez pour ajouter une image
-          <input
-            id="file-upload"
-            type="file"
-            onChange={onChangeHandle}
-            accept="image/png, image/jpeg, image/jpg"
-          />
-        </label>
-
-        <button className="formNews__btn" type="submit">
-          <div className="formNews__containerBtn">
-            <MdPublish className="formNews__icon" />
-            <p>Ajouter le post</p>
-          </div>
-        </button>
-      </div>
+      <button className="formNews__btn" type="submit">
+        <div className="formNews__containerBtn">
+          <MdPublish className="formNews__icon" />
+          <p>Ajouter le post</p>
+        </div>
+      </button>
+      {/* </div> */}
     </form>
   );
 }
