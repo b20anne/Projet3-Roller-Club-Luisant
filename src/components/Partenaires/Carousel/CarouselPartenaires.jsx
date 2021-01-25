@@ -48,7 +48,7 @@ const CarouselP = () => (
       items={objet}
       responsive={responsive}
       autoPlay
-      autoPlayInterval="2000"
+      autoPlayInterval="3000"
       disableDotsControls
       disableButtonsControls
       infinite

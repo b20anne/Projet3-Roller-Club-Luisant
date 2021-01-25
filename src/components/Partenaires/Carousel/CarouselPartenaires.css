@@ -19,8 +19,8 @@
   box-shadow: 2px 2px 2px 2px black;
   border-radius: 10px;
   margin-bottom: 2%;
-  margin-left: 2%;
-  margin-right: 2%;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 
 .alice-carousel {
@@ -32,5 +32,5 @@
 }
 
 .item img {
-  height: 160px;
+  height: 160px !important;
 }
