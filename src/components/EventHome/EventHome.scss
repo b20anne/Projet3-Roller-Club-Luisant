@@ -35,6 +35,12 @@
     display: flex;
     flex-flow: row nowrap;
 }
+
+.TERLinkButton{
+    color:#20b82c;
+    background-color: #3d3939;
+    padding: 5px;
+}
 }
 
 @media only screen and (max-width: 900px){
@@ -61,5 +67,11 @@
         margin-right: 15px;
         margin-top: 15px;
         margin-bottom: 15px;
+    }
+    .TERLinkButton{
+        color:#20b82c;
+        background-color: #3d3939;
+        padding: 5px;
+        margin-bottom: 10px;
     }
 }
