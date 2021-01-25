@@ -1,0 +1,36 @@
+.alice-carousel-img {
+  display: flex;
+  flex-direction: row;
+}
+
+.objet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.Partenaires {
+  color: #20b82c;
+  text-align: center;
+}
+
+.CarouselPartenaires {
+  box-shadow: 2px 2px 2px 2px black;
+  border-radius: 10px;
+  margin-bottom: 2%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.alice-carousel {
+  height: 200px;
+}
+
+.item {
+  height: 160px;
+}
+
+.item img {
+  height: 160px !important;
+}

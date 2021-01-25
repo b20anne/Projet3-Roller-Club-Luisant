@@ -3,7 +3,6 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import { BiBasket } from "react-icons/bi";
 import { RiCalendarEventFill } from "react-icons/ri";
 import { logoutUser } from "../../../actions/authActions";
 import Logo from "../../../components/HeaderComponent/Logo.png";
@@ -45,12 +44,6 @@ const HeaderHome = ({ auth, logoutUser }) => {
           <RollerVideo />
         </div>
         <div className="otherButtons">
-          <button as="input" type="button" className="market">
-            <p>Catalogue des Produits</p>
-            <div className="Basket">
-              <BiBasket size="3em" />
-            </div>
-          </button>
           <Link to="/planning">
             <button
               as="input"

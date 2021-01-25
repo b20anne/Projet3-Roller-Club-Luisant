@@ -14,29 +14,13 @@ const TableUsers = ({ users }) => {
             <th>Status</th>
             <th>Âge</th>
           </tr>
-          <tr>
-            <td data-th="Name">oui</td>
-            <td data-th="Prénom">yes</td>
-            <td data-th="Status">Baby</td>
-            <td data-th="Âge">12 ans</td>
-          </tr>
-          <tr>
-            <td data-th="Name">oui</td>
-            <td data-th="Prénom">yes</td>
-            <td data-th="Status">Baby</td>
-            <td data-th="Âge">12 ans</td>
-          </tr>
-          <tr>
-            <td data-th="Name">oui</td>
-            <td data-th="Prénom">yes</td>
-            <td data-th="Status">Baby</td>
-            <td data-th="Âge">12 ans</td>
-          </tr>
           {users.map((el) => (
             <tr key={el.id}>
               <td data-th="Name">{el.lastName}</td>
               <td data-th="Prénom">{el.firstName}</td>
-              <td data-th="Status">Baby</td>
+              <td data-th="Status">
+                {el.Status_id === undefined ? "À renseigner" : el.Status_id}
+              </td>
               <td data-th="Âge">{el.age} ans</td>
             </tr>
           ))}

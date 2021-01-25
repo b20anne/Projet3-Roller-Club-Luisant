@@ -27,6 +27,8 @@ import Regle from "./pages/Reglement/Reglement";
 import Roues from "./pages/RouesDeCouleur/RoueDeCouleur";
 import CoursBaby from "./pages/Cours/CoursBaby";
 import AdminPagePlanning from "./pages/AdminPagePlanning/AdminPagePlanning";
+import CoursApprentissage from "./pages/Cours/CoursApprentissage";
+import CoursPerfect from "./pages/Cours/CoursPerfect";
 
 // import Components
 import ScrollToTop from "./components/ScrollToTop/Scroll";
@@ -70,6 +72,16 @@ function App() {
               <Route exact path="/réglement" component={Regle} />
               <Route exact path="/roues" component={Roues} />
               <Route exact path="/cours/baby" component={CoursBaby} />
+              <Route
+                exact
+                path="/cours/apprentissage"
+                component={CoursApprentissage}
+              />
+              <Route
+                exact
+                path="/cours/perfectionnement"
+                component={CoursPerfect}
+              />
               <AdminRoute exact path="/shop" component={ShopPage} />
               <PrivateRoute exact path="/planning" component={Planning} />
               <AdminRoute exact path="/shop" component={ShopPage} />

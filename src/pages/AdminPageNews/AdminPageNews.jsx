@@ -28,8 +28,10 @@ function AdminPageNews() {
       <NavigationDashboard />
       <div className="adminPageNews__globalContainer">
         <h4 className="adminPageNews__titlePage">Ajoutez une actualité</h4>
-        <div className="adminPageNews__container">
+        <div className="adminPageNews__postNews">
           <CardPostNews handleClick={handlePost} />
+        </div>
+        <div className="adminPageNews__container">
           {dataPost.map((el) => {
             return (
               <CardPostNewsUI
