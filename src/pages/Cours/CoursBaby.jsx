@@ -29,7 +29,7 @@ const CoursBaby = () => {
                 </div>
                 <h3 className="titreVert">Prix :</h3>
                 <div>
-                  90 € à l’année (frais de dossier 50e + accès aux cours 40e)
+                  90 € à l’année (frais de dossier 50€ + accès aux cours 40€)
                 </div>
               </div>
               <button type="button" className="bttn-signUp">
