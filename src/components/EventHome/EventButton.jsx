@@ -6,7 +6,6 @@ function LinkButton() {
 
   function handleClick() {
     history.push("/toutes_en_roller");
-    window.scrollTo(0, 0);
   }
 
   return (
