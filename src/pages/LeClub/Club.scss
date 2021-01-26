@@ -6,11 +6,16 @@
     min-height: 100vh;
 }
 
-.ClubText{
-    margin: 15px;
-}
-
 .ClubBold{
     font-size: bold;
     color:  #f64c02;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.ClubText{
+    padding: 5px;
+    border-radius: 10px;
+    background: #3d3939;
+    color: #20b82c;
 }
