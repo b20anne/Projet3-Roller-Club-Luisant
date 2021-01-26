@@ -31,6 +31,7 @@ import CoursBaby from "./pages/Cours/CoursBaby";
 import NavbarGlobal from "./components/NavbarGlobal/NavbarGlobal";
 import DashboardUsers from "./pages/AdminPage/DashboardUsers/DashboardUsers";
 import Footer from "./components/Footer/Footer";
+import ProfilUser from "./pages/ProfilUser/ProfilUser";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -68,6 +69,7 @@ function App() {
             <Route exact path="/roues" component={Roues} />
             <Route exact path="/cours/baby" component={CoursBaby} />
             <AdminRoute exact path="/shop" component={ShopPage} />
+            <PrivateRoute exact path="/ProfilUser" component={ProfilUser} />
             <PrivateRoute exact path="/planning" component={Planning} />
             <AdminRoute exact path="/shop" component={ShopPage} />
             <AdminRoute exact path="/admin/news" component={AdminPageNews} />
