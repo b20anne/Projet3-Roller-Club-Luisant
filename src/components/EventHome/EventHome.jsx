@@ -15,7 +15,8 @@ const EventHome = () => {
           <h3 className="TERTextT">Toutes en Roller</h3>
           <p className="TERTextD">
             Inspiré par le projet TouteSport de la Fédération Nationale des
-            CDIFF, Toutes en Roller met en avant la performance sportive des
+            CDIFF,
+            <br /> Toutes en Roller met en avant la performance sportive des
             athlètes féminines au travers des courses de Roller phares et
             populaires.
           </p>

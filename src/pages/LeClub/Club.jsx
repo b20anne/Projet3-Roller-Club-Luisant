@@ -6,7 +6,6 @@ const Club = () => {
     <div className="ClubDiv">
       <h1 className="ClubBold">Roller Club Luisant</h1>
       <p className="ClubText">
-        <br />
         Créé en novembre 2019 à l’initiative de Solène Lopez (Présidente
         actuelle), le Roller Club Luisant également appelé RC Luisant est une
         association sportive loi 1901, affiliée à la Fédération Française de
@@ -22,8 +21,7 @@ const Club = () => {
         bien-être!
       </p>
       <h2 className="ClubBold">Objet</h2>
-      <p>
-        <br />
+      <p className="ClubText">
         Encadré par des passionnés le a pour ambition de promouvoir le Roller et
         le rendre accessible dès l&apos;âge de 3 ans. nous souhaitons également
         transmettre les valeurs de notre sport telles que la confiance en soi et
