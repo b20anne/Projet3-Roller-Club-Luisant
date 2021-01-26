@@ -12,8 +12,8 @@ import Mainvilliers from "./assets/MAINVILLIERS.png";
 
 const responsive = {
   0: { items: 1 },
-  568: { items: 2 },
-  1024: { items: 3 },
+  420: { items: 2 },
+  940: { items: 4 },
 };
 
 const objet = [
