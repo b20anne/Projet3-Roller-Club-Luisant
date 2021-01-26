@@ -22,8 +22,8 @@ const ProfilUser = () => {
                 </div>
             </div>
             <div className="contactCard">
-                <div className="userPhone">Téléphone<MdPhone /></div>
-                <div className="userEmail">Email<MdMailOutline /></div>
+                <div className="userPhone">Téléphone</div>
+                <div className="userEmail">Email</div>
             </div>
         </div>
     );

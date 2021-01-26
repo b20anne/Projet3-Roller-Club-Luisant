@@ -7,7 +7,6 @@ import "./FormNews.scss";
 
 function FormNews() {
   const [selectedFile, setSelectedFile] = useState(null);
-  const [filename, setFileName] = useState("");
   const [titleName, setTitleName] = useState("");
   const [descriptionName, setDescriptionName] = useState("");
 
@@ -24,8 +23,23 @@ function FormNews() {
       .post("http://localhost:8000/api/admin/", data)
       .then((res) => res.data)
       .then((res) => {
-        setFileName(res.filename);
-        alert(`Image ${res.filename} téléchargée avec succès.`);
+        const newsData = {
+          title: titleName,
+          description: descriptionName,
+          name: res.filename,
+          date: "12/01/2021",
+          alt: res.filename,
+        };
+        axios
+          .post("http://localhost:8000/api/actualities/add", newsData)
+          .then((resTwo) => resTwo.data)
+          .then(() => {
+            alert(`Article créé`);
+            window.location.reload();
+          })
+          .catch((err) => {
+            alert(err.response.data.errorMessage);
+          });
       })
       .catch((err) => {
         alert(err);
@@ -38,60 +52,46 @@ function FormNews() {
       alert("Vous devez renseigner un titre et une description");
     } else {
       onClickHandle();
-      const newsData = {
-        title: titleName,
-        description: descriptionName,
-        name: filename,
-        date: "12/01/2021",
-        alt: filename,
-      };
-
-      axios
-        .post("http://localhost:8000/api/actualities/add", newsData)
-        .then((res) => res.data)
-        .catch((err) => {
-          alert(err.response.data.errorMessage);
-        });
     }
   }
 
   return (
-    <form noValidate onSubmit={onSubmit}>
-      <div className="formNews__globalContainer">
+    <form className="formNews__globalContainer" noValidate onSubmit={onSubmit}>
+      {/* <div > */}
+      <input
+        className="formNews__input"
+        type="text"
+        placeholder="Entrez le titre de votre post"
+        name="title"
+        id="title"
+        onChange={(e) => setTitleName(e.target.value)}
+      />
+      <textarea
+        className="formNews__inputDesc"
+        name="description"
+        id="description"
+        placeholder="Entrez la description du post"
+        onChange={(e) => setDescriptionName(e.target.value)}
+        rows="10"
+      />
+
+      <label htmlFor="file-upload" className="formNews__upload">
+        cliquez pour ajouter une image
         <input
-          className="formNews__input"
-          type="text"
-          placeholder="Entrez le titre de votre post"
-          name="title"
-          id="title"
-          onChange={(e) => setTitleName(e.target.value)}
+          id="file-upload"
+          type="file"
+          onChange={onChangeHandle}
+          accept="image/png, image/jpeg, image/jpg"
         />
-        <textarea
-          className="formNews__inputDesc"
-          name="description"
-          id="description"
-          placeholder="Entrez la description du post"
-          onChange={(e) => setDescriptionName(e.target.value)}
-          rows="10"
-        />
+      </label>
 
-        <label htmlFor="file-upload" className="formNews__upload">
-          cliquez pour ajouter une image
-          <input
-            id="file-upload"
-            type="file"
-            onChange={onChangeHandle}
-            accept="image/png, image/jpeg, image/jpg"
-          />
-        </label>
-
-        <button className="formNews__btn" type="submit">
-          <div className="formNews__containerBtn">
-            <MdPublish className="formNews__icon" />
-            <p>Ajouter le post</p>
-          </div>
-        </button>
-      </div>
+      <button className="formNews__btn" type="submit">
+        <div className="formNews__containerBtn">
+          <MdPublish className="formNews__icon" />
+          <p>Ajouter le post</p>
+        </div>
+      </button>
+      {/* </div> */}
     </form>
   );
 }

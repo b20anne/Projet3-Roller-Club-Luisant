@@ -26,8 +26,11 @@ import Club from "./pages/LeClub/Club";
 import Regle from "./pages/Reglement/Reglement";
 import Roues from "./pages/RouesDeCouleur/RoueDeCouleur";
 import CoursBaby from "./pages/Cours/CoursBaby";
+import CoursApprentissage from "./pages/Cours/CoursApprentissage";
+import CoursPerfect from "./pages/Cours/CoursPerfect";
 
 // import Components
+import ScrollToTop from "./components/ScrollToTop/Scroll";
 import NavbarGlobal from "./components/NavbarGlobal/NavbarGlobal";
 import DashboardUsers from "./pages/AdminPage/DashboardUsers/DashboardUsers";
 import Footer from "./components/Footer/Footer";
@@ -57,6 +60,7 @@ function App() {
   return (
     <Provider store={store}>
       <Router>
+<<<<<<< HEAD
         <div className="App" id="app">
           <NavbarGlobal />
           <Switch>
@@ -77,6 +81,39 @@ function App() {
           </Switch>
           <Footer />
         </div>
+=======
+        <ScrollToTop>
+          <div className="App" id="app">
+            <NavbarGlobal />
+            <Switch>
+              <Route exact path="/" component={HomePage} />
+              <Route exact path="/register" component={Register} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/toutes_en_roller" component={Toutes} />
+              <Route exact path="/club" component={Club} />
+              <Route exact path="/réglement" component={Regle} />
+              <Route exact path="/roues" component={Roues} />
+              <Route exact path="/cours/baby" component={CoursBaby} />
+              <Route
+                exact
+                path="/cours/apprentissage"
+                component={CoursApprentissage}
+              />
+              <Route
+                exact
+                path="/cours/perfectionnement"
+                component={CoursPerfect}
+              />
+              <AdminRoute exact path="/shop" component={ShopPage} />
+              <PrivateRoute exact path="/planning" component={Planning} />
+              <AdminRoute exact path="/shop" component={ShopPage} />
+              <AdminRoute exact path="/admin/news" component={AdminPageNews} />
+              <AdminRoute exact path="/admin" component={DashboardUsers} />
+            </Switch>
+            <Footer />
+          </div>
+        </ScrollToTop>
+>>>>>>> 18fbef484a37a2cbf66e4e26a4326334005cb21d
       </Router>
     </Provider>
   );

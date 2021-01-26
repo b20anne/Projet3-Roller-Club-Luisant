@@ -6,11 +6,10 @@ function LinkButton() {
 
   function handleClick() {
     history.push("/toutes_en_roller");
-    window.scrollTo(0, 0);
   }
 
   return (
-    <button type="button" onClick={handleClick}>
+    <button type="button" onClick={handleClick} className="TERLinkButton">
       En Savoir Plus
     </button>
   );

@@ -4,35 +4,42 @@ import Logo from "../../components/assets/logoNav.gif";
 import Logo1 from "../../components/assets/Roller.jpg";
 import Carousel from "./Carousel/Carousel";
 
-const CoursBaby = () => {
+const CoursPerfect = () => {
   return (
     <div>
       <div className="Outline">
         <div className="group">
           <div className="group-top">
-            <h1 className="titreVert">Cours Baby</h1>
+            <h1 className="titreVert">Cours Perfectionnement</h1>
             <img src={Logo} alt="logo" className="logoCours" />
           </div>
           <div className="group2">
             <img src={Logo1} alt="OUi" className="imageCours" />
             <div className="descript">
               <div className="group3">
-                <h2 className="titreBlanc">DECOUVERTE/FUN/LUDIQUE</h2>
+                <h2 className="titreBlanc">
+                  VICTOIRES/PRÉCISION/DÉPASSEMENT DE SOI
+                </h2>
                 <h3 className="titreVert">Horaires :</h3>
                 <div>
-                  Samedi de 13h30 à 14h30 - Gymnase Roblot, cours Charles Brune
-                  à Luisant
+                  Lundi de 20h45 à 22h15 - Gymnase du Lycée Philibert de
+                  l&apos;Orme à Lucé. <br />
+                  Samedi de 14h30 à 16h - Gymnase du Lycée Philibert de
+                  l&apos;Orme à Lucé.
                 </div>
                 <h3 className="titreVert">Description :</h3>
                 <div>
-                  Le BABY, découverte de la pratique et apprentissage des
-                  fondamentaux du ROLLER pour les enfants âgés de 3 à 5 ans.
-                  Pratique en collectif pour favoriser le développement de la
-                  motricité de nos jeunes patineurs, notamment de l’équilibre.
+                  <p>
+                    LE PERFECTIONNEMENT par la préparation aux épreuves
+                    nationales (Roller Course), en optimisant la technique et
+                    les capacités physiques des sportifs. Réservé aux patineurs
+                    « EXPERTS » (niveau roue argent minimum âgés de plus de 10
+                    ans).
+                  </p>
                 </div>
                 <h3 className="titreVert">Prix :</h3>
                 <div>
-                  90 € à l’année (frais de dossier 50€ + accès aux cours 40€)
+                  170 € à l’année (frais de dossier 50€ + accès aux cours 120€)
                 </div>
               </div>
               <button type="button" className="bttn-signUp">
@@ -47,4 +54,4 @@ const CoursBaby = () => {
   );
 };
 
-export default CoursBaby;
+export default CoursPerfect;

@@ -1,6 +1,5 @@
 .navDashboard {
   &__globalContainer {
-    margin-bottom: 20px;
     min-height: 100vh;
     width: 30%;
     display: flex;
@@ -57,10 +56,18 @@
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   .navDashboard {
     &__globalContainer {
       min-height: auto;
+      margin-bottom: 20px;
+    }
+  }
+}
+@media only screen and (max-width: 1400px) and (min-width: 999px) {
+  .navDashboard {
+    &__globalContainer {
+      width: 50%;
     }
   }
 }

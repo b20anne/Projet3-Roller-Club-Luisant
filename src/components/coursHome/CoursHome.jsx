@@ -19,16 +19,7 @@ const CoursHome = () => {
             <h2>Cours baby</h2>
           </div>
         </Link>
-        <Link to="/cours/perfectionnement">
-          <div
-            className="coursDisplay"
-            style={{
-              backgroundImage: `url(${perfectionnement})`,
-            }}
-          >
-            <h2>Cours Perfectionnement</h2>
-          </div>
-        </Link>
+
         <Link to="/cours/apprentissage">
           <div
             className="coursDisplay"
@@ -37,6 +28,16 @@ const CoursHome = () => {
             }}
           >
             <h2>Cours apprentissage</h2>
+          </div>
+        </Link>
+        <Link to="/cours/perfectionnement">
+          <div
+            className="coursDisplay"
+            style={{
+              backgroundImage: `url(${perfectionnement})`,
+            }}
+          >
+            <h2>Cours Perfectionnement</h2>
           </div>
         </Link>
       </div>

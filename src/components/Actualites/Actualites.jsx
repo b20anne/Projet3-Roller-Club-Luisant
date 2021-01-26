@@ -24,7 +24,6 @@ class Actualites extends React.Component {
 
       .then((response) => response.data)
       .then((data) => {
-        console.log(data);
         this.setState({
           actualities: data,
         });

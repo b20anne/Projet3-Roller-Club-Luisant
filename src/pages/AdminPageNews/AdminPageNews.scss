@@ -2,7 +2,12 @@
   &__globalContainer {
     min-height: 82vh;
     width: 100%;
-    padding: 40px;
+
+    h4 {
+      text-align: center;
+      width: 100%;
+      margin: 40px 0;
+    }
   }
 
   &__titlePage {
@@ -13,11 +18,17 @@
 
   &__container {
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     margin: 40px 0;
     display: flex;
     flex-wrap: wrap;
   }
+  &__postNews {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
 }
 
 @media only screen and (max-width: 800px) {
@@ -29,7 +40,9 @@
       align-items: center;
     }
     &__container {
-      justify-content: center;
+      min-height: 80vh;
+      justify-content: space-evenly;
+      flex-direction: column;
     }
   }
 }
