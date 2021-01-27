@@ -71,7 +71,7 @@ export default function Navbar() {
                 }}
               >
                 <Link to="/login" onClick={() => setMenuOpen(!menuOpen)}>
-                  Connection
+                  Connexion
                 </Link>
               </div>
               <div

@@ -39,7 +39,7 @@ function Navbar({ auth, logoutUser }) {
           </Link>
           {auth.isAuthenticated === true ? (
             <Link to="/planning">
-              <li className="items">Nos planning</li>
+              <li className="items">Nos plannings</li>
             </Link>
           ) : null}
           {auth.isAuthenticated === true && auth.user.id === 1 ? (
@@ -84,7 +84,7 @@ function Navbar({ auth, logoutUser }) {
             <li className="itemsMobile">Mon compte</li>
           </Link>
           <Link to="/planning" onClick={() => setMenuOpen(!menuOpen)}>
-            <li className="itemsMobile">Nos planning</li>
+            <li className="itemsMobile">Nos plannings</li>
           </Link>
           {auth.isAuthenticated === true && auth.user.id === 1 ? (
             <Link to="/admin" onClick={() => setMenuOpen(!menuOpen)}>
@@ -105,7 +105,7 @@ function Navbar({ auth, logoutUser }) {
                   width: "100%",
                 }}
               >
-                Deconnection
+                Déconnexion
               </div>
             </div>
           </li>

@@ -29,7 +29,7 @@ const NavigationDashboard = () => {
         <Link style={{ textDecoration: "none" }} to="/admin/dashboardothers">
           <div className="navDashboard__itemNav">
             <FaCalendarAlt value={{ size: "2em", color: "white" }} />
-            <p className="navDashboard__textNav">Gérer les planning</p>
+            <p className="navDashboard__textNav">Gérer les plannings</p>
           </div>
         </Link>
       </div>
