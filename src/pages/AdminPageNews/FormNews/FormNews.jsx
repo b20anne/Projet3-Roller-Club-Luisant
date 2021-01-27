@@ -15,10 +15,8 @@ function FormNews() {
   };
 
   const onClickHandle = () => {
-    console.log("file send");
     const data = new FormData();
     data.append("file", selectedFile);
-    console.table("form", data.get("file"));
     axios
       .post("http://localhost:8000/api/admin/", data)
       .then((res) => res.data)
