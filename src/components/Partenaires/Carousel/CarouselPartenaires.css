@@ -13,10 +13,11 @@
 .Partenaires {
   color: #20b82c;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .CarouselPartenaires {
-  box-shadow: 2px 2px 2px 2px black;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   margin-bottom: 2%;
   margin-left: 1%;
