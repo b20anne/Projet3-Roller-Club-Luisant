@@ -11,14 +11,14 @@ const TableUsers = ({ users }) => {
           <tr>
             <th>Nom</th>
             <th>Prénom</th>
-            <th>Status</th>
+            <th>Statut</th>
             <th>Âge</th>
           </tr>
           {users.map((el) => (
             <tr key={el.id}>
-              <td data-th="Name">{el.lastName}</td>
+              <td data-th="Nom">{el.lastName}</td>
               <td data-th="Prénom">{el.firstName}</td>
-              <td data-th="Status">
+              <td data-th="Statut">
                 {el.Status_id === undefined ? "À renseigner" : el.Status_id}
               </td>
               <td data-th="Âge">{el.age} ans</td>
