@@ -7,7 +7,7 @@ function CardUI({ name }) {
   return (
     <div className="cardP__globalContainer">
       <div className="cardP__containerText">
-        <p className="cardP__text">Planning du cours {name}</p>
+        <p className="cardP__text">Planning {name}</p>
       </div>
     </div>
   );
