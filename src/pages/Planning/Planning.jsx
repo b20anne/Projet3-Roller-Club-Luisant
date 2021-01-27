@@ -1,21 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 import "./Planning.scss";
 import CardUI from "./CardUI/CardUI";
 
 function Planning() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const axiosData = async () => {
+      const res = await axios.get(`http://localhost:8000/api/planning/`);
+      setData(res.data);
+    };
+    axiosData();
+  });
   return (
     <div className="planning__globalContainer">
       <h3 className="planning__titlePlanning">Les Plannings</h3>
-      <div className="planning__cardCourse">
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href="https://calendar.google.com/calendar/u/2?cid=bjByZmpyOTNkdWtyZXNoZTByYW9ydTN1ZDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
-        >
-          <CardUI name="baby" />
-        </a>
-      </div>
+      {data.map((el) => (
+        <div className="planning__cardCourse">
+          <a target="_blank" rel="noreferrer" href={el.url}>
+            <CardUI name={el.title} />
+          </a>
+        </div>
+      ))}
     </div>
   );
 }
