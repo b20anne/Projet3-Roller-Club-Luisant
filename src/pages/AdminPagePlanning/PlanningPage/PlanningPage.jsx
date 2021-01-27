@@ -17,7 +17,7 @@ function PlanningPage() {
       setData(res.data);
     };
     axiosData();
-  }, []);
+  }, [data]);
 
   return (
     <>
