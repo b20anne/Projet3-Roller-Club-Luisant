@@ -60,28 +60,6 @@ function App() {
   return (
     <Provider store={store}>
       <Router>
-<<<<<<< HEAD
-        <div className="App" id="app">
-          <NavbarGlobal />
-          <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route exact path="/register" component={Register} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/toutes_en_roller" component={Toutes} />
-            <Route exact path="/club" component={Club} />
-            <Route exact path="/réglement" component={Regle} />
-            <Route exact path="/roues" component={Roues} />
-            <Route exact path="/cours/baby" component={CoursBaby} />
-            <AdminRoute exact path="/shop" component={ShopPage} />
-            <PrivateRoute exact path="/ProfilUser" component={ProfilUser} />
-            <PrivateRoute exact path="/planning" component={Planning} />
-            <AdminRoute exact path="/shop" component={ShopPage} />
-            <AdminRoute exact path="/admin/news" component={AdminPageNews} />
-            <AdminRoute exact path="/admin" component={DashboardUsers} />
-          </Switch>
-          <Footer />
-        </div>
-=======
         <ScrollToTop>
           <div className="App" id="app">
             <NavbarGlobal />
@@ -105,6 +83,7 @@ function App() {
                 component={CoursPerfect}
               />
               <AdminRoute exact path="/shop" component={ShopPage} />
+              <PrivateRoute exact path="/ProfilUser" component={ProfilUser} />
               <PrivateRoute exact path="/planning" component={Planning} />
               <AdminRoute exact path="/shop" component={ShopPage} />
               <AdminRoute exact path="/admin/news" component={AdminPageNews} />
@@ -113,7 +92,6 @@ function App() {
             <Footer />
           </div>
         </ScrollToTop>
->>>>>>> 18fbef484a37a2cbf66e4e26a4326334005cb21d
       </Router>
     </Provider>
   );

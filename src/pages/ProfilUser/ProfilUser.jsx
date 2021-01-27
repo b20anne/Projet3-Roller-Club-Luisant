@@ -1,10 +1,10 @@
 import React from "react";
 import "../ProfilUser/ProfilUser.css";
 import Logo1 from "../../components/assets/Roller.jpg";
-import MdPhone from "react-icons/md";
-import MdMailOutline from "react-icons/md";
-import MdCreate from "react-icons/md";
-import MdNotInterested from "react-icons/md";
+import { MdPhone } from "react-icons/md";
+import { MdMailOutline } from "react-icons/md";
+import { FaPen } from "react-icons/fa";
+import { MdNotInterested } from "react-icons/md";
 
 const ProfilUser = () => {
     return (
@@ -17,13 +17,15 @@ const ProfilUser = () => {
                     fuga vel ad laudantium,
                     in neque culpa distinctio dolorum, est libero velit!</div>
                     <div className="statusUser">Status :</div>
-                    <button>Déconnexion</button>
-                    <button>Modifier</button>
+                    <div className="groupBttn">
+                    <button className ="bttnDeco" alt="Déco">Déconnexion<MdNotInterested style={{fontSize: '15px'}}/></button>
+                        <button className="bttnModif" alt="Modif">Modifier<FaPen style={{fontSize: '15px'}}/></button>
+                    </div>
                 </div>
             </div>
             <div className="contactCard">
-                <div className="userPhone">Téléphone</div>
-                <div className="userEmail">Email</div>
+                <div className="userPhone"><MdPhone style={{fontSize: '25px'}}/>Téléphone</div>
+                <div className="userEmail"><MdMailOutline style={{fontSize: '25px'}}/>Email</div>
             </div>
         </div>
     );
