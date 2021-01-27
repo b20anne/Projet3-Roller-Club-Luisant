@@ -53,7 +53,7 @@ const HeaderHome = ({ auth, logoutUser }) => {
                 cursor: "pointer",
               }}
             >
-              <p>Planning des cours</p>
+              <p>Plannings des cours</p>
               <div className="RiCalendar">
                 <RiCalendarEventFill size="3em" />
               </div>

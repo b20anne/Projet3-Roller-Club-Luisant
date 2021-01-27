@@ -56,7 +56,7 @@ export default function Navbar() {
             <li className="itemsMobiles">Le Club</li>
           </Link>
           <Link to="/règlement" onClick={() => setMenuOpen(!menuOpen)}>
-            <li className="itemsMobiles">Réglement</li>
+            <li className="itemsMobiles">Règlement</li>
           </Link>
           <Link to="/roues" onClick={() => setMenuOpen(!menuOpen)}>
             <li className="itemsMobiles">Les roues de couleur</li>
