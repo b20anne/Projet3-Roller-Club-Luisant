@@ -25,7 +25,7 @@ const HeaderHome = ({ auth, logoutUser }) => {
                 logoutUser();
               }}
             >
-              logout
+              Déconnexion
             </button>
           </div>
         ) : (
