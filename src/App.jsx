@@ -29,6 +29,7 @@ import CoursBaby from "./pages/Cours/CoursBaby";
 import AdminPagePlanning from "./pages/AdminPagePlanning/AdminPagePlanning";
 import CoursApprentissage from "./pages/Cours/CoursApprentissage";
 import CoursPerfect from "./pages/Cours/CoursPerfect";
+import Legal from "./pages/Mentions Légales/Legal";
 
 // import Components
 import ScrollToTop from "./components/ScrollToTop/Scroll";
@@ -82,6 +83,7 @@ function App() {
                 path="/cours/perfectionnement"
                 component={CoursPerfect}
               />
+              <Route exact path="/copyright" component={Legal} />
               <AdminRoute exact path="/shop" component={ShopPage} />
               <PrivateRoute exact path="/planning" component={Planning} />
               <AdminRoute exact path="/shop" component={ShopPage} />
