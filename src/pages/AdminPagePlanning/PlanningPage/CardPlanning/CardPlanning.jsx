@@ -16,9 +16,7 @@ function CardPlanning({ title, type, date, id }) {
       <FcSurvey style={{ fontSize: "25px", marginRight: "10px" }} />
       <div className="cardPlanning__container">
         <p>{title}</p>
-        <p className="cardPlanning__category">
-          {type ? "Sondage" : "planning"}
-        </p>
+        <p className="cardPlanning__category">{type}</p>
         <p style={{ fontSize: "18px" }}>{date}</p>
         <div style={{ display: "flex" }}>
           <AiOutlineEdit
@@ -41,7 +39,7 @@ function CardPlanning({ title, type, date, id }) {
 
 CardPlanning.propTypes = {
   title: PropTypes.string.isRequired,
-  type: PropTypes.bool.isRequired,
+  type: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
   date: PropTypes.string.isRequired,
 };
