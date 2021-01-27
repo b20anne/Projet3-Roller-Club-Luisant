@@ -2,18 +2,14 @@ import React from "react";
 import LogoTER from "./assets/TER.png";
 import Logo1 from "./assets/FNCIDFF.png";
 import Logo2 from "./assets/TOUTE.png";
-import R1 from "./assets/R1.jpg";
 import R2 from "./assets/R2.jpg";
+import R2M from "./assets/R2M.jpg";
 import R3 from "./assets/R3.jpg";
 import "./Toutes.scss";
 
 const Toutes = () => {
   return (
-    <div
-      style={{
-        margin: "70px 0",
-      }}
-    >
+    <div>
       <div className="LogoToutes">
         <img src={LogoTER} alt="TER" />
         <h1 className="TERH1">Toutes en Roller</h1>
@@ -46,11 +42,11 @@ const Toutes = () => {
         </p>
       </div>
       <div className="TERRoll">
-        <div className="Roll1">
-          <img src={R1} alt="Roller1" />
-        </div>
         <div className="Roll2">
           <img src={R2} alt="Roller2" />
+        </div>
+        <div className="Roll2Min">
+          <img src={R2M} alt="Roll2Mini" />
         </div>
         <div className="Roll3">
           <img src={R3} alt="Roller3" />
