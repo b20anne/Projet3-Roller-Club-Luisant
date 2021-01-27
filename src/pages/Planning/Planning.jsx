@@ -17,13 +17,15 @@ function Planning() {
   return (
     <div className="planning__globalContainer">
       <h3 className="planning__titlePlanning">Les Plannings</h3>
-      {data.map((el) => (
-        <div className="planning__cardCourse">
-          <a target="_blank" rel="noreferrer" href={el.url}>
-            <CardUI name={el.title} />
-          </a>
-        </div>
-      ))}
+      {data.map((el) =>
+        el.category === "planning" ? (
+          <div className="planning__cardCourse">
+            <a target="_blank" rel="noreferrer" href={el.url}>
+              <CardUI name={el.title} />
+            </a>
+          </div>
+        ) : null
+      )}
     </div>
   );
 }
