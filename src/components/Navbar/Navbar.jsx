@@ -27,7 +27,7 @@ export default function Navbar() {
           <Link to="/club">
             <li className="iteems">Le Club</li>
           </Link>
-          <Link to="/réglement">
+          <Link to="/règlement">
             <li className="iteems">Règlement</li>
           </Link>
           <Link to="/roues">
@@ -50,16 +50,16 @@ export default function Navbar() {
       >
         <ul className="listeMobiles">
           <Link to="/" onClick={() => setMenuOpen(!menuOpen)}>
-            <li className="itemsMobiles">Accueuil</li>
+            <li className="itemsMobiles">Acceuil</li>
           </Link>
           <Link to="/club" onClick={() => setMenuOpen(!menuOpen)}>
             <li className="itemsMobiles">Le Club</li>
           </Link>
-          <Link to="/réglement" onClick={() => setMenuOpen(!menuOpen)}>
+          <Link to="/règlement" onClick={() => setMenuOpen(!menuOpen)}>
             <li className="itemsMobiles">Réglement</li>
           </Link>
           <Link to="/roues" onClick={() => setMenuOpen(!menuOpen)}>
-            <li className="itemsMobiles">Les roues de couleurs</li>
+            <li className="itemsMobiles">Les roues de couleur</li>
           </Link>
           <li className="itemsMobiles">
             <div className="accessLoginMobile">
@@ -71,7 +71,7 @@ export default function Navbar() {
                 }}
               >
                 <Link to="/login" onClick={() => setMenuOpen(!menuOpen)}>
-                  Connection
+                  Connexion
                 </Link>
               </div>
               <div
