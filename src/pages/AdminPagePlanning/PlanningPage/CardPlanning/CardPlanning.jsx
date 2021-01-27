@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
-import { FcSurvey } from "react-icons/fc";
+import { FcSurvey, FcCalendar } from "react-icons/fc";
 import { AiOutlineEdit, AiFillDelete } from "react-icons/ai";
 
 import "./CardPlanning.scss";
@@ -13,7 +13,11 @@ function CardPlanning({ title, type, date, id }) {
 
   return (
     <div className="cardPlanning__globalContainer">
-      <FcSurvey style={{ fontSize: "25px", marginRight: "10px" }} />
+      {type === "sondage" ? (
+        <FcSurvey style={{ fontSize: "25px", marginRight: "10px" }} />
+      ) : (
+        <FcCalendar style={{ fontSize: "25px", marginRight: "10px" }} />
+      )}
       <div className="cardPlanning__container">
         <p>{title}</p>
         <p className="cardPlanning__category">{type}</p>
