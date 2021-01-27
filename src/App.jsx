@@ -26,6 +26,7 @@ import Club from "./pages/LeClub/Club";
 import Regle from "./pages/Reglement/Reglement";
 import Roues from "./pages/RouesDeCouleur/RoueDeCouleur";
 import CoursBaby from "./pages/Cours/CoursBaby";
+import AdminPagePlanning from "./pages/AdminPagePlanning/AdminPagePlanning";
 import CoursApprentissage from "./pages/Cours/CoursApprentissage";
 import CoursPerfect from "./pages/Cours/CoursPerfect";
 
@@ -84,8 +85,13 @@ function App() {
               <AdminRoute exact path="/shop" component={ShopPage} />
               <PrivateRoute exact path="/planning" component={Planning} />
               <AdminRoute exact path="/shop" component={ShopPage} />
-              <AdminRoute exact path="/admin/news" component={AdminPageNews} />
               <AdminRoute exact path="/admin" component={DashboardUsers} />
+              <AdminRoute exact path="/admin/news" component={AdminPageNews} />
+              <AdminRoute
+                exact
+                path="/admin/planning"
+                component={AdminPagePlanning}
+              />
             </Switch>
             <Footer />
           </div>
