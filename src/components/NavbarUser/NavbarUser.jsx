@@ -31,7 +31,7 @@ function Navbar({ auth, logoutUser }) {
           <Link to="/club">
             <li className="items">Le Club</li>
           </Link>
-          <Link to="/réglement">
+          <Link to="/règlement">
             <li className="items">Règlement</li>
           </Link>
           <Link to="/roues">
@@ -74,7 +74,7 @@ function Navbar({ auth, logoutUser }) {
           <Link to="/club" onClick={() => setMenuOpen(!menuOpen)}>
             <li className="itemsMobile">Le Club</li>
           </Link>
-          <Link to="/réglement" onClick={() => setMenuOpen(!menuOpen)}>
+          <Link to="/règlement" onClick={() => setMenuOpen(!menuOpen)}>
             <li className="itemsMobile">Règlement</li>
           </Link>
           <Link to="/roues" onClick={() => setMenuOpen(!menuOpen)}>
