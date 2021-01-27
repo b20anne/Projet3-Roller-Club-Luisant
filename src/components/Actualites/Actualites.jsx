@@ -3,7 +3,6 @@ import axios from "axios";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import "./Actualites.scss";
-// eslint-disable-next-line import/no-named-as-default
 import SingleActualite from "./SingleActualite";
 
 class Actualites extends React.Component {
