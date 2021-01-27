@@ -26,7 +26,6 @@ const FormPlanning = ({ category, closeMenu }) => {
       url: urlName,
       category,
     };
-    console.log(postData);
     axios
       .post("http://localhost:8000/api/planning/add", postData)
       .then((resTwo) => resTwo.data)
@@ -41,7 +40,7 @@ const FormPlanning = ({ category, closeMenu }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    if (!titleName && !urlName) {
+    if (!titleName || !urlName) {
       alert("Vous devez renseigner un titre et un lien");
     } else {
       clickHandle();
@@ -76,7 +75,9 @@ const FormPlanning = ({ category, closeMenu }) => {
             placeholder={`Entrez le lien de votre ${category}`}
             value={urlName}
             name="url"
+            pattern="https://.*"
             id="url"
+            required
             onChange={(e) => {
               setUrl(e.target.value);
             }}
