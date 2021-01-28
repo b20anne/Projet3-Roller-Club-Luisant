@@ -6,9 +6,11 @@ import { AiOutlineEdit, AiFillDelete } from "react-icons/ai";
 
 import "./CardPlanning.scss";
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 function CardPlanning({ title, type, date, id }) {
   const handleDelete = () => {
-    axios.delete(`http://localhost:8000/api/planning/${id}`);
+    axios.delete(`${API_URL}/api/planning/${id}`);
   };
 
   return (

@@ -6,6 +6,8 @@ import "./Actualites.scss";
 // eslint-disable-next-line import/no-named-as-default
 import SingleActualite from "./SingleActualite";
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 class Actualites extends React.Component {
   constructor(props) {
     super(props);
@@ -20,7 +22,7 @@ class Actualites extends React.Component {
 
   getActualities() {
     axios
-      .get("http://localhost:8000/api/actualities/")
+      .get(`${API_URL}api/actualities/`)
 
       .then((response) => response.data)
       .then((data) => {
@@ -42,7 +44,7 @@ class Actualites extends React.Component {
           {actualities.map((actuality) => (
             <SingleActualite
               key={actuality.id}
-              picture={`http://localhost:8000/public/images/${actuality.name}`}
+              picture={`${API_URL}/public/images/${actuality.name}`}
               alt={actuality.alt}
               title={actuality.title}
               description={actuality.description}
@@ -57,7 +59,7 @@ class Actualites extends React.Component {
                 <div>
                   <SingleActualite
                     key={actuality.id}
-                    picture={`http://localhost:8000/public/images/${actuality.name}`}
+                    picture={`${API_URL}/public/images/${actuality.name}`}
                     alt={actuality.alt}
                     title={actuality.title}
                     description={actuality.description}
