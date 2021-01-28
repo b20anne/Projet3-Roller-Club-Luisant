@@ -8,12 +8,14 @@ import CardPostNews from "./CardPostNews/CardPostNews";
 import Form from "./FormNews/FormNews";
 import NavigationDashboard from "../../components/NavigationDashboard/NavigationDashboard";
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 function AdminPageNews() {
   const [isVisibleForm, setIsVisibleForm] = useState(false);
   const [dataPost, setDataPost] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8000/api/actualities").then((res) => {
+    axios.get(`${API_URL}/api/actualities`).then((res) => {
       setDataPost(res.data);
       console.log(dataPost);
     });
@@ -27,7 +29,7 @@ function AdminPageNews() {
     <div className="dashboardContainer">
       <NavigationDashboard />
       <div className="adminPageNews__globalContainer">
-        <h4 className="adminPageNews__titlePage">Ajoutez une actualité</h4>
+        <h4 className="adminPageNews__titlePage">Ajouter une actualité</h4>
         <div className="adminPageNews__postNews">
           <CardPostNews handleClick={handlePost} />
         </div>
@@ -35,7 +37,7 @@ function AdminPageNews() {
           {dataPost.map((el) => {
             return (
               <CardPostNewsUI
-                image={`http://localhost:8000/public/images/${el.name}`}
+                image={`${API_URL}/public/images/${el.name}`}
                 id={el.id}
               />
             );
