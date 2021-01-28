@@ -19,7 +19,7 @@ function AdminPageNews() {
       setDataPost(res.data);
       console.log(dataPost);
     });
-  }, []);
+  }, [dataPost]);
 
   function handlePost() {
     setIsVisibleForm(!isVisibleForm);

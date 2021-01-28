@@ -3,7 +3,6 @@ import axios from "axios";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import "./Actualites.scss";
-// eslint-disable-next-line import/no-named-as-default
 import SingleActualite from "./SingleActualite";
 
 const API_URL = process.env.REACT_APP_API_URL;
