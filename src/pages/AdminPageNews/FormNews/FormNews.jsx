@@ -5,6 +5,8 @@ import { MdPublish } from "react-icons/md";
 
 import "./FormNews.scss";
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 function FormNews() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [titleName, setTitleName] = useState("");
@@ -18,7 +20,7 @@ function FormNews() {
     const data = new FormData();
     data.append("file", selectedFile);
     axios
-      .post("http://localhost:8000/api/admin/", data)
+      .post(`${API_URL}api/admin/`, data)
       .then((res) => res.data)
       .then((res) => {
         const newsData = {
@@ -29,7 +31,7 @@ function FormNews() {
           alt: res.filename,
         };
         axios
-          .post("http://localhost:8000/api/actualities/add", newsData)
+          .post(`${API_URL}/api/actualities/add`, newsData)
           .then((resTwo) => resTwo.data)
           .then(() => {
             alert(`Article créé`);
