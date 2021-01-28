@@ -17,13 +17,13 @@ const NavigationDashboard = () => {
         <Link style={{ textDecoration: "none" }} to="/admin">
           <div className="navDashboard__itemNav">
             <FaUserAlt value={{ size: "2em", color: "white" }} />
-            <p className="navDashboard__textNav">Voir les utilisateurs</p>
+            <p className="navDashboard__textNav">Voir les adhérents</p>
           </div>
         </Link>
         <Link style={{ textDecoration: "none" }} to="/admin/news">
           <div className="navDashboard__itemNav">
             <FaNewspaper value={{ size: "2em", color: "white" }} />
-            <p className="navDashboard__textNav">Gérer les Actualités</p>
+            <p className="navDashboard__textNav">Gérer les actualités</p>
           </div>
         </Link>
         <Link style={{ textDecoration: "none" }} to="/admin/planning">

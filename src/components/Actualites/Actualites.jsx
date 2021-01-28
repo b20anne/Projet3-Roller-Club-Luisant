@@ -21,7 +21,7 @@ class Actualites extends React.Component {
 
   getActualities() {
     axios
-      .get(`${API_URL}api/actualities/`)
+      .get(`${API_URL}/api/actualities/`)
 
       .then((response) => response.data)
       .then((data) => {
