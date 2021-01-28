@@ -4,12 +4,14 @@ import axios from "axios";
 import "./Planning.scss";
 import CardUI from "./CardUI/CardUI";
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 function Planning() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     const axiosData = async () => {
-      const res = await axios.get(`http://localhost:8000/api/planning/`);
+      const res = await axios.get(`${API_URL}/api/planning/`);
       setData(res.data);
     };
     axiosData();
@@ -17,13 +19,15 @@ function Planning() {
   return (
     <div className="planning__globalContainer">
       <h3 className="planning__titlePlanning">Les Plannings</h3>
-      {data.map((el) => (
-        <div className="planning__cardCourse">
-          <a target="_blank" rel="noreferrer" href={el.url}>
-            <CardUI name={el.title} />
-          </a>
-        </div>
-      ))}
+      {data.map((el) =>
+        el.category === "planning" ? (
+          <div className="planning__cardCourse">
+            <a target="_blank" rel="noreferrer" href={el.url}>
+              <CardUI name={el.title} />
+            </a>
+          </div>
+        ) : null
+      )}
     </div>
   );
 }
