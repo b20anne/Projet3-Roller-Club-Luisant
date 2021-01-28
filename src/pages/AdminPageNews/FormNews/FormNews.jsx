@@ -61,7 +61,7 @@ function FormNews() {
       <input
         className="formNews__input"
         type="text"
-        placeholder="Entrez le titre de votre post"
+        placeholder="Entrez le titre du post"
         name="title"
         id="title"
         onChange={(e) => setTitleName(e.target.value)}
