@@ -29,7 +29,7 @@ function AdminPageNews() {
     <div className="dashboardContainer">
       <NavigationDashboard />
       <div className="adminPageNews__globalContainer">
-        <h4 className="adminPageNews__titlePage">Ajoutez une actualité</h4>
+        <h4 className="adminPageNews__titlePage">Ajouter une actualité</h4>
         <div className="adminPageNews__postNews">
           <CardPostNews handleClick={handlePost} />
         </div>
