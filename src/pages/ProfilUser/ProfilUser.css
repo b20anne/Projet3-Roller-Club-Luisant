@@ -89,6 +89,18 @@
 }
 
 
+.userPhone {
+    display: flex;
+    align-items: center;
+}
+
+.userEmail {
+    display: flex;
+    align-items: center;
+}
+
+
+
 @media screen and (max-width:650px) {
 
 
