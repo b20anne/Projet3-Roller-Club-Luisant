@@ -9,7 +9,7 @@ function Footer() {
   return (
     <footer>
       <div className="footer">
-        <NavLink to="/Copyright">
+        <NavLink to="/copyright">
           <Copyright />
         </NavLink>
         <div className="LogoFFRS">
