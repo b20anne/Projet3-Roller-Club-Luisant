@@ -20,7 +20,7 @@ function FormNews() {
     const data = new FormData();
     data.append("file", selectedFile);
     axios
-      .post(`${API_URL}api/admin/`, data)
+      .post(`${API_URL}/api/admin/`, data)
       .then((res) => res.data)
       .then((res) => {
         const newsData = {
