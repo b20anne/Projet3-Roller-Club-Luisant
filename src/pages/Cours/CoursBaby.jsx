@@ -1,6 +1,5 @@
 import React from "react";
 import "./cours.css";
-import Logo from "../../components/assets/logoNav.gif";
 import Logo1 from "../../components/assets/Roller.jpg";
 import Carousel from "./Carousel/Carousel";
 
@@ -11,13 +10,12 @@ const CoursBaby = () => {
         <div className="group">
           <div className="group-top">
             <h1 className="titreVert">Cours Baby</h1>
-            <img src={Logo} alt="logo" className="logoCours" />
           </div>
           <div className="group2">
             <img src={Logo1} alt="OUi" className="imageCours" />
             <div className="descript">
               <div className="group3">
-                <h2 className="titreBlanc">DECOUVERTE/FUN/LUDIQUE</h2>
+                <h2 className="titreBlanc">DECOUVERTE FUN LUDIQUE</h2>
                 <h3 className="titreVert">Horaires :</h3>
                 <div>
                   Samedi de 13h30 à 14h30 - Gymnase Roblot, cours Charles Brune
@@ -36,7 +34,7 @@ const CoursBaby = () => {
                 </div>
               </div>
               <button type="button" className="bttn-signUp">
-                Inscription
+                Inscription: nous contacter par mail
               </button>
             </div>
           </div>
