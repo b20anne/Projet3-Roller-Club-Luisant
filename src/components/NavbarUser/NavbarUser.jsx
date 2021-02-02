@@ -49,7 +49,11 @@ function Navbar({ auth, logoutUser }) {
           ) : null}
           {auth.isAuthenticated === true ? (
             <Link to="/profilUser">
-              <li className="items">Mon Compte</li>
+              <img
+                src="https://oasys.ch/wp-content/uploads/2019/03/photo-avatar-profil.png"
+                className="profilNavbar"
+                alt="Navbar"
+              />
             </Link>
           ) : null}
         </ul>
