@@ -4,6 +4,7 @@ import { MdPhone, MdMailOutline, MdNotInterested } from "react-icons/md";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import axios from "axios";
+import { logoutUser } from "../../actions/authActions";
 import Logo1 from "../../components/assets/Roller.jpg";
 
 const API_URL = process.env.REACT_APP_API_URL;
@@ -23,8 +24,6 @@ class ProfilUser extends React.Component {
   getUser() {
     const { userInfo } = this.props;
     const { id } = userInfo;
-    console.log(this.props);
-
     axios
       .get(`${API_URL}/api/profile/${id}`)
 
@@ -41,6 +40,8 @@ class ProfilUser extends React.Component {
 
   render() {
     const { user } = this.state;
+    // eslint-disable-next-line no-shadow
+    const { logoutUser } = this.props;
     return (
       <div>
         {user ? (
@@ -53,7 +54,14 @@ class ProfilUser extends React.Component {
                 </div>
                 <div className="statusUser">Âge : {user.age}</div>
                 <div className="groupBttn">
-                  <button type="submit" className="bttnDeco" alt="Déco">
+                  <button
+                    onClick={() => {
+                      logoutUser();
+                    }}
+                    type="submit"
+                    className="bttnDeco"
+                    alt="Déco"
+                  >
                     Déconnexion
                     <MdNotInterested style={{ fontSize: "15px" }} />
                   </button>
@@ -81,10 +89,11 @@ class ProfilUser extends React.Component {
 
 ProfilUser.propTypes = {
   userInfo: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  logoutUser: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
   userInfo: state.auth.user,
 });
 
-export default connect(mapStateToProps)(ProfilUser);
+export default connect(mapStateToProps, { logoutUser })(ProfilUser);
