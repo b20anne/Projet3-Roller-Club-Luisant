@@ -13,13 +13,16 @@ const API_URL = process.env.REACT_APP_API_URL;
 function AdminPageNews() {
   const [isVisibleForm, setIsVisibleForm] = useState(false);
   const [dataPost, setDataPost] = useState([]);
-
-  useEffect(() => {
+  function getData() {
     axios.get(`${API_URL}/api/actualities`).then((res) => {
       setDataPost(res.data);
       console.log(dataPost);
     });
-  }, [dataPost]);
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   function handlePost() {
     setIsVisibleForm(!isVisibleForm);
@@ -39,6 +42,7 @@ function AdminPageNews() {
               <CardPostNewsUI
                 image={`${API_URL}/public/images/${el.name}`}
                 id={el.id}
+                getData={getData}
               />
             );
           })}
