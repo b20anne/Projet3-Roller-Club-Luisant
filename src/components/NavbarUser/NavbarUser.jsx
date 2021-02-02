@@ -47,12 +47,12 @@ function Navbar({ auth, logoutUser }) {
               <li className="items">Admin page</li>
             </Link>
           ) : null}
+          {auth.isAuthenticated === true ? (
+            <Link to="/profilUser">
+              <li className="items">Mon Compte</li>
+            </Link>
+          ) : null}
         </ul>
-        <img
-          src="https://oasys.ch/wp-content/uploads/2019/03/photo-avatar-profil.png"
-          className="profilNavbar"
-          alt="Navbar"
-        />
         <div className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
           <div className="menu-btn_burger">
             <div />
@@ -80,7 +80,7 @@ function Navbar({ auth, logoutUser }) {
           <Link to="/roues" onClick={() => setMenuOpen(!menuOpen)}>
             <li className="itemsMobile">Les roues de couleur</li>
           </Link>
-          <Link to="/profil" onClick={() => setMenuOpen(!menuOpen)}>
+          <Link to="/profilUser" onClick={() => setMenuOpen(!menuOpen)}>
             <li className="itemsMobile">Mon compte</li>
           </Link>
           <Link to="/planning" onClick={() => setMenuOpen(!menuOpen)}>
