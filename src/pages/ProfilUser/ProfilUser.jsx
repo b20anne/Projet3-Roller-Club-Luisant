@@ -51,7 +51,7 @@ class ProfilUser extends React.Component {
                 <div className="nameUser">
                   Nom / Prénom : {user.lastName} {user.firstName}
                 </div>
-                <div className="statusUser">Âge : {user.age}</div>
+                <div className="statusUser">Année de naissance: {user.age}</div>
                 <div className="groupBttn">
                   <button type="submit" className="bttnDeco" alt="Déco">
                     Déconnexion

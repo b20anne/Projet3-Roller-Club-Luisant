@@ -17,10 +17,14 @@ const DashboardUsers = () => {
     fetchApi();
   }, []);
 
+  const handleDelete = (id) => {
+    axios.delete(`${API_URL}/api/users/${id}`);
+  };
+
   return (
     <div className="dashboardContainer">
       <NavigationDashboard />
-      <TableUsers users={users} />
+      <TableUsers users={users} handleDelete={handleDelete} />
     </div>
   );
 };

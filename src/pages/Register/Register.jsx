@@ -59,7 +59,7 @@ const Register = (props) => {
           <div className="formContainer">
             <div className="formTitle">
               <h1>Inscription</h1>
-              <h2>Créez votre compte pour accéder à nos offres</h2>
+              <h2>Créer son compte</h2>
               <p>
                 Veuillez rentrer vos informations personnelles pour pouvoir
                 créer votre compte.
@@ -120,7 +120,7 @@ const Register = (props) => {
                     id="age"
                     name="age"
                     type="text"
-                    placeholder="Age"
+                    placeholder="Année de naissance"
                     value={age}
                     onChange={(event) => {
                       setAge(event.target.value);
