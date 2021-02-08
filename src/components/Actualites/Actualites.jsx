@@ -55,9 +55,8 @@ class Actualites extends React.Component {
           <div>
             <Slide>
               {actualities.map((actuality) => (
-                <div>
+                <div key={actuality.id}>
                   <SingleActualite
-                    key={actuality.id}
                     picture={`${API_URL}/public/images/${actuality.name}`}
                     alt={actuality.alt}
                     title={actuality.title}
