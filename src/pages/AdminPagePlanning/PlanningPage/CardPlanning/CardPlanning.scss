@@ -16,6 +16,13 @@
     }
   }
 
+  &__edit {
+    margin-right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #ffa500;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
@@ -25,5 +32,21 @@
   &__category {
     color: rgb(109, 109, 109);
     font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .cardPlanning {
+    &__category {
+      display: none;
+    }
+
+    &__edit {
+      display: none;
+    }
+
+    &__date {
+      display: none ;
+    }
   }
 }

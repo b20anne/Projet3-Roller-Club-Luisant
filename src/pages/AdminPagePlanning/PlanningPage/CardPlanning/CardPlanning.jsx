@@ -23,7 +23,9 @@ function CardPlanning({ title, type, date, id }) {
       <div className="cardPlanning__container">
         <p>{title}</p>
         <p className="cardPlanning__category">{type}</p>
-        <p style={{ fontSize: "18px" }}>{date}</p>
+        <p className="cardPlanning__date" style={{ fontSize: "18px" }}>
+          {date}
+        </p>
         <div style={{ display: "flex" }}>
           <AiFillDelete
             onClick={handleDelete}
