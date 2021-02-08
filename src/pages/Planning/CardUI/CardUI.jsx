@@ -14,7 +14,7 @@ function CardUI({ name, link }) {
       className="cardP__globalContainer"
     >
       <div className="cardP__containerText">
-        <p className="cardP__text">Planning {name}</p>
+        <p className="cardP__text">Sondage {name}</p>
       </div>
     </div>
   );

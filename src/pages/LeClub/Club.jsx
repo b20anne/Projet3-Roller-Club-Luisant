@@ -41,7 +41,7 @@ const Club = () => {
       <p className="ClubText1">
         LOPEZ Solène
         <br /> <br /> 07.86.57.04.34
-        <br /> <br /> roller.club.luisant@outlook.fr
+        <br /> <br /> Roller.Club.Luisant@outlook.fr
         <br /> <br /> 108 avenue Maurice Maunoury 28600 Luisant
       </p>
     </div>
