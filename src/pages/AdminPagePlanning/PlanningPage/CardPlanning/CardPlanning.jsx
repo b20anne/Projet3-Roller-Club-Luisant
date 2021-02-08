@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
 import { FcSurvey, FcCalendar } from "react-icons/fc";
-import { AiOutlineEdit, AiFillDelete } from "react-icons/ai";
+import { AiFillDelete } from "react-icons/ai";
 
 import "./CardPlanning.scss";
 
@@ -27,7 +27,6 @@ function CardPlanning({ title, type, date, id }) {
           {date}
         </p>
         <div style={{ display: "flex" }}>
-          <AiOutlineEdit className="cardPlanning__edit" />
           <AiFillDelete
             onClick={handleDelete}
             style={{ fontSize: "28px", cursor: "pointer", color: "#D11A2A" }}
