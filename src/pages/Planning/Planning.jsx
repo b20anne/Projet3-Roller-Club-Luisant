@@ -19,15 +19,25 @@ function Planning() {
   return (
     <div className="planning__globalContainer">
       <h3 className="planning__titlePlanning">Les Plannings</h3>
-      {data.map((el) =>
-        el.category === "planning" ? (
-          <div className="planning__cardCourse">
-            <a target="_blank" rel="noreferrer" href={el.url}>
-              <CardUI name={el.title} />
-            </a>
-          </div>
-        ) : null
-      )}
+      <div className="planning__cardCourse">
+        {data.map((el) =>
+          el.category === "planning" ? (
+            <>
+              <CardUI name={el.title} link={el.url} />
+            </>
+          ) : null
+        )}
+      </div>
+      <h3 className="planning__titlePlanning">Les Sondages</h3>
+      <div className="planning__cardCourse">
+        {data.map((el) =>
+          el.category === "sondage" ? (
+            <>
+              <CardUI name={el.title} link={el.url} />
+            </>
+          ) : null
+        )}
+      </div>
     </div>
   );
 }
