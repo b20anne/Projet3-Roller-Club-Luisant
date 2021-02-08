@@ -11,6 +11,7 @@ const API_URL = process.env.REACT_APP_API_URL;
 function CardPlanning({ title, type, date, id }) {
   const handleDelete = () => {
     axios.delete(`${API_URL}/api/planning/${id}`);
+    window.location.reload();
   };
 
   return (

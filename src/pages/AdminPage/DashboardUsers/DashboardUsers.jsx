@@ -19,6 +19,7 @@ const DashboardUsers = () => {
 
   const handleDelete = (id) => {
     axios.delete(`${API_URL}/api/users/${id}`);
+    window.location.reload();
   };
 
   return (

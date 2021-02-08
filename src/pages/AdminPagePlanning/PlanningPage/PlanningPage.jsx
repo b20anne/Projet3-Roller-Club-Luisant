@@ -13,13 +13,19 @@ function PlanningPage() {
   const [displaySondage, setDisplaySondage] = useState(false);
   const [displayPlanning, setDisplayPlanning] = useState(false);
 
+  const axiosData = async () => {
+    const res = await axios.get(`${API_URL}/api/planning/`);
+    setData(res.data);
+  };
+
   useEffect(() => {
-    const axiosData = async () => {
-      const res = await axios.get(`${API_URL}/api/planning/`);
-      setData(res.data);
-    };
     axiosData();
-  }, [data]);
+    if (displayPlanning || displaySondage) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "visible";
+    }
+  }, [displaySondage, displayPlanning]);
 
   return (
     <>
