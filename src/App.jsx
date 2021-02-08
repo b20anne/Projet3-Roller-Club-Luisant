@@ -18,7 +18,6 @@ import AdminRoute from "./adminRoute/adminRoute";
 import HomePage from "./pages/HomePage/HomePage";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
-import ShopPage from "./pages/ShopPage/ShopPage";
 import Planning from "./pages/Planning/Planning";
 import Toutes from "./pages/ToutesEnRoller/Toutes";
 import AdminPageNews from "./pages/AdminPageNews/AdminPageNews";
@@ -85,10 +84,8 @@ function App() {
                 component={CoursPerfect}
               />
               <Route exact path="/copyright" component={Legal} />
-              <AdminRoute exact path="/shop" component={ShopPage} />
               <PrivateRoute exact path="/profilUser" component={ProfilUser} />
               <PrivateRoute exact path="/planning" component={Planning} />
-              <AdminRoute exact path="/shop" component={ShopPage} />
               <AdminRoute exact path="/admin" component={DashboardUsers} />
               <AdminRoute exact path="/admin/news" component={AdminPageNews} />
               <AdminRoute

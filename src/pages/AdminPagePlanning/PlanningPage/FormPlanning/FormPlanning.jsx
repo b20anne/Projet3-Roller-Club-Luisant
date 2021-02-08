@@ -55,7 +55,7 @@ const FormPlanning = ({ category, closeMenu }) => {
         <div
           className="formPlanning__closeBtn"
           onClick={closeMenu}
-          onKeyDown
+          onKeyDown={closeMenu}
           role="button"
           tabIndex="0"
         >

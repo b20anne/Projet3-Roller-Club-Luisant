@@ -17,7 +17,6 @@ function AdminPageNews() {
   function getData() {
     axios.get(`${API_URL}/api/actualities`).then((res) => {
       setDataPost(res.data);
-      console.log(dataPost);
     });
   }
 
@@ -44,6 +43,7 @@ function AdminPageNews() {
                 image={`${API_URL}/public/images/${el.name}`}
                 id={el.id}
                 getData={getData}
+                key={el.id}
               />
             );
           })}

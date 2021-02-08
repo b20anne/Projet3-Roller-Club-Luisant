@@ -10,9 +10,8 @@ function Planning() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const axiosData = async () => {
-      const res = await axios.get(`${API_URL}/api/planning/`);
-      setData(res.data);
+    const axiosData = () => {
+      axios.get(`${API_URL}/api/planning/`).then((res) => setData(res.data));
     };
     axiosData();
   });
@@ -22,9 +21,9 @@ function Planning() {
       <div className="planning__cardCourse">
         {data.map((el) =>
           el.category === "planning" ? (
-            <>
+            <React.Fragment key={el.id}>
               <CardUI name={el.title} link={el.url} />
-            </>
+            </React.Fragment>
           ) : null
         )}
       </div>
@@ -32,9 +31,9 @@ function Planning() {
       <div className="planning__cardCourse">
         {data.map((el) =>
           el.category === "sondage" ? (
-            <>
+            <React.Fragment key={el.id}>
               <CardUI name={el.title} link={el.url} />
-            </>
+            </React.Fragment>
           ) : null
         )}
       </div>

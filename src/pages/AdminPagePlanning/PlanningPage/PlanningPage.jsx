@@ -74,6 +74,7 @@ function PlanningPage() {
             title={el.title}
             date={el.date}
             type={el.category}
+            key={el.id}
           />
         ))}
       </div>

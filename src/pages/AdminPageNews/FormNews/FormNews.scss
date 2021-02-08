@@ -66,3 +66,20 @@
 input[type="file"] {
   display: none;
 }
+
+@media only screen and (max-width: 900px) {
+  .formNews {
+    &__input {
+      width: 80%;
+    }
+    &__inputDesc {
+      width: 80%;
+    }
+    &__upload {
+      width: 80%;
+    }
+    &__btn {
+      width: 80%;
+    }
+  }
+}

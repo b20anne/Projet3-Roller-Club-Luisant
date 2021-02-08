@@ -8,6 +8,7 @@
   background: transparent;
   color: #20b82c;
   border: none;
+  cursor: pointer;
 }
 
 .bouton:before,
