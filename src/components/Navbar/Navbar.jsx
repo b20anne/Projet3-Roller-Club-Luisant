@@ -50,7 +50,7 @@ export default function Navbar() {
       >
         <ul className="listeMobiles">
           <Link to="/" onClick={() => setMenuOpen(!menuOpen)}>
-            <li className="itemsMobiles">Acceuil</li>
+            <li className="itemsMobiles">Accueil</li>
           </Link>
           <Link to="/club" onClick={() => setMenuOpen(!menuOpen)}>
             <li className="itemsMobiles">Le Club</li>
