@@ -20,12 +20,7 @@ function PlanningPage() {
 
   useEffect(() => {
     axiosData();
-    if (displayPlanning || displaySondage) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "visible";
-    }
-  }, [displaySondage, displayPlanning]);
+  }, []);
 
   return (
     <>

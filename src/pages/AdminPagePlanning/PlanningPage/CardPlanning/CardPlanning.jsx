@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
 import { FcSurvey, FcCalendar } from "react-icons/fc";
-import { AiOutlineEdit, AiFillDelete } from "react-icons/ai";
+import { AiFillDelete } from "react-icons/ai";
 
 import "./CardPlanning.scss";
 
@@ -22,13 +22,12 @@ function CardPlanning({ title, type, date, id }) {
         <FcCalendar style={{ fontSize: "25px", marginRight: "10px" }} />
       )}
       <div className="cardPlanning__container">
-        <p>{title}</p>
+        <p>{title.length <= 15 ? title : `${title.slice(0, 12)}...`}</p>
         <p className="cardPlanning__category">{type}</p>
         <p className="cardPlanning__date" style={{ fontSize: "18px" }}>
           {date}
         </p>
         <div style={{ display: "flex" }}>
-          <AiOutlineEdit className="cardPlanning__edit" />
           <AiFillDelete
             onClick={handleDelete}
             style={{ fontSize: "28px", cursor: "pointer", color: "#D11A2A" }}
