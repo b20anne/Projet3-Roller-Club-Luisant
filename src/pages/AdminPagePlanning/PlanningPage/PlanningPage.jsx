@@ -13,13 +13,14 @@ function PlanningPage() {
   const [displaySondage, setDisplaySondage] = useState(false);
   const [displayPlanning, setDisplayPlanning] = useState(false);
 
+  const axiosData = async () => {
+    const res = await axios.get(`${API_URL}/api/planning/`);
+    setData(res.data);
+  };
+
   useEffect(() => {
-    const axiosData = async () => {
-      const res = await axios.get(`${API_URL}/api/planning/`);
-      setData(res.data);
-    };
     axiosData();
-  }, [data]);
+  }, []);
 
   return (
     <>
@@ -73,6 +74,7 @@ function PlanningPage() {
             title={el.title}
             date={el.date}
             type={el.category}
+            key={el.id}
           />
         ))}
       </div>

@@ -9,8 +9,7 @@ const API_URL = process.env.REACT_APP_API_URL;
 
 function CardPostNewsUI({ image, id, getData }) {
   function handleDelete() {
-    axios.delete(`${API_URL}/api/actualities/news/${id}`).then((res) => {
-      console.log(res);
+    axios.delete(`${API_URL}/api/actualities/news/${id}`).then(() => {
       getData();
     });
   }

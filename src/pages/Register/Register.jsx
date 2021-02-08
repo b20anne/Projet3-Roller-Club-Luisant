@@ -161,7 +161,7 @@ const mapStateToProps = (state) => ({
 
 Register.propTypes = {
   registerUser: PropTypes.func.isRequired,
-  history: PropTypes.func.isRequired,
+  history: PropTypes.oneOfType([PropTypes.object]).isRequired,
 };
 
 export default connect(mapStateToProps, { registerUser })(Register);

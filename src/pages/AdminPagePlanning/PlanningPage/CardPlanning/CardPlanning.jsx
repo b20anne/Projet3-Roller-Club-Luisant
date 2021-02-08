@@ -11,6 +11,7 @@ const API_URL = process.env.REACT_APP_API_URL;
 function CardPlanning({ title, type, date, id }) {
   const handleDelete = () => {
     axios.delete(`${API_URL}/api/planning/${id}`);
+    window.location.reload();
   };
 
   return (
@@ -21,7 +22,7 @@ function CardPlanning({ title, type, date, id }) {
         <FcCalendar style={{ fontSize: "25px", marginRight: "10px" }} />
       )}
       <div className="cardPlanning__container">
-        <p>{title}</p>
+        <p>{title.length <= 15 ? title : `${title.slice(0, 12)}...`}</p>
         <p className="cardPlanning__category">{type}</p>
         <p className="cardPlanning__date" style={{ fontSize: "18px" }}>
           {date}

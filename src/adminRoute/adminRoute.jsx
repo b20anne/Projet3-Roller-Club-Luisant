@@ -24,7 +24,7 @@ const AdminRoute = ({ component: Component, auth, ...rest }) => {
 
 AdminRoute.propTypes = {
   auth: PropTypes.oneOfType([PropTypes.object]).isRequired,
-  component: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  component: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({

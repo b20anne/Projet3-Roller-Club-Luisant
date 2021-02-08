@@ -14,6 +14,7 @@ function TableUsers({ users, handleDelete }) {
             <th>Prénom</th>
             <th>Adresse email</th>
             <th>Année de naissance</th>
+            <th> </th>
           </tr>
           {users.map((el, index) => (
             <tr key={el.id}>
