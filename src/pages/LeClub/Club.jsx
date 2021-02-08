@@ -20,6 +20,7 @@ const Club = () => {
         soi et l’esprit d’équipe en favorisant l’entretien physique et le
         bien-être!
       </p>
+
       <h2 className="ClubBold">Objet</h2>
       <p className="ClubText">
         Encadré par des passionnés le a pour ambition de promouvoir le Roller et
@@ -34,6 +35,14 @@ const Club = () => {
         <br /> Nos cours sont ouverts de Septembre à Juin hors vacances
         scholaires et des stages sont organisés tout au long de la saison pour
         découvrir de nouvelles sensations et aprfaire son entrainement.
+      </p>
+
+      <h1 className="ClubBold">Contact</h1>
+      <p className="ClubText1">
+        LOPEZ Solène
+        <br /> <br /> 07.86.57.04.34
+        <br /> <br /> roller.club.luisant@outlook.fr
+        <br /> <br /> 108 avenue Maurice Maunoury 28600 Luisant
       </p>
     </div>
   );
