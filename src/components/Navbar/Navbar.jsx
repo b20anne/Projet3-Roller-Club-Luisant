@@ -1,12 +1,21 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logoNav from "../assets/logoNav.gif";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "visible";
+    }
+  }, [menuOpen]);
+
   return (
     <div
       style={{
@@ -50,7 +59,7 @@ export default function Navbar() {
       >
         <ul className="listeMobiles">
           <Link to="/" onClick={() => setMenuOpen(!menuOpen)}>
-            <li className="itemsMobiles">Acceuil</li>
+            <li className="itemsMobiles">Accueil</li>
           </Link>
           <Link to="/club" onClick={() => setMenuOpen(!menuOpen)}>
             <li className="itemsMobiles">Le Club</li>
