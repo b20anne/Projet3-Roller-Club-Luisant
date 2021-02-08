@@ -6,6 +6,8 @@ import { FaCalendar, FaChartBar } from "react-icons/fa";
 
 import "./FormPlanning.scss";
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 const FormPlanning = ({ category, closeMenu }) => {
   const [urlName, setUrl] = useState("");
   const [titleName, setTitle] = useState("");
@@ -27,7 +29,7 @@ const FormPlanning = ({ category, closeMenu }) => {
       category,
     };
     axios
-      .post("http://localhost:8000/api/planning/add", postData)
+      .post(`${API_URL}/api/planning/add`, postData)
       .then((resTwo) => resTwo.data)
       .then(() => {
         alert(`${category} créé`);

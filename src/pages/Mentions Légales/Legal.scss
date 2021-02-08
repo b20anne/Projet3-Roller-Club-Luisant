@@ -1,27 +1,24 @@
-.ClubDiv{
-    padding: 10px;
-    margin-top: 35px;
-    margin-bottom: 25px;
+.LegalText{
+    margin: 15px;
     text-align: center;
-    min-height: 100vh;
 }
 
-.ClubBold{
+.LegalH2{
     font-size: bold;
     color:  #f64c02;
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
-.ClubText1{
+.LegalDesc1{
     padding: 5px;
     border-radius: 10px;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
 }
 
-.ClubText{
+.LegalDesc2{
     padding: 5px;
+    background:#3d3939;
     border-radius: 10px;
-    background: #3d3939;
     color: #20b82c;
 }

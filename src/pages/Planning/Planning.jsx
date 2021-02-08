@@ -4,12 +4,14 @@ import axios from "axios";
 import "./Planning.scss";
 import CardUI from "./CardUI/CardUI";
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 function Planning() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     const axiosData = async () => {
-      const res = await axios.get(`http://localhost:8000/api/planning/`);
+      const res = await axios.get(`${API_URL}/api/planning/`);
       setData(res.data);
     };
     axiosData();

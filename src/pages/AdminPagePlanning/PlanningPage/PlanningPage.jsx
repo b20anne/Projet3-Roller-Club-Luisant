@@ -6,6 +6,8 @@ import "./PlanningPage.scss";
 import CardPlanning from "./CardPlanning/CardPlanning";
 import FormPlanning from "./FormPlanning/FormPlanning";
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 function PlanningPage() {
   const [data, setData] = useState([]);
   const [displaySondage, setDisplaySondage] = useState(false);
@@ -13,7 +15,7 @@ function PlanningPage() {
 
   useEffect(() => {
     const axiosData = async () => {
-      const res = await axios.get(`http://localhost:8000/api/planning/`);
+      const res = await axios.get(`${API_URL}/api/planning/`);
       setData(res.data);
     };
     axiosData();
@@ -64,7 +66,7 @@ function PlanningPage() {
           <FaChartBar style={{ marginRight: "10px", fontSize: "17px" }} />
           Ajouter un sondage
         </button>
-        <h3 className="planningPage__title">Planning et sondages</h3>
+        <h3 className="planningPage__title">Plannings et sondages</h3>
         {data.map((el) => (
           <CardPlanning
             id={el.id}

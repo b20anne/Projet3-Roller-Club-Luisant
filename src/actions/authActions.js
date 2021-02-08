@@ -4,10 +4,11 @@ import setAuthToken from "../services/setAuthToken";
 
 import { SET_CURRENT_USER, USER_LOADING, GET_ERRORS } from "./types";
 
+const API_URL = process.env.REACT_APP_API_URL;
 // Register User
 export const registerUser = (userData, history) => (dispatch) => {
   axios
-    .post("http://localhost:8000/api/users/register", userData)
+    .post(`${API_URL}/api/users/register`, userData)
     .then(() => history.push("/login"))
     .catch((err) =>
       dispatch({
@@ -35,7 +36,7 @@ export const setUserLoading = () => {
 // Login - get user token
 export const loginUser = (userData) => (dispatch) => {
   axios
-    .post("http://localhost:8000/api/users/login", userData)
+    .post(`${API_URL}/api/users/login`, userData)
     .then((res) => {
       // Save to localStorage
       // Set token to localStorage
