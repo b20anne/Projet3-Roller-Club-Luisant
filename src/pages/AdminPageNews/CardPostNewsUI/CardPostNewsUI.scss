@@ -2,13 +2,14 @@
   &__globalContainer {
     height: 10em;
     width: 8em;
-    filter: grayscale(70%);
     border-radius: 15px;
+    border: solid 1px;
     // margin: 0 40px;
     &:hover {
       cursor: pointer;
       transform: scale(1.1);
       transition-duration: 0.3s;
+      filter: grayscale(70%);
     }
   }
 

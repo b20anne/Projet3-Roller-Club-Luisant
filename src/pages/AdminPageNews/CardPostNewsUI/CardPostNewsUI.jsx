@@ -3,7 +3,7 @@ import React from "react";
 import axios from "axios";
 
 import "./CardPostNewsUI.scss";
-import { BsFillTrashFill, BsPencil } from "react-icons/bs";
+import { BsFillTrashFill } from "react-icons/bs";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
@@ -26,7 +26,6 @@ function CardPostNewsUI({ image, id, getData }) {
     >
       <div className="CardPostNewsUI__iconTopImg">
         <BsFillTrashFill onClick={handleDelete} />
-        <BsPencil />
       </div>
     </div>
   );
