@@ -1,5 +1,9 @@
 import React from "react";
-import { AiFillFacebook, AiOutlineMail } from "react-icons/ai";
+import {
+  AiFillFacebook,
+  AiOutlineMail,
+  AiOutlineInstagram,
+} from "react-icons/ai";
 import "./SocialMedia.css";
 
 export default function SocialMedia() {
@@ -21,6 +25,15 @@ export default function SocialMedia() {
           className="facebook social"
         >
           <AiFillFacebook color="#20B82C" size="2em" />
+        </a>
+
+        <a
+          href="https://www.instagram.com/rcluisant/"
+          target="_blank"
+          rel="noreferrer"
+          className="instagram social"
+        >
+          <AiOutlineInstagram color="#20B82C" size="2em" />
         </a>
       </div>
     </div>
